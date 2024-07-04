@@ -75,7 +75,7 @@ dMPC ensures that the computation is performed without any party revealing its p
 Once the computation is complete, the output is revealed to the authorized parties without exposing any individual inputs, 
 maintaining privacy and confidentiality throughout the process.
 
-In the context of digital assets, MPC can be used to replace individual private keys for the signing of transactions.  
+In the context of digital assets, MPC can be used to replace individual private keys for the signing of transactions. 
 MPC distributes the signing process between multiple computers. Each computer possesses a piece of private data representing a share of the key, 
 and together they cooperate to sign transactions in a distributed way.
 

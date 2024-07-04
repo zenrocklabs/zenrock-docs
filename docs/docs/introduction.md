@@ -13,7 +13,7 @@ This documentation provides insights into Zenrock chain design as well as it's r
 
 ### What is Zenrock and What Can You Do with It?
 
-Zenrock is a unique combination of blockchain and MPC technology deployed in a form factor that is easy to use for Web3 developers. Zenrock provides permissionless access to institutional-grade private key management through a smart contract on any chain or offchain APIs.  A developer can build a single application on any chain that can initiate highly performant and secure settlement of assets on any other chain (EVM, Cosmos, Solana, Bitcoin). These capabilities allow developers to provide a far faster and more secure cross-chain user experience while simplifying development and maintenance.
+Zenrock is a unique combination of blockchain and MPC technology deployed in a form factor that is easy to use for Web3 developers. Zenrock provides permissionless access to institutional-grade private key management through a smart contract on any chain or offchain APIs. A developer can build a single application on any chain that can initiate highly performant and secure settlement of assets on any other chain (EVM, Cosmos, Solana, Bitcoin). These capabilities allow developers to provide a far faster and more secure cross-chain user experience while simplifying development and maintenance.
 
 ### Remote Control For Your Assets
 

@@ -1,0 +1,34 @@
+---
+title: Setup 
+sidebar_label: Setup
+sidebar_position: 2
+---
+
+Here you can find the necessary steps to setup your wallets and fund your account.
+
+### Install Wallet
+
+First you need to install the correct wallet to interact with zrChain.
+
+At the time of writing, we support the [Keplr wallet](https://www.keplr.app/) - support for other wallets will be added in the near future. Once you have fully installed Keplr (including making a back-up of the wallet seedphrase), go to our web (TODO - Link) to connect your wallet with the testnet.
+
+To manage your Zenrock account in Keplr, add the Zenrock network to the list of visible chains:
+`Open Keplr` —> `Settings` —> `Manage Chain Visibility` —> `Search for “Zenrock”` —> `set checkbox`
+
+![Keplr Chain Visibility](../../static/img/keplr-checkbox.png)
+
+TODO - Align
+
+### Fund your Wallet with ROCK
+
+When first accessing the frontend with an empty wallet, you will immediately be prompted to request some $ROCK tokens from the faucet.
+
+$ROCK is the native token of zrChain and is required for gas fees, governance and keyring fees.
+
+Alternatively, you can request $ROCK via the wallet menu on the top right or make a direct http request to the faucet: `curl <https://faucet.testnet.zenrocklabs.io> -XPOST -d'{"address":"<YOUR ZENROCK ADDRESS>"}'`
+
+![ROCK faucet](../../static/img/faucet.png)
+
+### Zenrock Chain Explorer
+
+zrChain testnet comes with its own block explorer where you can see your transactions on zrChain. The block explorer is accessible here: TODO - ADD LINK. 
