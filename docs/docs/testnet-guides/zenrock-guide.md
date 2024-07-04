@@ -27,7 +27,7 @@ This workspace will allow you to request keys from the keyrings.
 3. ***Policies***: Here you can manage the policies for your workspace. You can see which policies are available for you or you can create new ones. 
 Policies are applied to the workspace. After workspace creation, default policies are in place which require one member to initiate a key or signature request. In a later step, we will add custom policies with individual logic to your workspace. 
 
-TODO - New Policy Page
+![Policies](../../static/img/policies.png)
 
 4. ***Web3 Integrations***: Here you can connect your keys with other dApps via WalletConnect. This is important as this allows you to access the broad functions of the web3 ecosystem. Initial integration is focused on WalletConnect and we will add more features here soon.
 
@@ -53,12 +53,12 @@ TODO - New Policy Page
 
 ### 3. Key Request
 
-Now it’s time to create your first key. To do so, navigate to the “Your Keys” (TODO - LINK - /workspaces/workspaceId) tab in the workspace menu. Select your key type. Once you approve the transaction in Keplr, a key request is emitted. The MPC Network polls the chain for such requests and processes the request when it appears. Once the key from the MPC is returned, you can see that a new key has been added to the list. 
+Now it’s time to create your first key. To do so, navigate to the “Your Keys” tab in the workspace menu. Select your key type. Once you approve the transaction in Keplr, a key request is emitted. The MPC Network polls the chain for such requests and processes the request when it appears. Once the key from the MPC is returned, you can see that a new key has been added to the list. 
 
 ![Key Request](../../static/img/key-request.png)
 
 ### 4. Check your accounts
 
-Go to your Portfolio (TODO - LINK - /workspaces/workspaceId) to see the addresses that can be derived from your key. You are in control of those keys and can request signatures for those keys.
+Go to your Portfolio to see the addresses that can be derived from your key. You are in control of those keys and can request signatures for those keys.
 
 ![Portfolio with One Key](../../static/img/portfolio-key-1.png)

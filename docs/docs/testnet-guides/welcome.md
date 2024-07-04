@@ -8,19 +8,17 @@ Welcome to the Zenrock Blockchain (”zrChain”) testnet guide which covers its
 
 ## Links to Guides
 
-TODO - Links
-
-- Prerequisites
-- Zenrock Chain Guide
-- Ethereum Guide
-    - WalletConnect Test dApp
-    - Personal Sign
-    - Uniswap Guide
-    - Policy Guide
+- [Setuo](setup.md)
+- [Zenrock Chain Guide](zenrock-guide.md)
+- [Ethereum Guide](../testnet-guides/explore-ethereum/_category_.json)
+    - [WalletConnect Test dApp](../testnet-guides/explore-ethereum/walletConnect.md)
+    - [Personal Sign](../testnet-guides/explore-ethereum/personal-sign.md)
+    - [Uniswap Guide](../testnet-guides/explore-ethereum/uniswap.md)
+    - [Policy Guide](../testnet-guides/explore-ethereum/policy-swap.md)
 
 ## General Information
 
-Zenrock Blockchain is the interface to Zenrock’s MPC Network, or similar Key Management Systems, which are referred to as “Keyrings”. Keyrings receive key and signature requests published on zrChain and returns responses back to zrChain. (TODO - ADD LINKS TO MPC DOC)
+Zenrock Blockchain is the interface to Zenrock’s MPC Network, or similar Key Management Systems, which are referred to as “Keyrings”. Keyrings receive key and signature requests published on zrChain and returns responses back to zrChain. Read about more about our [MPCs](../mpc.md).
 
 The responses to key and signature requests contain public keys or signatures respectively, or a rejection notice if the request can not be fulfilled. The private key material is secured and only accessible by the MPC protocol running within a trusted execution environment (TEE). Only workspace members can request signatures. 
 
