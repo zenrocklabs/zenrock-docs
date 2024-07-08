@@ -6,7 +6,7 @@ sidebar_position: 3
 
 In this process, we want to swap Sepolia ETH to Wrapped ETH on Uniswap’s testnet. 
 
-1. ***Fund your Sepolia Walle***
+1. ***Fund your Sepolia Wallet***
 Before we start, fund your MPC generated address to have funds for gas and the swap payload. A popular faucet you can use is ![Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia). See the ETH balance of the address in the Portfolio View of the Zenrock web application.
 
 ![Zenrock Portfolio](../../../static/img/portfolio-uniswap.png)

@@ -8,6 +8,8 @@ sidebar_position: 2
 
 Personal sign is a simple signature request that is not used to sign a transaction. It can be used for authentication purposes to prove ownership of this address.
 
+The other methods exposed on this frontend are not relevant for this guide, but are important for developers who want to use them. zrChain supports these types of WalletConnect methods and can be invoked through a dApp.
+
 ![WalletConnect Menu](../../../static/img/wc-menu.png)
 
 2. Click on it and you will see it prompts a sign request for the connected wallet.

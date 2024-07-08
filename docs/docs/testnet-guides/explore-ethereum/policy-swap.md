@@ -41,6 +41,8 @@ As you may notice, the request is not yet executed as it waits for your other ac
 Open a new browser window and connect your second account with the zrChain frontend. Get some funds from the faucet to cover gas and transaction fees.
 (TODO - Screenshots)
 
+We are also going to support Passkeys that let you approve the action for a second device. This will add another layer of security to action approvals within a workspace.
+
 8. ***Pending Action***
 
 For the second account, you notice that a notification is shown over the Actions tab. You can see it corresponds with the signature request initiated with your first account. 

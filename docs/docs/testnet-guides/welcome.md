@@ -28,7 +28,7 @@ Signed transactions originating from zrChain are processed by an off-chain relay
 
 ## zrChain Features
 
-zrChain comes with a rich set of features that provide an intuitive user experience combined with bulletproof security.
+zrChain comes with a rich set of features that provide an intuitive user experience combined with institutional-grade security.
 
 **Workspaces and Policies**
 
@@ -57,7 +57,7 @@ Keys are managed in a workspace and their use can be defined within policies, fo
 
 A keyring defines an off-chain service for providing keys and signatures to zrChain. Keyrings are identified by a unique account identifier.
 
-Zenrock Labs, together with partners like Quicknode, provide a preferred MPC keyring. This ensures the distributed management of private key material across nodes in the MPC network.
+Zenrock Labs, together with partners like Quicknode, provide the Zenrock keyring. This ensures the distributed management of private key material across nodes in the MPC network.
 
 The Zenrock keyring architecture is pluggable - third parties can onboard their own keyring and provide keyring services via zrChain. A keyring provider may define custom fees for key and signature requests.
 
