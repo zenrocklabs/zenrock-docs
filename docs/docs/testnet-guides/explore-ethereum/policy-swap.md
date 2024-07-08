@@ -8,7 +8,7 @@ In this next step, we will use custom policies. We will add a new member and upd
 
 1. ***Create New Account***
 
-Create a new account in your Keplr wallet. Open `Keplr` —> `Account icon on the top right` —> `Add Wallet`. Save the seed phrase somewhere secure and copy the Zenrock account address starting with “zen1…". Alternatively, ask to do it with a compagnion.
+Create a new account in your Keplr wallet. Open `Keplr` —> `Account icon on the top right` —> `Add Wallet`. Save the seed phrase somewhere secure and copy the Zenrock account address starting with “zen1…". If you switch accounts within the same browser, we recommend to reload the page after the account has changed. Alternatively, ask to do it with a compagnion on different devices.
 
 2. ***Add Member to Workspace***
 
@@ -16,24 +16,38 @@ Switch your account back to the original account and go to the “Members” tab
 
 ![Add Member to Workspace](../../../static/img/add-member.png)
 
+***Optional: Request your first key***: If the workspace has no keys yet, request a key to follow this guide. 
+
 3. ***Create new Policy***
 
-Create a new policy by navigating to the Policy tab. Chose New Sign Policy which prompts a modal where you can select the participants. Select both and set both addresses as “required”. This ensures that both addresses need to approve the request. Once the policy is defined, submit it by clicking on the button to create a new policy. This policy will automatically assigned to the workspace. 
-(TODO - Screenshots)
+Create a new policy by navigating to the Policy tab. Chose "Create Policy" button which prompts a modal where you can select if it should be the Admin or the Sign policy. Chose ***SIGN*** policy. Give it a name such as "Test Policy" and confirm. In the next step chose the participants. In the case following this guide, I want both parties to approve a request, therefore, both participants are added and after clicking on "next" both are defined as ***required***. 
+
+![New Policy Members](../../../static/img/build-policy-1.png)
+
+![Set them as required](../../../static/img/build-policy-2.png)
+
+![Policy Summary](../../../static/img/build-policy-3.png)
+
+Once the policy is defined, submit it by clicking on the button to create a new policy. This policy will automatically show up on the ***available policies*** section in the workspace. 
 
 4. ***Connect with WalletConnect Test App***
 
 Now go back to WalletConnect test app and connect it with the frontend as in the previous steps and select the key you want to use. Approve the session in the web application.
-(TODO - Screenshots)
+
+![Connect Key with WalletConnect](../../../static/img/WC-connect.png)
 
 5. ***Make a Personal Sign Request***
 
-Once the connection is established, select “Personal Sign”. This will again trigger a signature request on the zrChain web application. Sign the signature request and publish it on zrChain. 
-(TODO - Screenshots)
+Once the connection is established, select “Personal Sign”. This will again trigger a signature request on the zrChain web application. Approve the signature request and publish it on zrChain. 
+
+![Personal Sign Request](../../../static/img/wc-personal-sign.png)
 
 6. ***Pending Request***
 
-As you may notice, the request is not yet executed as it waits for your other account to approve - this is the account which you made a member of the Workspace and added as a required party in the policy.
+As you may notice, the request is not yet executed as it waits for the other account to approve - this is the account which you made a member of the Workspace and added as a required party in the policy.
+
+Now switch to the second account that is a member of the workspace to continue.
+
 (TODO - Screenshots)
 
 7. ***Prepare Second Account***
@@ -45,12 +59,12 @@ We are also going to support Passkeys that let you approve the action for a seco
 
 8. ***Pending Action***
 
-For the second account, you notice that a notification is shown over the Actions tab. You can see it corresponds with the signature request initiated with your first account. 
+For the second account, you notice that a notification is shown over the `Actions` tab. You can see it corresponds with the signature request initiated with your first account. 
 (TODO - Screenshots)
 
 9. ***Approve Action***
 
-Approve the action with a transaction coming from Keplr to start the execution process of the request. 
+Approve the action with a transaction coming from Keplr to approve the action and start the execution process of the request. 
 (TODO - Screenshots)
 
 10. ***Complete Personal Sign***
