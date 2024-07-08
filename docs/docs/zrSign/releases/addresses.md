@@ -19,4 +19,6 @@ More EVM chains will be announced soon!
 
 ### zrSign Version 2
 
-In version 2 with it beying closely entangled with Zenrock chain, zrSign will have only EVM support to begin with but will add more networks like more EVM chains, Bitcoin, Cosmos, and Solana to fulfill Zenrock's [omnichain vision](../../introduction.md#going-omnichain-with-zenrock) throughout testnet phase.
+In version 2, zrSign will be closely integrated with the Zenrock chain. Initially, it will support a small number of EVM chains. During the testnet phase, it will expand to include more networks such as other EVM chains, Bitcoin, Cosmos, and Solana, aligning with Zenrock's [omnichain vision](../../introduction.md#going-omnichain-with-zenrock).
+
+

@@ -14,11 +14,12 @@ The `zrKeyReq` function interacts with wallet-related functionalities by using t
 
 #### Parameters
 - `ZrKeyReqParams` : A struct defined in `SignTypes.sol` that contains the following field:
-- `walletTypeId` : A `bytes32` identifier that specifies the type of wallet. This identifier is used to fetch the corresponding key.
+    - `walletTypeId` : A `bytes32` identifier that specifies the type of wallet. This identifier is used to fetch the corresponding key.
+    - `monitoring` : A `boolean` flag outlining if a wallet should be monitored by zenrocks' off-chain systems to provide ease of use.
 
 #### Modifiers
 - The function may use access control modifiers to ensure that only authorized users can request keys.
-- Each key request requires a transaction fee, equivalent to the base fee obtained via `getBaseFee()`, to be sent with the call.
+- Each key request requires a transaction fee, equivalent to the fee obtained via `estimateFee()`, to be sent with the call.
 
 #### Return Type
 - None
@@ -32,19 +33,25 @@ pragma solidity 0.8.20;
 import "./ISign.sol";  // Importing the contract where `zrKeyReq` is defined
 import "./SignTypes.sol";  // Importing the types used by the contract
 contract WalletInteraction {
+    
     ISign public signContract;
     constructor(address _signContractAddress) {
         signContract = ISign(_signContractAddress);
     }
+
     // Function to request a key from the wallet
     function getKey(bytes32 walletTypeId) external payable {
-        uint256 baseFee = signContract.getBaseFee();
+        bool withMonitoring = true;
+        uint256 zrFee = signContract.estimateFee(withMonitoring);
+        
         // Prepare the parameters for the key request
         SignTypes.ZrKeyReqParams memory params = SignTypes.ZrKeyReqParams({
-            walletTypeId: walletTypeId
+            walletTypeId: walletTypeId,
+            monitoring: withMonitoring
         });
+        
         // Execute the key request function
-        signContract.zrKeyReq{value: baseFee}(params);
+        signContract.zrKeyReq{value: zrFee}(params);
     }
 }
 ```
@@ -80,34 +87,40 @@ Here is an example of interacting with the `zrSignHash` function, including fee 
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
+
 import "./ISign.sol";  // Importing the Sign contract
 import "./SignTypes.sol";  // Importing the types used by the Sign contract
+
 contract WalletInteraction {
     ISign public signContract;
-    bytes32 constant evmWalletTypeId = 0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a;  // EVM wallet type ID
-    bytes32 constant sepoliaDstChainId = 0xafa90c317deacd3d68f330a30f96e4fa7736e35e8d1426b2e1b2c04bce1c2fb7;  // Sepolia chain ID
+
+    // keccak256(abi.encode(ChainInfo{purpose:44 coinType: 60}))
+    bytes32 constant evmWalletTypeId = 0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a; 
+    // keccak256(abi.encodePacked("eip155:11155111"));
+    bytes32 constant sepoliaDstChainId = 0xafa90c317deacd3d68f330a30f96e4fa7736e35e8d1426b2e1b2c04bce1c2fb7;
+
     constructor(address _signContractAddress) {
         signContract = ISign(_signContractAddress);
     }
-    function calculateFeeForSign(bytes memory payload) public view returns(uint256) {
-        uint256 networkFee = payload.length * signContract.getNetworkFee();
-        uint256 totalFee = signContract.getBaseFee() + networkFee;
-        return totalFee;
-    }
+
     // Function to sign a hash
     function signHash(bytes32 hash) external payable {
-        uint256 fee = calculateFeeForSign(abi.encodePacked(hash));
-        require(msg.value >= fee, "Insufficient fee sent");
         // Fetching the wallet index for the owner
-        string[] memory keys = signContract.getZrKeys(walletTypeId, address(this)); // optional if you want to fetch the keys
-        uint256 walletIndex = 0;  //  The first key index for simplicity
-        SignTypes.zrSignParams memory params = SignTypes.zrSignParams({
+        string[] memory keys = signContract.getZrKeys(evmWalletTypeId, address(this)); 
+        uint256 walletIndex = keys.length;  
+
+        // Get fee estimate
+        uint256 fee = signContract.estimateFee(evmWalletTypeId, address(this), walletIndex);
+        require(msg.value >= fee, "Insufficient fee sent");
+
+        SignTypes.ZrSignParams memory params = SignTypes.ZrSignParams({
             walletTypeId: evmWalletTypeId,
             walletIndex: walletIndex,
             dstChainId: sepoliaDstChainId,
             payload: abi.encodePacked(hash),
             broadcast: false
         });
+
         // Execute the signing function with the prepared parameters and the required fee
         signContract.zrSignHash{value: fee}(params);
     }
@@ -144,35 +157,40 @@ Below is a hypothetical example of how to interact with the `zrSignData` functio
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
+
 import "./ISign.sol";  // Importing the Sign contract
 import "./SignTypes.sol";  // Importing the types used by the Sign contract
+
 contract WalletInteraction {
-    ISign public signContract;
-    address public owner = msg.sender;
+   ISign public signContract;
+
+    // keccak256(abi.encode(ChainInfo{purpose:44 coinType: 60}))
     bytes32 constant evmWalletTypeId = 0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a;  // EVM wallet type ID
+    // keccak256(abi.encodePacked("eip155:11155111"));
     bytes32 constant sepoliaDstChainId = 0xafa90c317deacd3d68f330a30f96e4fa7736e35e8d1426b2e1b2c04bce1c2fb7;  // Sepolia chain ID
+ 
     constructor(address _signContractAddress) {
         signContract = ISign(_signContractAddress);
     }
-    function calculateFeeForSign(bytes memory payload) public view returns(uint256) {
-        uint256 networkFee = payload.length * signContract.getNetworkFee();
-        uint256 totalFee = signContract.getBaseFee() + networkFee;
-        return totalFee;
-    }
+
     // Function to sign data
     function signData(bytes memory data) external payable {
-        uint256 fee = calculateFeeForSign(data);
-        require(msg.value >= fee, "Insufficient fee sent");
         // Fetching the wallet index for the owner
-        string[] memory keys = signContract.getZrKeys(evmWalletTypeId, owner);
-        uint256 walletIndex = 0;  //  The first key index for simplicity
-        SignTypes.zrSignParams memory params = SignTypes.zrSignParams({
+        string[] memory keys = signContract.getZrKeys(evmWalletTypeId, address(this));
+        uint256 walletIndex = keys.length;
+
+        // Get fee estimate
+        uint256 fee = signContract.estimateFee(evmWalletTypeId, address(this), walletIndex);
+        require(msg.value >= fee, "Insufficient fee sent");
+
+        SignTypes.ZrSignParams memory params = SignTypes.ZrSignParams({
             walletTypeId: evmWalletTypeId,
             walletIndex: walletIndex,
             dstChainId: sepoliaDstChainId,
             payload: data,
             broadcast: false
         });
+
         // Execute the signing function with the prepared parameters and the required fee
         signContract.zrSignData{value: fee}(params);
     }
@@ -209,35 +227,39 @@ Below is an example of how to interact with the `zrSignTx` function, including t
 ```solidity
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.20;
+
 import "./ISign.sol";  // Importing the Sign contract
 import "./SignTypes.sol";  // Importing the types used by the Sign contract
+
 contract WalletInteraction {
     ISign public signContract;
-    address public owner = msg.sender;
+
+    // keccak256(abi.encode(ChainInfo{purpose:44 coinType: 60}))
     bytes32 constant evmWalletTypeId = 0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a;  // EVM wallet type ID
+    // keccak256(abi.encodePacked("eip155:11155111"));
     bytes32 constant sepoliaDstChainId = 0xafa90c317deacd3d68f330a30f96e4fa7736e35e8d1426b2e1b2c04bce1c2fb7;  // Sepolia chain ID
+
     constructor(address _signContractAddress) {
         signContract = ISign(_signContractAddress);
     }
-    function calculateFeeForSign(bytes memory payload) public view returns(uint256) {
-        uint256 networkFee = payload.length * signContract.getNetworkFee();
-        uint256 totalFee = signContract.getBaseFee() + networkFee;
-        return totalFee;
-    }
-    // Function to sign and possibly broadcast a transaction
+
     function signTransaction(bytes memory transactionData, bool shouldBroadcast) external payable {
-        uint256 fee = calculateFeeForSign(transactionData);
-        require(msg.value >= fee, "Insufficient fee sent");
         // Fetching the wallet index for the owner
-        string[] memory keys = signContract.getZrKeys(evmWalletTypeId, owner);
-        uint256 walletIndex = 0;  // Assume the first key is the correct index for simplicity
-        SignTypes.zrSignParams memory params = SignTypes.zrSignParams({
+        string[] memory keys = signContract.getZrKeys(evmWalletTypeId, address(this));
+        uint256 walletIndex = keys.length;
+
+        // Get fee estimate
+        uint256 fee = signContract.estimateFee(evmWalletTypeId, address(this), walletIndex);
+        require(msg.value >= fee, "Insufficient fee sent");
+
+        SignTypes.ZrSignParams memory params = SignTypes.ZrSignParams({
             walletTypeId: evmWalletTypeId,
             walletIndex: walletIndex,
             dstChainId: sepoliaDstChainId,
             payload: transactionData,
             broadcast: shouldBroadcast
         });
+        
         // Execute the transaction signing function with the prepared parameters and the required fee
         signContract.zrSignTx{value: fee}(params);
     }
