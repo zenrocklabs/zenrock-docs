@@ -15,7 +15,7 @@ You can find us on Discord and X/Twitter:
 
 You can find our Big Dipper explorer here: 
 
-- [Testnet](explorer.gardia.zenrocklabs.io)
+- [Testnet - TODO - LINK](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 - [Mainnet - Coming Soon](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ### Does Zenrock support smart contract development? 
