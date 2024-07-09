@@ -80,7 +80,7 @@ Once executed, the source OApp sends the supplied payload to a destination OApp 
     function sendRemoteTx() public payable {
         bytes32 evmWalletTypeID = 0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a;
         uint256 walletIndex = 0;
-        bytes32 destinationChainID = 0x58668d988d55d99e25d6bacd8ebdd4fd43f9afec7eb5550316efbaf05879b59b;
+        bytes32 destinationChainID = 0x58668d988d55d99e25d6bacd8ebdd4fd43f9afec7eb5550316efbaf05879b59b; // keccak256("eip155:168587773")
         bytes rlpTxPayload = 0xec0285012a05f2008303d090943ca69dc0824ff36b545ddb1b5e4bf13b17905421872386f26fc1000080808080;
         bool broadcast = true;
 
