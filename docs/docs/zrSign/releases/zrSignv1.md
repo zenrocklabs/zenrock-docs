@@ -9,7 +9,7 @@ slug: /zrsign
 
 The **zrSign protocol** is a smart contract designed for providing key and signature services on various EVM blockchains.
 Zenrock's dMPC will periodically query the zrSign smart contracts for pending requests and return the responses back to the smart contract. 
-Stored in the smart contract, the public keys can be used like an externally owned account across the entire evm ecosystem.
+Stored in the smart contract, the public keys can be used as an externally owned account across the entire evm ecosystem.
 zrSign specifies three different endpoints that allow you to request signatures for arbitrary data (**zrSignData**), 
 blinded hashes (**zrSignHash**), and for transactions (**zrSignTx**) including a relayer service. 
 
