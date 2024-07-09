@@ -1,27 +1,28 @@
 ---
-title: zrSign Use 
-sidebar_label: zrSign developer flow
+title: zrSign Developer Guide 
+sidebar_label: zrSign Developer Guide
 sidebar_position: 4
 ---
 
-zrSign provides MPC features through key- and signature requests particularly for EVM chains right now. Interfacing zrSign allows solidity-based dApps to invoke zrSign's methods and access its state. Read more about zrSign and how to integrate it best in [this section](../../../docs/docs/zrSign/_category_.json) of our documentation.
+zrSign provides Zenrock MPC network features via key and signature requests. Current support is for EVM based chains with many more coming in the near future.
+Interfacing with zrSign allows Solidity-based dApps to invoke zrSign's methods and access its state. For more information on zrSign and its integration, refer to [this section](../../../docs/docs/zrSign/_category_.json) of our documentation.
+This page focuses on the differences between zrSign Direct and zrSign Omni and how they can be leveraged for different use cases.
 
-This page focuses on how zrSign version 1 and zrSign version 2 are different and how they can be used in dApps. 
+## zrSign Direct
 
-## zrSign version 1 
+zrSign Direct enables developers to [interface](../zrSign/devs/references/izrsign-interface.md) their dApps directly with zrSign, allowing them to build use cases based on the keys and signatures returned by the Zenrock MPC network and managed directly by the smart contract. zrSign Direct allows dApp developers to query keys and signatures directly from the smart contract for use within the dApp.
 
-zrSign version 1 aims for developers to [interface](../zrSign/devs/references/izrsign-interface.md) their dApp with zrSign directly and then let the dApp developer build their use case around the returned keys and signatures coming from Zenrock's MPC. 
+## zrSign Omni
 
-This allows the dApp developer to query the keys and signatures directly from the zrSign smart contract and use this information within the dApp. 
+zrSign Omni (coming this summer) exposes Zenrock chain (zrChain) features for EVM developers remotely. The interfaces to the zrSign smart contract remain the same. However, keys and signatures are returned to zrChain instead of the smart contract.
+This fully integrates key and signature requests with zrChain. 
 
-## zrSign version 2 - "the zrChain outpost"
-
-zrSign version 2, which will be released soon, aims for enabling zrChains features for EVM developers remotely. While the interfaces to zrSign stay the same, and therefore the developer experience calling them, the keys and signatures are not returned to the smart contract but instead on zrChain directly. 
-
-The keys and processes are then fully integrated with zrChain, embedded in a workspace and managed by admin- and sign policies, exposed to different type of keys and wallet types not represented on zrSign version 1. Developers then can make signature requests via zrSign version 2 that are getting processed on zrChain to facilitate a cross-chain experience. 
-
-The addition of zrChain-native policies allows zrSign developers to add conditions and different approvers to their signature requests without needing to handle the authorization level within their smart contract. Thus, further opening the realm of possibilities for smart contracts on different chains to work with each other via zrChain. 
+zrSign Omni:
+1. Allows keys to be embedded in a Workspace which can be used by an admin and to sign policies
+2. Provides developers access to a broader set of blockchains than zrSign Direct (most notably Bitcoin and Solana)
+3. Allows developers to craft custom business rules in the form of Policies to control transaction flows, necessary approvers, etc.
+4. Allows developers to use other key ring providers in addition to the Zenrock MPC network 
 
 ## Deployment
 
-Both implementations will be their own product and deployed as separate smart contracts, meaning developers will be able to use both versions independently of each other. 
+zrSign Direct and zrSign Omni are distinct products and deployed as separate smart contracts, allowing developers to use both versions independently.

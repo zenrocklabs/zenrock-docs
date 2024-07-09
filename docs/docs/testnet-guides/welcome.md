@@ -8,13 +8,14 @@ Welcome to the Zenrock Blockchain (”zrChain”) testnet guide which covers its
 
 ## Links to Guides
 
-- [Setuo](setup.md)
+- [Setup](setup.md)
 - [Zenrock Chain Guide](zenrock-guide.md)
 - [Ethereum Guide](../testnet-guides/explore-ethereum/_category_.json)
     - [WalletConnect Test dApp](../testnet-guides/explore-ethereum/walletConnect.md)
     - [Personal Sign](../testnet-guides/explore-ethereum/personal-sign.md)
     - [Uniswap Guide](../testnet-guides/explore-ethereum/uniswap.md)
     - [Policy Guide](../testnet-guides/explore-ethereum/policy-swap.md)
+- [zrSign Developer Guide](zrSignV2.md)
 
 ## General Information
 

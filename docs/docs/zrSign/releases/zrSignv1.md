@@ -1,6 +1,6 @@
 ---
-title: The zrSign Protocol Version 1
-sidebar_label: Version 1
+title: zrSign Direct
+sidebar_label: zrSign Direct
 sidebar_position: 2
 slug: /zrsign
 ---
@@ -16,9 +16,9 @@ blinded hashes (**zrSignHash**), and for transactions (**zrSignTx**) including a
 The protocol is implemented as a set of smart contracts that can receive requests and the dMPC's responses.
 A proxy smart contract allows for upgrading zrSign and the addition of new features. 
 
-The next major version of zrSign - [zrSign v2](zrSignv2.md) - comes with additional performance- and architecture improvements leveraging the Zenrock blockchain! In this version, responses to request originating from zrSign smart contracts will get published on Zenrock directly, with additional features without changing the developer experience on the existing zrSign smart contracts and their consuming dapps. 
+The next major version of zrSign - [ zrSign Omni](zrSignv2.md) - comes with additional performance- and architecture improvements leveraging the Zenrock blockchain! In this version, responses to request originating from zrSign smart contracts will get published on Zenrock directly, with additional features without changing the developer experience on the existing zrSign smart contracts and their consuming dapps. 
 
-The following diagram shows the solution architecture of zrSign v1:
+The following diagram shows the solution architecture of zrSign Direct:
 
 ![zrSign Architecture](../../../static/img/zrsign-architecture.png)
 
