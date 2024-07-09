@@ -26,7 +26,7 @@ With this OApp, users can seamlessly interact with a zrSign contract deployed on
 ## Supported Networks
 
 ### Outgoing OApps:
-    - Ethereum Sepolia: [0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35](https://sepolia.etherscan.io/address/0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35#code)
+    - Ethereum Sepolia: [0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35](https://sepolia.etherscan.io/address/0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35)
 ### Destination OApps:
     - Polygon Amoy: [0xc0763f6501d331e92aeb54d2c5d76838fa26f1c5](https://amoy.polygonscan.com/address/0xc0763f6501d331e92aeb54d2c5d76838fa26f1c5)
 
@@ -48,7 +48,15 @@ One a key is generated, it is binded to the destination (destination) OApp and t
     - EVM wallet Type: `0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a`
 
 #### Usage Example
-*Comming soon...*
+```solidity
+    function createWallet () public payable {
+        bytes32 evmWalletTypeID = 0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a;
+        uint256 zrFee = oapp.calculateFee(evmWalletTypeID);
+
+        oapp.reqZrKey{value: zrFee}(evmWalletTypeID);
+    }
+```
+
 
 ---
 
@@ -68,4 +76,22 @@ Once executed, the source OApp sends the supplied payload to a destination OApp 
 - `broadcast (bool)`: A boolean flag indicating whether the signed transaction should be broadcast immediately.
 
 #### Usage Example
-*Comming soon...*
+```solidity
+    function sendRemoteTx() public payable {
+        bytes32 evmWalletTypeID = 0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a;
+        uint256 walletIndex = 0;
+        bytes32 destinationChainID = 0x58668d988d55d99e25d6bacd8ebdd4fd43f9afec7eb5550316efbaf05879b59b;
+        bytes rlpTxPayload = 0xec0285012a05f2008303d090943ca69dc0824ff36b545ddb1b5e4bf13b17905421872386f26fc1000080808080;
+        bool broadcast = true;
+
+        uint256 zrFee = oapp.calculateFee(rlpTxPayload);
+
+        oapp.reqZrSigForTx{value: zrFee}(
+            evmWalletTypeID,
+            walletIndex,
+            destinationChainID,
+            rlpTxPayload,
+            broadcast
+        );
+    }
+```
