@@ -26,11 +26,13 @@ With this OApp, users can seamlessly interact with a zrSign contract deployed on
 ## Supported Networks
 
 ### Outgoing OApps:
-    - Ethereum Sepolia: [0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35#code](https://sepolia.etherscan.io/address/0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35#code)
+    - Ethereum Sepolia: [0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35](https://sepolia.etherscan.io/address/0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35#code)
 ### Destination OApps:
     - Polygon Amoy: [0xc0763f6501d331e92aeb54d2c5d76838fa26f1c5](https://amoy.polygonscan.com/address/0xc0763f6501d331e92aeb54d2c5d76838fa26f1c5)
 
 ## Functions
+
+---
 
 ### `zrKeyReq`
 
@@ -43,9 +45,12 @@ One a key is generated, it is binded to the destination (destination) OApp and t
 
 #### Parameters
 - `walletTypeID (bytes32)`: Identifier for the wallet type involved in the signing.
+    - EVM wallet Type: `0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a`
 
 #### Usage Example
 *Comming soon...*
+
+---
 
 ### `zrSigForTx`
 
@@ -55,9 +60,10 @@ One a key is generated, it is binded to the destination (destination) OApp and t
 Once executed, the source OApp sends the supplied payload to a destination OApp that has been integrated with a zrSign contract. It then forwards the request to the zrSign contract and acts as a proxy between the user on the source chain and the zrSign contract on the destination chain.
 
 #### Parameters
-- `walletTypeID (bytes32)`: Identifier for the wallet type involved in the signing.
+- `walletTypeID (bytes32)`: Identifier for the wallet type involved in the signing. At the moment the only supported wallet type is an EVM wallet type.
+    - EVM wallet Type: `0xe146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a`
 - `walletIndex (uint256)`: Index of the wallet which will be signing the hash.
-- `dstChainID (bytes32)`: The destination chain ID where the signed transaction might be used or verified.
+- `dstChainID (bytes32)`: The destination chain ID where the signed transaction might be used or verified. The destination chain ID is represented as a keccak hash of the chain in CAIP-2 format. For example `keccak256(abi.encodePacked("eip155:11155111"))` is the ID for Ethereum Sepolia.
 - `payload (bytes)`: Transaction data to be signed, provided as an array of bytes.
 - `broadcast (bool)`: A boolean flag indicating whether the signed transaction should be broadcast immediately.
 
