@@ -15,7 +15,7 @@ You can find us on Discord and X/Twitter:
 
 You can find our Big Dipper explorer here: 
 
-- [Testnet - Coming Soon](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
+- [Testnet](explorer.gardia.zenrocklabs.io)
 - [Mainnet - Coming Soon](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
 
 ### Does Zenrock support smart contract development? 
@@ -28,7 +28,7 @@ Yes, we are supporting CosmWasm for smart contract interaction. We are currently
 The dApp team needs to integrate the zrSign interface into their contracts to make appropriate calls, that will allow cross-chain messaging right away.
 
 ### Where is zrSign deployed? 
-Currently zrSign is deployed on Sepolia under the address [0x8F309C9550D0d69C3f9b8d7BCdC7C93B05Cd089e](https://sepolia.etherscan.io/address/0x8F309C9550D0d69C3f9b8d7BCdC7C93B05Cd089e). To find other implemented zrSign contracts, check in our [address page](./zrSign/releases/addresses.md)!
+Currently zrSign is deployed on Sepolia under the address [0x8F309C9550D0d69C3f9b8d7BCdC7C93B05Cd089e](https://sepolia.etherscan.io/address/0x8F309C9550D0d69C3f9b8d7BCdC7C93B05Cd089e). To find other implemented zrSign contracts, check in our [address page](./zrSign/releases/addresses.md)! We will update the list frequently.
 
 ### Can a single contract control several wallets within single or multiple networks?
 Yes, a single contract can have as many wallets on supported chains as needed.

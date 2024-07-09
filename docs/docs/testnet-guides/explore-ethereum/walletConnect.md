@@ -7,7 +7,11 @@ sidebar_position: 1
 The following steps show how to connect the Zenrock web application to WalletConnect:
 
 1. Go to the WalletConnect test environment: [https://react-app.walletconnect.com/](https://react-app.walletconnect.com/).
-2. Select `Sepolia` as a network, scroll down and click on `connect`. Select `Zenrock Chain Wallets`. This will let you access your mpc MPC generated keys stored in your workspace on zrChain.
+2. Select `Sepolia` as a network, scroll down and click on `connect`. This will promt you a QR code. On the top right, copy the payload (a WalletConnect URI) and go back to the integrations tab in the web application. Enter the URI and approve the session.
+
+![WalletConnect QR Code](../../../static/img/wc-qr-code.png)
+
+If you have done the previous step already, you will directly get prompted to select `Zenrock Chain Wallets`. This will let you access your mpc MPC generated keys stored in your workspace on zrChain. Alternatively, click on "New Pairing" to start a new session. In this case, we recommend to reload the page of the web application, too.
 
 ![WalletConnect Keys Selection](../../../static/img/wc-connection.png)
 ![WalletConnect Pending Approval](../../../static/img/wc-connection2.png)

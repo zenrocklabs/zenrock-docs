@@ -10,7 +10,7 @@ Here you can find the necessary steps to setup your wallets and fund your accoun
 
 First you need to install the correct wallet to interact with zrChain.
 
-At the time of writing, we support the [Keplr wallet](https://www.keplr.app/) - support for other wallets will be added in the near future. Once you have fully installed Keplr (including making a back-up of the wallet seedphrase), go to our web (TODO - Link) to connect your wallet with the testnet.
+At the time of writing, we support the [Keplr wallet](https://www.keplr.app/) - support for other wallets will be added in the near future. Once you have fully installed Keplr (including making a back-up of the wallet seedphrase), go to the [web application](https://web.gardia.zenrocklabs.io/) to connect your wallet with the testnet.
 
 To manage your Zenrock account in Keplr, add the Zenrock network to the list of visible chains:
 `Open Keplr` —> `Settings` —> `Manage Chain Visibility` —> `Search for “Zenrock”` —> `set checkbox`
@@ -29,4 +29,4 @@ Alternatively, you can request $ROCK via the wallet menu on the top right or mak
 
 ### Zenrock Chain Explorer
 
-zrChain testnet comes with its own block explorer where you can see your transactions on zrChain. The block explorer is accessible here: TODO - ADD LINK. 
+zrChain testnet comes with its own block explorer where you can see your transactions on zrChain. The block explorer is accessible [here](https://explorer.gardia.zenrocklabs.io). 

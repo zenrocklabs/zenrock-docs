@@ -4,10 +4,8 @@ sidebar_label: Personal Sign
 sidebar_position: 2
 ---
 
-1. After establishing a connection with a zrChain key within WalletConnect, you should see a list of methods that WalletConnect provides. We are interested in the first one - "Personal Sign".
-
+1. After establishing a connection with a zrChain key within WalletConnect, you should see a list of methods that WalletConnect provides. We are interested in the first one - "Personal Sign". 
 Personal sign is a simple signature request that is not used to sign a transaction. It can be used for authentication purposes to prove ownership of this address.
-
 The other methods exposed on this frontend are not relevant for this guide, but are important for developers who want to use them. zrChain supports these types of WalletConnect methods and can be invoked through a dApp.
 
 ![WalletConnect Menu](../../../static/img/wc-menu.png)
