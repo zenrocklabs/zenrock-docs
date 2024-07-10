@@ -24,6 +24,7 @@ With this OApp, users can seamlessly interact with a zrSign contract deployed on
 ![zrsign-oapp-flow-simple](../../../static/img/zrsign-oapp-flow-simple.svg)
 
 ## Supported Networks
+The list of supported networks will be expanded as we deploy the OApp (and zrSign contracts) to new networks.
 
 ### Outgoing OApps:
     - Ethereum Sepolia: [0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35](https://sepolia.etherscan.io/address/0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35)
@@ -56,7 +57,6 @@ One a key is generated, it is binded to the destination (destination) OApp and t
         oapp.reqZrKey{value: zrFee}(evmWalletTypeID);
     }
 ```
-
 
 ---
 
