@@ -8,7 +8,7 @@ This page will guide you through zenrock chain from creating a workspace to crea
 
 ### 1. Create a Workspace
 
-After funding your account from the faucet, it’s time to interact with zrChain. First, go to your workspaces (TODO - LINK) and click on the button to create your first workspace if you don’t already have one. Sign the transaction request prompted by Keplr.
+After funding your account from the faucet, it’s time to interact with zrChain. First, go to your [workspaces](https://gardia.zenrocklabs.io/workspaces) and click on the button to create your first workspace if you don’t already have one. Sign the transaction request prompted by Keplr.
 
 This workspace will allow you to request keys from the keyrings. 
 

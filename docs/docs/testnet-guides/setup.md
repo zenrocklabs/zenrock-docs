@@ -10,7 +10,7 @@ Here you can find the necessary steps to setup your wallets and fund your accoun
 
 First you need to install the correct wallet to interact with zrChain.
 
-At the time of writing, we support the [Keplr wallet](https://www.keplr.app/) - support for other wallets will be added in the near future. Once you have fully installed Keplr (including making a back-up of the wallet seedphrase), go to the [web application](https://web.gardia.zenrocklabs.io/) to connect your wallet with the testnet.
+At the time of writing, we support the [Keplr wallet](https://www.keplr.app/) - support for other wallets will be added in the near future. Once you have fully installed Keplr (including making a back-up of the wallet seedphrase), go to the [web application](https://gardia.zenrocklabs.io/) to connect your wallet with the testnet.
 
 To manage your Zenrock account in Keplr, add the Zenrock network to the list of visible chains:
 `Open Keplr` —> `Settings` —> `Manage Chain Visibility` —> `Search for “Zenrock”` —> `set checkbox`
@@ -23,7 +23,7 @@ When first accessing the frontend with an empty wallet, you will immediately be 
 
 $ROCK is the native token of zrChain and is required for gas fees, governance and keyring fees.
 
-Alternatively, you can request $ROCK via the wallet menu on the top right or make a direct http request to the faucet: `curl <https://faucet.testnet.zenrocklabs.io> -XPOST -d'{"address":"<YOUR ZENROCK ADDRESS>"}'`
+Alternatively, you can request $ROCK via the wallet menu on the top right or make a direct http request to the faucet: `curl <https://faucet.gardia.zenrocklabs.io> -XPOST -d'{"address":"<YOUR ZENROCK ADDRESS>"}'`
 
 ![ROCK faucet](../../static/img/faucet.png)
 
