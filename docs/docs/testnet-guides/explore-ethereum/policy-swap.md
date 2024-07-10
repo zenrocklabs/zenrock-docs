@@ -8,7 +8,7 @@ In this next step, we will use custom policies. We will add a new member and upd
 
 1. ***Create New Account***
 
-Create a new account in your Keplr wallet. Open `Keplr` —> `Account icon on the top right` —> `Add Wallet`. Save the seed phrase somewhere secure and copy the Zenrock account address starting with “zen1…". If you switch accounts within the same browser, we recommend to reload the page after the account has changed. Alternatively, ask to do it with a compagnion on different devices.
+Create a new account in your Keplr wallet. Open `Keplr` —> `Account icon on the top right` —> `Add Wallet`. Save the seed phrase somewhere secure and copy the Zenrock account address starting with “zen1…". If you switch accounts within the same browser, we recommend to reload the page after the account has changed. Alternatively, ask to do it with a companion on different devices.
 
 2. ***Add Member to Workspace***
 
@@ -16,7 +16,7 @@ Switch your account back to the original account and go to the “Members” tab
 
 ![Add Member to Workspace](../../../static/img/add-member.png)
 
-***Optional: Request your first key***: If the workspace has no keys yet, request a key to follow this guide. 
+***Optional: Request your First Key***: If the workspace has no keys yet, request a key to follow this guide. 
 
 3. ***Create new Policy***
 

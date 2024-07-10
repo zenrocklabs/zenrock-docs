@@ -7,7 +7,7 @@ sidebar_position: 1
 The following steps show how to connect the Zenrock web application to WalletConnect:
 
 1. Go to the WalletConnect test environment: [https://react-app.walletconnect.com/](https://react-app.walletconnect.com/).
-2. Select `Sepolia` as a network, scroll down and click on `connect`. This will promt you a QR code. On the top right, copy the payload (a WalletConnect URI) and go back to the integrations tab in the web application. Enter the URI and approve the session.
+2. Select `Sepolia` as a network, scroll down and click on `connect`. This will prompt a QR code. On the top right, copy the payload (a WalletConnect URI) and go back to the integrations tab in the web application. Enter the URI and approve the session.
 
 ![WalletConnect QR Code](../../../static/img/wc-qr-code.png)
 

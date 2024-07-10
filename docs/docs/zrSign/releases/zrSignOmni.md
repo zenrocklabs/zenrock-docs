@@ -10,7 +10,7 @@ sidebar_position: 3
 
 ### Zenrock Blockchain to Store Key and Signature Responses
 
-Depending on which EVM network is used to interact with a zrSign Direct smart contract, the process of requesting and returning a key or signature can take up to a few minutes based on the underlying network's traffic and can cause significantly higher transaction fees. To solve this issue, zrSign Omni does keep the same functions to request keys and signatures but will not receive the responses to key and signature requests, but rather those responses are being published on the Zenrock Blockchain. 
+Depending on which EVM network is used to interact with a zrSign Direct smart contract, the process of requesting and returning a key or signature can take up to a few minutes based on the underlying network's traffic and can cause significantly higher transaction fees. To solve this issue, zrSign Omni retains the same functions to request keys and signatures, but the responses are published on the Zenrock Blockchain instead of being stored on the zrSign smart contract. 
 This approach comes with a series of benefits: 
 
 1. ***Continuously fast and cheap processing of requests***: The responses appear on-chain within a few seconds and transaction fees can only be a fraction compared to the evm networks where zrSign is deployed.
@@ -20,7 +20,7 @@ This approach comes with a series of benefits:
 
 ### zrSign Omni Use Cases
 
-The addition of zrChain-native policies allows zrSign developers to add conditions and different approvers to their signature requests without needing to handle the authorization level within their smart contract. Thus, further opening the realm of possibilities for smart contracts on different chains to work with each other via zrChain. For example could a DEX aggregator collect approvals from signers on different networks to execute a swap on a remote DEX. In that case, the swap transaction is set on the request and gets immediately executed when the required members have approved the execution.
+The addition of zrChain-native policies enables zrSign developers to add conditions and different approvers to their signature requests without handling the authorization level within their smart contract. Thus, further opening the realm of possibilities for smart contracts on different chains to work with each other via zrChain. For example could a DEX aggregator collect approvals from signers on different networks to execute a swap on a remote DEX. In that case, the swap transaction is set on the request and gets immediately executed when the required members have approved the execution.
 
 zrSign Omni also enables access to other networks like Bitcoin, Solana or other chains with more complex transaction structures. This also includes alternative zrSign implementations on any blockchain for example in a Rust version to deploy zrSign natively on other networks. 
 

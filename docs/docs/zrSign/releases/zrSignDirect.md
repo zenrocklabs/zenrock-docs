@@ -16,7 +16,7 @@ blinded hashes (**zrSignHash**), and for transactions (**zrSignTx**) including a
 The protocol is implemented as a set of smart contracts that can receive requests and the dMPC's responses.
 A proxy smart contract allows for upgrading zrSign and the addition of new features. 
 
-The next major version of zrSign - [ zrSign Omni](zrSignv2.md) - comes with additional performance- and architecture improvements leveraging the Zenrock blockchain! In this version, responses to request originating from zrSign smart contracts will get published on Zenrock directly, with additional features without changing the developer experience on the existing zrSign smart contracts and their consuming dapps. 
+The next major version of zrSign - [ zrSign Omni](zrSignOmni.md) - comes with additional performance- and architecture improvements leveraging the Zenrock blockchain! In this version, responses to request originating from zrSign smart contracts will get published on Zenrock directly, with additional features without changing the developer experience on the existing zrSign smart contracts and their consuming dapps. 
 
 The following diagram shows the solution architecture of zrSign Direct:
 
