@@ -9,7 +9,7 @@ In this process, we want to swap Sepolia ETH to Wrapped ETH on Uniswap’s testn
 1. ***Fund your Sepolia Wallet***
 Before we start, fund your MPC generated address to have funds for gas and the swap payload. A popular faucet you can use is [Alchemy](https://www.alchemy.com/faucets/ethereum-sepolia). See the ETH balance of the address in the Portfolio View of the Zenrock web application.
 
-![Zenrock Portfolio](../../../static/img/portfolio-uniswap.png)
+![Zenrock Portfolio](../../../static/img/portfolio-key-1.png)
 
 2. ***Uniswap Testnet***
 Next, go to the TESTNET version of Uniswap by clicking on this link: [https://app.uniswap.org/swap?chain=sepolia](https://app.uniswap.org/swap?chain=sepolia)
@@ -28,6 +28,8 @@ Make sure you are connected by checking the connected address on Uniswap is the 
 4. ***Initiate Swap***
 
 Now select WETH as the token to swap your Sepolia ETH. Select a tiny amount, for example 0.001 ETH to swap to 0.001 WETH. Click on `Swap`. 
+
+![Uniswap Swap](../../../static/img/uniswap-swap.png)
 
 5. ***Execute Request on zrChain***
 

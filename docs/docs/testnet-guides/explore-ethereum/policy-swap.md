@@ -20,15 +20,13 @@ Switch your account back to the original account and go to the “Members” tab
 
 3. ***Create new Policy***
 
-Create a new policy by navigating to the Policy tab. Chose "Create Policy" button which prompts a modal where you can select if it should be the Admin or the Sign policy. Chose ***SIGN*** policy. Give it a name such as "Test Policy" and confirm. In the next step chose the participants. In the case following this guide, I want both parties to approve a request, therefore, both participants are added and after clicking on "next" both are defined as ***required***. 
+Create a new policy by navigating to the Policy tab. Chose "Create Policy" button which prompts a modal where you can enter a name for the policy. In the next step chose the participants from the dropdown and give it an alias. In the case following this guide, I want both parties to approve a request, therefore, both participants are added and after clicking on "next" both are required to approve under this policy. On the summary page click "Create Policy" and sign the transaction.
 
 ![New Policy Members](../../../static/img/build-policy-1.png)
 
-![Set them as required](../../../static/img/build-policy-2.png)
+![Policy Summary](../../../static/img/build-policy-2.png)
 
-![Policy Summary](../../../static/img/build-policy-3.png)
-
-Once the policy is created, set it as sign policy by clicking on the button to create a new policy. This policy will automatically show up on the ***available policies*** section in the workspace. Approve the transaction in Keplr.
+Once the policy is created, set it as an active policy and select ***Set as Sign Policy*** by clicking on the button. This policy will automatically show up on the ***available policies*** section in the workspace. Approve the transaction in Keplr.
 
 ![Set Policy](../../../static/img/set-policy-1.png)
 
@@ -36,11 +34,13 @@ Once the policy is created, set it as sign policy by clicking on the button to c
 
 Now the workspace should show your custom policy as the sign policy. 
 
+![Policy Overview](../../../static/img/set-policy-3.png)
+
 4. ***Connect with WalletConnect Test App***
 
-Now go back to WalletConnect test app and connect it with the frontend as in the [previous steps](walletConnect.md) and select the key you want to use. Approve the session in the web application.
+Now go back to WalletConnect test app and if you haven't done already connect it with the frontend as in the [previous steps](walletConnect.md) and select the key you want to use. Approve the session in the web application.
 
-![Connect Key with WalletConnect](../../../static/img/WC-connect.png)
+![Connect Key with WalletConnect](../../../static/img/wc-approve-connection.png)
 
 5. ***Make a Personal Sign Request***
 

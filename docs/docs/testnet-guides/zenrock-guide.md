@@ -29,7 +29,7 @@ Policies are applied to the workspace. After workspace creation, default policie
 
 ![Policies](../../static/img/policies.png)
 
-4. ***Web3 Integrations***: Here you can connect your keys with other dApps via WalletConnect. This is important as this allows you to access the broad functions of the web3 ecosystem. Initial integration is focused on WalletConnect and we will add more features here soon.
+4. ***Web3 Integrations***: Here you can connect your keys with other dApps for example via WalletConnect. This is important as this allows you to access the broad functions of the web3 ecosystem. Initial integration is focused on EVM and WalletConnect and we will add more features here soon.
 
 ![Integrations](../../static/img/web3-integrations.png)
 
