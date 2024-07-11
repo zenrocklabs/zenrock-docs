@@ -18,6 +18,6 @@ This ensures that relevant accounts are notified of pending actions and prevents
 
 ### Passkeys
 
-**_Passkeys_** enable keys derived from biometrics to be used as workspace approvers.
+**_Passkeys_** enable keys derived from biometrics to be used as workspace approvers. We will add them to the workspace so that users could approve an action for a trusted device they own, adding another factor to their approval process.
 
-When passkeys are implemented, approvals can only be sourced from a certain device or classic Web2 account. Passkeys may be used to ease access and improve the usability of policies.
+When passkeys are implemented, approvals can only be sourced from a certain device or classic Web2 account. This will add a second layer of security to the workspace. Passkeys may be used to ease access and improve the usability of policies.

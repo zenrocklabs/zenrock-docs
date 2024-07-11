@@ -13,7 +13,7 @@ This documentation provides insights into Zenrock chain design as well as it's r
 
 ### What is Zenrock and What Can You Do with It?
 
-Zenrock is a unique combination of blockchain and MPC technology deployed in a form factor that is easy to use for Web3 developers. Zenrock provides permissionless access to institutional-grade private key management through a smart contract on any chain or offchain APIs.  A developer can build a single application on any chain that can initiate highly performant and secure settlement of assets on any other chain (EVM, Cosmos, Solana, Bitcoin). These capabilities allow developers to provide a far faster and more secure cross-chain user experience while simplifying development and maintenance.
+Zenrock is a unique combination of blockchain and MPC technology deployed in a form factor that is easy to use for Web3 developers. Zenrock provides permissionless access to institutional-grade private key management through a smart contract on any chain or offchain APIs. A developer can build a single application on any chain that can initiate highly performant and secure settlement of assets on any other chain (EVM, Cosmos, Solana, Bitcoin). These capabilities allow developers to provide a far faster and more secure cross-chain user experience while simplifying development and maintenance.
 
 ### Remote Control For Your Assets
 
@@ -77,3 +77,11 @@ Besides providing three custom modules ([identity](./zenrock/identity.md), [trea
 and [policy](./zenrock/policy.md)), Zenrock also has support for CosmWasm. The rust-based
 smart contract language allows building more dynamic use cases, dapps and other features
 to facilitate a rapid development and cost-effective interaction.
+
+### Smart Contracts with zrSign
+
+For developers preferring EVM networks to interface with our MPCs, we provide zrSign - a solidity-based smart contract solution that exposes methods to request keys- and signatures. Developers can chose between two versions of zrSign - zrSign Direct and zrSign Omni. 
+
+While they both expose methods to make key- and signature requests, they differ in where the responses are being published. In zrSign direct, the requests are made directly to Zenrocks MPC Federation and returned back to the zrSign smart contract where the public keys and signatures are being stored. This implementation lets other dApps access their assets directly. zrSign Omni forwards the requests to zrChain, where it will be managed through workspaces and exposed to other features like policies and choice of keyrings to process the requests. Thus, bringing zrChain features directly to dApps on the EVM.
+
+Check out zrSign in our [user guide](./testnet-guides/zrSign.md) and on the [implementation docs](./zrSign/_category_.json). 
