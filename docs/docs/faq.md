@@ -33,7 +33,7 @@ Yes, we are supporting CosmWasm for smart contract interaction. We are currently
 The dApp team needs to integrate the zrSign interface into their contracts to make appropriate calls, that will allow cross-chain messaging right away.
 
 ### Where is zrSign deployed? 
-Currently zrSign is deployed on Sepolia under the address [0x8F309C9550D0d69C3f9b8d7BCdC7C93B05Cd089e](https://sepolia.etherscan.io/address/0x8F309C9550D0d69C3f9b8d7BCdC7C93B05Cd089e). To find other implemented zrSign contracts, check in our [address page](./zrSign/releases/addresses.md)! We will update the list frequently.
+Currently zrSign is deployed on several evm networks under the address ```0xA7AdF06a1D3a2CA827D4EddA96a1520054713E1c```. To find the list of deployed instances, check the [address page](./zrSign/releases/addresses.md)! We will update the list frequently.
 
 ### Can a single contract control several wallets within single or multiple networks?
 Yes, a single contract can have as many wallets on supported chains as needed.
