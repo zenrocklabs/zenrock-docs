@@ -267,7 +267,7 @@ contract WalletInteraction {
 ```
 ---
 
-### `estimateFee`
+### `estimateFee` Functions Overview
 
 #### Overview
 A utility function assising the user in estimating how much he needs to pay for a zrSign request and the on-chain response following his request (e.g. returning the user generated key back to the contract).
