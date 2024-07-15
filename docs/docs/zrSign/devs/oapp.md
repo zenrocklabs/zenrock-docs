@@ -29,10 +29,18 @@ If you want to interact with an MPC key generated from an OApp, you will always 
 ## Supported Networks
 The list of supported networks will be expanded as we deploy the OApp (and zrSign contracts) to new networks.
 
-### Outgoing OApps:
-    - Ethereum Sepolia: [0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35](https://sepolia.etherscan.io/address/0x01edbc48854ebd3fcf8f8b9e411847c6d1990a35)
-### Destination OApps:
-    - Polygon Amoy: [0xc0763f6501d331e92aeb54d2c5d76838fa26f1c5](https://amoy.polygonscan.com/address/0xc0763f6501d331e92aeb54d2c5d76838fa26f1c5)
+### Outgoing & Desination OApps:
+
+List of OApps that can both interact with external OApps and receive request which are forwarded to a local on-chain zrSign contract. 
+
+| Network Name     | Chain Id | Address                                                                                                                       |
+| ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Eth Sepolia      | 11155111 | [0x1106565715008703Ebcc55E5b0AdF1EBFE771685](https://sepolia.etherscan.io/address/0x1106565715008703Ebcc55E5b0AdF1EBFE771685) |
+| Avalanche Fuji   | 43113    | [0x68C8A5a0895037bDB8E93DC30d1eCAc055eE9272](https://testnet.snowtrace.io/address/0x68C8A5a0895037bDB8E93DC30d1eCAc055eE9272) |
+| Polygon Amoy     | 80002    | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://amoy.polygonscan.com/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E) |
+| Arbitrum Sepolia | 421614   | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://sepolia.arbiscan.io/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E)  |
+| Base Sepolia     | 84532    | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://sepolia.basescan.org/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E) |
+
 
 ## Functions
 
