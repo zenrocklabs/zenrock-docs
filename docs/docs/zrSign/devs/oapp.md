@@ -40,7 +40,7 @@ List of OApps that can both interact with external OApps and receive request whi
 | Polygon Amoy     | 80002    | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://amoy.polygonscan.com/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E) |
 | Arbitrum Sepolia | 421614   | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://sepolia.arbiscan.io/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E)  |
 | Base Sepolia     | 84532    | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://sepolia.basescan.org/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E) |
-
+| BSC Testnet      | 97       | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://testnet.bscscan.com/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E)  |
 
 ## Functions
 
