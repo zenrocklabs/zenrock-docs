@@ -265,3 +265,30 @@ contract WalletInteraction {
     }
 }
 ```
+---
+
+### `estimateFee` Functions Overview
+
+#### Overview
+A utility function assising the user in estimating how much he needs to pay for a zrSign request and the on-chain response following his request (e.g. returning the user generated key back to the contract).
+
+There are two functions allowing the user to estimate the fee based on the values they have available to them.
+
+#### Parameters (Option #1): 
+- `options (uint8)`: The `options` field is an enum specifiying the different "modes" of key management. Currently we offer the following:
+    - `1`: Simple key creation without any added features.
+    - `2`: Added monitoring to the generated key which inform the off-chain services to keep track and monitor activity. This is useful for chains such as Bitcoin where you need to keep track of UTXO's.
+- `value (uint256)`: The additional value you're planning on passing within the transaction.
+
+> **_NOTE:_**  When estimating key generation then option #1 should be used as you don't have the wallet details listed in option #2.
+
+#### Parameters (Option #2): 
+- `walletTypeId (bytes32)`:  A `bytes32` identifier that specifies the type of wallet. This identifier is used to fetch the corresponding key.
+- `owner (address)`: The owner of the generated walletwallet
+- `walletIndex (uint256)`: Index of the wallet which will be signing the hash.
+- `value (uint256)`: The additional value you're planning on passing within the transaction.
+
+#### Return Type
+- `mpc fee (uint256)` - the fee sent to the MPC's for providing their signing services.
+- `network fee (uint256)` - The fee for the on-chain transaction that will return the result. This field would also include the additional `value` if added.
+- `total fee (uint256)` - The total amount from the `mpc` and `network` fees above.
