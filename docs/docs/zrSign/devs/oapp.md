@@ -35,12 +35,12 @@ List of OApps that can both interact with external OApps and receive request whi
 
 | Network Name     | Chain Id | Address                                                                                                                       |
 | ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Eth Sepolia      | 11155111 | [0x1106565715008703Ebcc55E5b0AdF1EBFE771685](https://sepolia.etherscan.io/address/0x1106565715008703Ebcc55E5b0AdF1EBFE771685) |
-| Avalanche Fuji   | 43113    | [0x68C8A5a0895037bDB8E93DC30d1eCAc055eE9272](https://testnet.snowtrace.io/address/0x68C8A5a0895037bDB8E93DC30d1eCAc055eE9272) |
-| Polygon Amoy     | 80002    | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://amoy.polygonscan.com/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E) |
-| Arbitrum Sepolia | 421614   | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://sepolia.arbiscan.io/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E)  |
-| Base Sepolia     | 84532    | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://sepolia.basescan.org/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E) |
-| BSC Testnet      | 97       | [0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E](https://testnet.bscscan.com/address/0xC9706D80b1Bee144Ae5c5654FD5C658C3Bc6467E)  |
+| Eth Sepolia      | 11155111 | [0x487acbd32588f233c04D49E4B0C5804CEB56d29C](https://sepolia.etherscan.io/address/0x487acbd32588f233c04D49E4B0C5804CEB56d29C) |
+| Avalanche Fuji   | 43113    | [0x5feA7F3394c425F58EC66F8e31cEEBf4879A862b](https://testnet.snowtrace.io/address/0x5feA7F3394c425F58EC66F8e31cEEBf4879A862b) |
+| Polygon Amoy     | 80002    | [0x75Fb47e5159c36C366813447D8cF2FB689D7Fd42](https://amoy.polygonscan.com/address/0x75Fb47e5159c36C366813447D8cF2FB689D7Fd42) |
+| Arbitrum Sepolia | 421614   | [0xAEC4990BEa6Eb901E57e6272555eeA365A7c0bd2](https://sepolia.arbiscan.io/address/0xAEC4990BEa6Eb901E57e6272555eeA365A7c0bd2)  |
+| Base Sepolia     | 84532    | [0x75Fb47e5159c36C366813447D8cF2FB689D7Fd42](https://sepolia.basescan.org/address/0x75Fb47e5159c36C366813447D8cF2FB689D7Fd42) |
+| BSC Testnet      | 97       | [0x95Ef67323E74394501c16F8eA10Db9E993179deB](https://testnet.bscscan.com/address/0x95Ef67323E74394501c16F8eA10Db9E993179deB)  |
 
 ## Functions
 
