@@ -1,12 +1,12 @@
 ---
 title: Validation Module
 sidebar_label: Validation Module
-sidebar_position: 6
+sidebar_position: 7
 ---
 
 Zenrock's **_Validation Module_** is zrChain's economic security module, effectively replacing the staking module.
 
-Besides the features of the staking module, the validation module also facilitates the support of vote extensions which are necessary to support additional economic security through an Eigenlayer integration.
+Besides the features of the staking module, the validation module also facilitates the support of vote extensions which are necessary to support additional economic security through an EigenLayer integration.
 
 ### Vote Extensions
 
