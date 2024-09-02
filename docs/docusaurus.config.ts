@@ -60,7 +60,7 @@ const config: Config = {
         {
           label: 'Zenrock Blockchain',
           position: 'left',
-          to: 'zrchain/architecture',
+          to: 'zrChain/architecture',
         },
         {
           label: 'zrSign',
