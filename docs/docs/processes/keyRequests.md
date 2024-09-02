@@ -9,7 +9,7 @@ and generating a key from a keyring service.
 
 ![Key Request Process](../../static/img/keyrequest_process.png)
 
-1. ***Workspace Owner Initiates Key Request***: The process begins with an owner of a workspace sending a key request to Zenrock. This request includes the [key type](../zenrock/treasury.md#supported-keys), [workspace](../zenrock/identity.md#workspaces), and the [keyring](../zenrock/identity.md#keyrings) address. A fee to create the key according to the fee model inside the keyring is being charged.
+1. ***Workspace Owner Initiates Key Request***: The process begins with an owner of a workspace sending a key request to Zenrock. This request includes the [key type](../zrchain/treasury.md#supported-keys), [workspace](../zrchain/identity.md#workspaces), and the [keyring](../zrchain/identity.md#keyrings) address. A fee to create the key according to the fee model inside the keyring is being charged.
 2. ***Zenrock Stores Request***: Upon receiving the request, Zenrock verifies and stores the request and marks the status as "pending". This indicates that the key request is acknowledged but not yet processed by the keyring yet.
 3. ***MPC Connector Detects Pending Request***: The MPC Connector monitors for any pending key requests. When it detects the request with the specified keyring address, it picks it up for further processing.
 4. ***MPC Connector Forwards Request***: The MPC Connector then forwards the key request to the MPC Federation, which is responsible for generating the key.

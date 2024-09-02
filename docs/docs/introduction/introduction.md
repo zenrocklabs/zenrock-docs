@@ -26,7 +26,7 @@ Developers can interface zrSign smart contracts to integrate it into their own d
 
 An integration with zrSign comes with additional benefits such as increased speed through a direct MPC response and remote execution of transactions on supported networks. Furthermore, cross-chain transactions don't require to be initiated via bridges, which can be a security risk and are often a single point of failure. 
 
-Read more about zrSign [here](./zrSign/_category_.json).
+Read more about zrSign [here](../zrSign/_category_.json).
 
 ### zrChain
 zrChain is Zenrock's own blockchain and the home of the native ROCK token. It is a sovereign application-specific blockchain built with the Cosmos SDK and extends the features that are present on zrSign. zrChain is secured by the economic security of the ROCK token, but also through assets on Ethereum through an new Eigenlayer integration as zrChain's AVS (Actively Validated Services).
@@ -35,7 +35,7 @@ zrChain comes with various tools to make MPC easier to use and access as well as
 
 Developers can also build their own dApps on zrChain through CosmWasm smart contracts and access the full suite of zrChain features directly. 
 
-Read more about zrChain [here](./zrChain/_category_.json).
+Read more about zrChain [here](../zrChain/_category_.json).
 
 ### zenBTC
 
