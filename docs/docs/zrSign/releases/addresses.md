@@ -29,4 +29,4 @@ More EVM chains will be announced soon!
 
 ### zrSign Omni
 
-In zrSign Omni with it beying closely entangled with Zenrock chain, zrSign will have only EVM support to begin with but will add more networks like more EVM chains, Bitcoin, Cosmos, and Solana to fulfill Zenrock's [omnichain vision](../../introduction.md#going-omnichain-with-zenrock) throughout testnet phase.
+In zrSign Omni with it beying closely entangled with Zenrock chain, zrSign will have only EVM support to begin with but will add more networks like more EVM chains, Bitcoin, Cosmos, and Solana to fulfill Zenrock's [omnichain vision](../../introduction/introduction.md#going-omnichain-with-zenrock) throughout testnet phase.

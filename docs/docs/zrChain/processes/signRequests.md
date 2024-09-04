@@ -9,7 +9,7 @@ and generating a signature for a specific key.
 The overall process has many similarities to the [key request process](keyRequests.md), 
 with differences in additional policy verification and storage of the requests.
 
-![Signature Request Process](../../static/img/signrequest_process.png)
+![Signature Request Process](../../../static/img/signrequest_process.png)
 
 1. ***Workspace Owner Initiates Signature Request***: The process starts with an owner of a workspace sending a signature request for a specific key inside the workspace to Zenrock.
 2. ***Storing of Signature Request***: Zenrock stores this request with a status that depends on the sign policy within the workspace. If other approvers are required, the status will be "partial". This indicates that the signature process requires approval from other workspace owners. If no other approvers are required, the status will be changed to "pending", indicating that the MPC can start processing the request. 

@@ -60,7 +60,7 @@ const config: Config = {
         {
           label: 'Zenrock Blockchain',
           position: 'left',
-          to: 'zenrock/architecture',
+          to: 'zrChain/architecture',
         },
         {
           label: 'zrSign',
@@ -75,7 +75,7 @@ const config: Config = {
       ],
     },
     footer: {
-      style: 'light',
+      style: 'dark',
       links: [
         {
           title: 'Docs',
@@ -109,7 +109,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Zenrock Labs, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Zenrock Labs, Inc.`,
     },
     prism: {
       theme: prismThemes.github,

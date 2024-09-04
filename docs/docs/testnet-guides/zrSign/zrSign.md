@@ -1,16 +1,16 @@
 ---
 title: zrSign Developer Guide 
 sidebar_label: zrSign Developer Guide
-sidebar_position: 4
+sidebar_position: 1
 ---
 
 zrSign provides Zenrock MPC network features via key and signature requests. Current support is for EVM-based chains with many more coming in the near future.
-Interfacing with zrSign allows Solidity-based dApps to invoke zrSign's methods and access its state. For more information on zrSign and its integration, refer to [this section](../../../docs/docs/zrSign/concepts/zrSign.md) of our documentation.
+Interfacing with zrSign allows Solidity-based dApps to invoke zrSign's methods and access its state. For more information on zrSign and its integration, refer to [this section](../../zrSign/concepts/zrSign.md) of our documentation.
 This page focuses on the differences between zrSign Direct and zrSign Omni and how they can be leveraged for different use cases.
 
 ## zrSign Direct
 
-zrSign Direct enables developers to [interface](../zrSign/devs/references/izrsign-interface.md) their dApps directly with zrSign, allowing them to build use cases based on the keys and signatures returned by the Zenrock MPC network and managed directly by the smart contract. zrSign Direct allows dApp developers to query keys and signatures directly from the smart contract for use within the dApp.
+zrSign Direct enables developers to [interface](../../zrSign/devs/references/izrsign-interface.md) their dApps directly with zrSign, allowing them to build use cases based on the keys and signatures returned by the Zenrock MPC network and managed directly by the smart contract. zrSign Direct allows dApp developers to query keys and signatures directly from the smart contract for use within the dApp.
 
 ## zrSign Omni
 

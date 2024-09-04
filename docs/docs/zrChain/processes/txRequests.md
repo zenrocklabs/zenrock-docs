@@ -10,7 +10,7 @@ The transaction signature request is a subtype of a general signature request, t
 overall process has many similarities to the [signature request process](signRequests.md). 
 However, the request differs with additional wallet type and destination chain- or prefix definition, 
 
-![Transaction Request Process](../../static/img/txrequest_process.png)
+![Transaction Request Process](../../../static/img/txrequest_process.png)
 
 1. ***Workspace Owner Initiates Transaction Signature Request***: The process starts with an owner of a workspace sending a transaction signature request for a specific key inside the workspace to Zenrock, indicating the wallet type and the destination chain.
 2. ***Parsing and Formatting Signature Request***: When the unsigned transaction is broadcasted to Zenrock, the unsigned transaction will get parsed to check for the transaction details. Depending on the workspace's signing policy, a different policy may be in effect. For example, if the transaction transfers over a significant amount of the underlying coin.
