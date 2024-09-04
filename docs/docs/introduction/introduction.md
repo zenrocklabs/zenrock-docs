@@ -55,7 +55,7 @@ This approach can not only save gas costs but also bring a performance benefit.
 
 The Zenrock blockchain is our sovereign application-specific blockchain built with the Cosmos SDK and provides a broad variety of creating workspaces to manage your keys and assets across various destination networks in a secure and efficient manner. 
 
-To target the EVM networks, we are providing zrSign smart contracts written in solidity that can either be directly interacted with or be interfaced into other dApps. The zrSign smart contracts provide the possibility of requesting keys and signatures with different levels of privacy and purposes. 
+To target the EVM networks, we are providing zrSign smart contracts written in Solidity that can either be directly interacted with or be interfaced into other dApps. The zrSign smart contracts provide the possibility of requesting keys and signatures with different levels of privacy and purposes. 
 
 ### Destination Networks
 
