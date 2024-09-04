@@ -6,7 +6,7 @@ sidebar_position: 3
 
 ## Smart Contract Integration with zrSign
 
-For developers preferring EVM networks to interface with our MPCs, we provide zrSign - a solidity-based smart contract solution that exposes methods to request keys- and signatures. Developers can chose between two versions of zrSign - zrSign Direct and zrSign Omni. 
+For developers preferring EVM networks to interface with our MPCs, we provide zrSign - a Solidity-based smart contract solution that exposes methods to request keys and signatures. Developers can chose between two versions of zrSign: zrSign Direct and zrSign Omni. 
 
 While they both expose methods to make key- and signature requests, they differ in where the responses are being published. In zrSign direct, the requests are made directly to Zenrocks MPC Federation and returned back to the zrSign smart contract where the public keys and signatures are being stored. This implementation lets other dApps access their assets directly. zrSign Omni forwards the requests to zrChain, where it will be managed through workspaces and exposed to other features like policies and choice of keyrings to process the requests. Thus, bringing zrChain features directly to dApps on the EVM.
 
