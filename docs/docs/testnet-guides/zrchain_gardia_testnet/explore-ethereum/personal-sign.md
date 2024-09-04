@@ -11,8 +11,8 @@ Personal sign is a simple signature request that is not used to sign a transacti
 The other methods exposed on this frontend are not relevant for this guide, but are important for developers who want to use them. zrChain supports these types of WalletConnect methods and can be invoked through a dApp.
 
 <div style={{maxWidth: "400px", margin: "0 auto"}}>
-
-![WalletConnect Menu](../../../static/img/wc-menu.png)
+ 
+![WalletConnect Menu](../../../../static/img/wc-menu.png)
 
 </div>
 
@@ -22,7 +22,7 @@ Click on it and you will see it prompts a sign request for the connected wallet.
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![WalletConnect Approve Connection](../../../static/img/wc-approve-connection.png)
+![WalletConnect Approve Connection](../../../../static/img/wc-approve-connection.png)
 
 </div>
 
@@ -32,7 +32,7 @@ Check the Zenrock web application frontend. You should see a counter over “Sig
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![WalletConnect Personal Sign](../../../static/img/wc-personal-sign.png)
+![WalletConnect Personal Sign](../../../../static/img/wc-personal-sign.png)
 
 </div>
 
@@ -42,6 +42,6 @@ The MPC Network processes the request and returns a signature. This signature ge
 
 <div style={{maxWidth: "400px", margin: "0 auto"}}>
 
-![WalletConnect Approved Personal Sign](../../../static/img/wc-approved-sign.png)
+![WalletConnect Approved Personal Sign](../../../../static/img/wc-approved-sign.png)
 
 </div>

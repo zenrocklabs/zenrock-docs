@@ -11,7 +11,7 @@ Before we start, fund your MPC generated address to have funds for gas and the s
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Zenrock Portfolio](../../../static/img/portfolio-key-1.png)
+![Zenrock Portfolio](../../../../static/img/portfolio-key-1.png)
 
 </div>
 
@@ -21,7 +21,7 @@ It should look like this:
 
 <div style={{maxWidth: "600px", margin: "0 auto"}}> 
 
-![Uniswap Testapp](../../../static/img/uniswap.png)
+![Uniswap Testapp](../../../../static/img/uniswap.png)
 
 </div>
 
@@ -30,8 +30,8 @@ Now go to “Connect” and connect your WalletConnect session with the web appl
 Make sure you are connected by checking the connected address on Uniswap is the same as the one selected on the Zenrock web application. 
 
 <div style={{display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap"}}>
-  <img src={require("../../../static/img/uniswap-uri.png").default} alt="Uniswap URI" style={{maxWidth: "300px", margin: "10px"}} />
-  <img src={require("../../../static/img/uniswap-integration.png").default} alt="Uniswap Integration" style={{maxWidth: "800px", margin: "10px"}} />
+  <img src={require("../../../../static/img/uniswap-uri.png").default} alt="Uniswap URI" style={{maxWidth: "300px", margin: "10px"}} />
+  <img src={require("../../../../static/img/uniswap-integration.png").default} alt="Uniswap Integration" style={{maxWidth: "800px", margin: "10px"}} />
 </div>
 
 ### ***Initiate Swap***
@@ -40,7 +40,7 @@ Now select WETH as the token to swap your Sepolia ETH. Select a tiny amount, for
 
 <div style={{maxWidth: "400px", margin: "0 auto"}}> 
 
-![Uniswap Swap](../../../static/img/uniswap-swap.png)
+![Uniswap Swap](../../../../static/img/uniswap-swap.png)
 
 </div>
 
@@ -50,7 +50,7 @@ After you clicked on `Swap` go back to the Zenrock chain web application. Again 
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}> 
 
-![Uniswap Swap Initiation on zrChain](../../../static/img/uniswap-swap-zrchain.png)
+![Uniswap Swap Initiation on zrChain](../../../../static/img/uniswap-swap-zrchain.png)
 
 </div>
 

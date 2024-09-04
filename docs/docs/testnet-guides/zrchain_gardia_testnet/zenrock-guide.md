@@ -14,7 +14,7 @@ This workspace will allow you to request keys from the keyrings.
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Create Workspace](../../static/img/create-workspace.png)
+![Create Workspace](../../../static/img/create-workspace.png)
 
 </div>
 
@@ -24,7 +24,7 @@ This workspace will allow you to request keys from the keyrings.
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}> 
 
-![Empty Portfolio](../../static/img/empty-portfolio.png)
+![Empty Portfolio](../../../static/img/empty-portfolio.png)
 
 </div>
 
@@ -32,7 +32,7 @@ This workspace will allow you to request keys from the keyrings.
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Workspace Overview](../../static/img/workspace-overview.png)
+![Workspace Overview](../../../static/img/workspace-overview.png)
 
 </div>
 
@@ -41,7 +41,7 @@ Policies are applied to the workspace. After workspace creation, default policie
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Policies](../../static/img/policies.png)
+![Policies](../../../static/img/policies.png)
 
 </div>
 
@@ -49,7 +49,7 @@ Policies are applied to the workspace. After workspace creation, default policie
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Integrations](../../static/img/web3-integrations.png)
+![Integrations](../../../static/img/web3-integrations.png)
 
 </div>
 
@@ -57,7 +57,7 @@ Policies are applied to the workspace. After workspace creation, default policie
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Your Keys](../../static/img/keys.png)
+![Your Keys](../../../static/img/keys.png)
 
 </div>
 
@@ -65,7 +65,7 @@ Policies are applied to the workspace. After workspace creation, default policie
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Your Signature Requests](../../static/img/sign-requests.png)
+![Your Signature Requests](../../../static/img/sign-requests.png)
 
 </div>
 
@@ -73,7 +73,7 @@ Policies are applied to the workspace. After workspace creation, default policie
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Workspace Members](../../static/img/members.png)
+![Workspace Members](../../../static/img/members.png)
 
 </div>
 
@@ -81,7 +81,7 @@ Policies are applied to the workspace. After workspace creation, default policie
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Actions](../../static/img/actions.png)
+![Actions](../../../static/img/actions.png)
 
 </div>
 
@@ -91,7 +91,7 @@ Now it’s time to create your first key. To do so, navigate to the “Your Keys
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Key Request](../../static/img/key-request.png)
+![Key Request](../../../static/img/key-request.png)
 
 </div>
 
@@ -101,6 +101,6 @@ Go to your Portfolio to see the addresses that can be derived from your key. You
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Portfolio with One Key](../../static/img/portfolio-key-1.png)
+![Portfolio with One Key](../../../static/img/portfolio-key-1.png)
 
 </div>

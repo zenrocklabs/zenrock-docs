@@ -17,7 +17,7 @@ To manage your Zenrock account in Keplr, add the Zenrock network to the list of 
 
 <div style={{maxWidth: "400px", margin: "0 auto"}}>
 
-![Keplr Chain Visibility](../../static/img/keplr-checkbox.png)
+![Keplr Chain Visibility](../../../static/img/keplr-checkbox.png)
 
 </div>
 
@@ -35,7 +35,7 @@ curl <https://faucet.gardia.zenrocklabs.io> -XPOST -d'{"address":"<YOUR ZENROCK 
 
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
-![ROCK faucet](../../static/img/faucet.png)
+![ROCK faucet](../../../static/img/faucet.png)
 
 </div>
 
