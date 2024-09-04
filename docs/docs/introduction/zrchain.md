@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ## Overview
 
-The Zenrock Blockchain is the flagship product of the Zenrock project to provide bedrock security infrastructure that will support an omnichain future. Through our custom modules for identity- and asset management, we provide a comprehensive means to build applications to **_natively_** interact with the largest blockchain networks.
+The Zenrock Blockchain is the flagship product of the Zenrock project to provide bedrock security infrastructure that will support an omnichain future. Through our custom modules for identity and asset management, we provide a comprehensive means to build applications to **_natively_** interact with the largest blockchain networks.
 
 ### Policies
 
