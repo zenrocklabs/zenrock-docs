@@ -61,4 +61,4 @@ To target the EVM networks, we are providing zrSign smart contracts written in s
 
 While the Cosmos-based Zenrock Blockchain and zrSign on EVM networks can be used to make requests, we will support the most popular networks as destination to execute transactions, such as ***other EVM networks***, ***Bitcoin***, ***Solana***, and the ***Cosmos ecosystem***. The created keys can be reused across networks as long as those networks support the key type, like a secp256k1 ecdsa key can be used for EVM- and Cosmos networks. 
 
-With the launch of testnet, we will start with support for the EVM as a narrower scope for testnet and will incrementally add support for the other networks, too. There will be frequently new features to explore, so stay tuned!
+With the launch of the testnet, we will start with support for EVM as a narrower scope for testnet and will incrementally add support for the other networks, too. There will be frequently new features to explore, so stay tuned!
