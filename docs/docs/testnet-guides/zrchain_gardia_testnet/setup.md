@@ -25,7 +25,7 @@ To manage your Zenrock account in Keplr, add the Zenrock network to the list of 
 
 When first accessing the frontend with an empty wallet, you will immediately be prompted to request some ROCK tokens from the faucet.
 
-$ROCK is the native token of zrChain and is required for gas fees, governance and keyring fees.
+ROCK is the native token of zrChain and is required for gas fees, governance and keyring fees.
 
 Alternatively, you can request ROCK via the wallet menu on the top right or make a direct http request to the faucet: 
 
