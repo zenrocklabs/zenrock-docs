@@ -21,7 +21,7 @@ To manage your Zenrock account in Keplr, add the Zenrock network to the list of 
 
 </div>
 
-### Fund your Wallet with $ROCK
+### Fund your Wallet with ROCK
 
 When first accessing the frontend with an empty wallet, you will immediately be prompted to request some $ROCK tokens from the faucet.
 
