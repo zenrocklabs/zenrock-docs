@@ -15,7 +15,7 @@ Developers can build a single application on any chain that can initiate highly 
 
 Zenrock lets users directly interact with your favorite dapps across supported networks. No need for bridges between the networks. Since the public key and signatures are stored securely and tamperproof on Zenrock, with the possibility of having private transactions, all that needs to be done is assembling the unsigned transaction with the signature and publish it to an RPC node of the destination network. Zenrock has relayers in place for most of the networks already to improve the user experience as much as possible.
 
-This design lets users remotely control their assets from Zenrock and reduces the need for many smart contract hops, wrapping of assets and drastically reduces time and transaction fees. With the possibility of building smart contracts on CosmWasm, Zenrock is a great place of aggregating many cross chain use cases, bundle liquidity and addresses across many networks.
+This design lets users remotely control their assets from Zenrock and reduces the need for many smart contract hops, wrapping of assets and drastically reduces time and transaction fees. With the possibility of building smart contracts on CosmWasm, Zenrock is a great place for aggregating many cross chain use cases, bundle liquidity and addresses across many networks.
 
 ## Zenrock Products
 
