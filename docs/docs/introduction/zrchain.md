@@ -28,4 +28,4 @@ For more detailed information about zrChain, check out the [zrChain docs](../zrC
 
 ### Cosmos SDK
 
-zrChain is built with the Cosmos SDK which is a modular blockchain framework customized to build application-specific blockchains with their own set of validators and connected to the cosmos ecosystem with the IBC protocol. Besides easily implementing your own custom modules, the Cosmos SDK brings standard modules that cover the basics of blockchain interaction, like for example the interface to CometBFT - the underlying consensus engine. This allows Zenrock to be highly performant, compatible and tailored for its own applications.
+zrChain is built with the Cosmos SDK which is a modular blockchain framework customized to build application-specific blockchains with their own set of validators and connected to the Cosmos ecosystem with the IBC protocol. Besides easily implementing your own custom modules, the Cosmos SDK brings standard modules that cover the basics of blockchain interaction, like for example the interface to CometBFT - the underlying consensus engine. This allows Zenrock to be highly performant, compatible and tailored for its own applications.
