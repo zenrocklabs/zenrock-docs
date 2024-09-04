@@ -14,7 +14,7 @@ Check out zrSign in our [user guide](../testnet-guides/zrSign/zrSign.md) and on 
 
 ## zrSign Versions
 
-zrSign offers two versions to choose from, each exposing methods to make key- and signature requests, called [zrSign Direct](../zrSign/releases/zrSignDirect.md) and [zrSign Omni](../zrSign/releases/zrSignOmni.md).
+zrSign offers two versions to choose from, each exposing methods to make key and signature requests, called [zrSign Direct](../zrSign/releases/zrSignDirect.md) and [zrSign Omni](../zrSign/releases/zrSignOmni.md).
 
 Both versions are implemented in Solidity and can be used to make requests to the Zenrocks MPC Federations. The main difference is where the responses are being published. zrSign Direct publishes the responses back to the smart contract, while zrSign Omni publishes the responses to zrChain. 
 
