@@ -20,7 +20,7 @@ Select `Sepolia` as a network, scroll down and click on `connect`. This will pro
 
 </div>
 
-If you have done the previous step already, you will directly get prompted to select `Zenrock Chain Wallets`. This will let you access your mpc MPC generated keys stored in your workspace on zrChain. Alternatively, click on "New Pairing" to start a new session. In this case, we recommend to reload the page of the web application, too.
+If you have done the previous step already, you will directly get prompted to select `Zenrock Chain Wallets`. This will let you access your MPC generated keys stored in your workspace on zrChain. Alternatively, click on "New Pairing" to start a new session. In this case, we recommend to reload the page of the web application, too.
 
 <div style={{display: "flex", justifyContent: "center", gap: "20px", flexWrap: "wrap"}}>
   <img src={require("../../../../static/img/wc-connection.png").default} alt="WalletConnect Keys Selection" style={{maxWidth: "400px", margin: "10px"}} />
