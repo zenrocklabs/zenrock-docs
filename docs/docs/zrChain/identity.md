@@ -18,10 +18,10 @@ Lastly, a keyring provider can set the costs that occur for each key and signatu
 
 ### Workspaces
 
-**_Workspaces_** allow users (Workspace owners) to manage sets of keys. This allows key rotation and decouples the risk from managing wallets through one single account.
+**_Workspaces_** allow users (workspace owners) to manage sets of keys. This allows key rotation and decouples the risk from managing wallets through one single account.
 
 Apart from having associated keys, workspace settings also define [policies](policy.md) for admin and signature tasks.
 
-Policies define governance of the Workspace. They typically specify which combination of accounts must provide approval for a signature to be considered valid.
+Policies define governance of the workspace. They typically specify which combination of accounts must provide approval for a signature to be considered valid.
 
-Policies also provide a governance structure for Workspace changes and can be used to prevent giving a single account full control over the Workspace.
+Policies also provide a governance structure for workspace changes and can be used to prevent giving a single account full control over the workspace.

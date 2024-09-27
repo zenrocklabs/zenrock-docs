@@ -18,7 +18,7 @@ zrSign Omni (coming this summer), exposes Zenrock chain (zrChain) features for E
 This fully integrates key and signature requests with zrChain. 
 
 zrSign Omni:
-1. Allows keys to be embedded in a Workspace which can be used by an admin, and to sign policies
+1. Allows keys to be embedded in a workspace which can be used by an admin, and to sign policies
 2. Provides developers access to a broader set of blockchains than zrSign Direct (most notably Bitcoin and Solana)
 3. Allows developers to craft custom business rules in the form of Policies to control transaction flows, necessary approvers, etc.
 4. Allows developers to use other keyring providers, in addition to the Zenrock MPC network 
