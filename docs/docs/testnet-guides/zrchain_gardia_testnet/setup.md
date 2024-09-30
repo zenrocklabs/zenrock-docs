@@ -27,12 +27,6 @@ When first accessing the frontend with an empty wallet, you will immediately be 
 
 ROCK is the native token of zrChain and is required for gas fees, governance and keyring fees.
 
-Alternatively, you can request ROCK via the wallet menu on the top right or make a direct http request to the faucet: 
-
-```bash
-curl <https://faucet.gardia.zenrocklabs.io> -XPOST -d'{"address":"<YOUR ZENROCK ADDRESS>"}'
-```
-
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
 ![ROCK faucet](../../../static/img/faucet.png)
