@@ -27,6 +27,16 @@ To manage your Zenrock account in Keplr, add the Zenrock network to the list of 
 
 </div>
 
+### Fund your Wallet with ROCK
+
+When first accessing the frontend with an empty wallet, you will immediately be prompted to request some ROCK tokens from the faucet.
+
+ROCK is the native token of zrChain and is required for gas fees, governance and keyring fees.
+
+<div style={{maxWidth: "600px", margin: "0 auto"}}>
+
+![ROCK faucet](../../../static/img/faucet.png)
+  
 ### Zenrock Chain Explorer
 
 zrChain testnet comes with its own block explorer where you can see your transactions on zrChain. The block explorer is accessible [here](https://explorer.gardia.zenrocklabs.io).
