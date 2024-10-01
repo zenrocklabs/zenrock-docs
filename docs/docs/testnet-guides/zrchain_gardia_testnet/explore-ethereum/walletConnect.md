@@ -12,11 +12,19 @@ Go to the WalletConnect test environment: [https://react-app.walletconnect.com/]
 
 ### Initiate Session
 
-Select `Sepolia` as a network, scroll down and click on `connect`. This will prompt a QR code. On the top right, copy the payload (a WalletConnect URI) and go back to the integrations tab in the web application. Chose the key you want to connect with and enter the URI and approve the session.
+Select `Sepolia` as a network, scroll down and click on `connect`. This will prompt a QR code. On the top right, copy the payload (a WalletConnect URI) and go back to the `Apps` tab in the web application for your workspace. Chose the key you want to connect with and click on `Add New Session` enter the URI and approve the session.
+
+<div style={{maxWidth: "600px", margin: "0 auto"}}>
+
+![WalletConnect QR Code](../../../../static/img/new-wc-session.png)
+
+</div>
+
+Afterwards, you can enter the URI that you copied from WalletConnect in the field `Enter WalletConnect URI` and click on `Add Session`. Next you need to approve it to tie it to the MPC key in your workspace.
 
 <div style={{maxWidth: "300px", margin: "0 auto"}}>
 
-![WalletConnect QR Code](../../../../static/img/wc-qr-code.png)
+![WalletConnect QR Code](../../../../static/img/add-wc-session-prompt.png)
 
 </div>
 
@@ -27,21 +35,19 @@ If you have done the previous step already, you will directly get prompted to se
   <img src={require("../../../../static/img/wc-connection2.png").default} alt="WalletConnect Pending Approval" style={{maxWidth: "400px", margin: "10px"}} />
 </div>
 
-### Approve Connection on Zenrock
+### Verify Connection is Established
 
-Go back to the Zenrock Web Application in the tab `Integrations`. Here, click on approve to finalise the connection with WalletConnect.
+On the Apps tab in the web application you can see that the Session for WalletConnect is added. You can also see it on the WalletConnect App directly.
 
-<div style={{maxWidth: "800px", margin: "0 auto"}}>
+<div style={{maxWidth: "600px", margin: "0 auto"}}>
 
-![WalletConnect Approve Connection](../../../../static/img/wc-approve-connection.png)
+![Wallet Connect Menu](../../../../static/img/wc-established.png)
 
 </div>
 
-### Verify Connection is Established
-
 Now go back to the WalletConnect App and you see that the key from zrChain is selected in the wallet.
 
-<div style={{maxWidth: "400px", margin: "0 auto"}}>
+<div style={{maxWidth: "600px", margin: "0 auto"}}>
 
 ![Wallet Connect Menu](../../../../static/img/wc-menu.png)
 
