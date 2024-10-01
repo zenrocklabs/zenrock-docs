@@ -35,8 +35,10 @@ ROCK is the native token of zrChain and is required for gas fees, governance and
 
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
-![ROCK faucet](../../../static/img/faucet.png)
-  
+![ROCK faucet](../../../static/img/fund-wallet.png)
+
+</div>
+
 ### Zenrock Chain Explorer
 
 zrChain testnet comes with its own block explorer where you can see your transactions on zrChain. The block explorer is accessible [here](https://explorer.gardia.zenrocklabs.io).
