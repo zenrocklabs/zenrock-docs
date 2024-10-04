@@ -25,14 +25,6 @@ This function requests a signature for a hash associated with a specific wallet 
 function zrSignHash(SignTypes.ZrSignParams calldata params) external payable;
 ```
 
-### zrSignData
-
-This function requests a signature for data associated with a specific wallet type and public key index. It should be payable to allow sending Ether along with the request.
-
-```solidity
-function zrSignData(SignTypes.ZrSignParams calldata params) external payable;
-```
-
 ### zrSignTx
 
 This function requests a signature for a transaction data associated with a specific wallet type and public key index. If the broadcast flag is true, the transaction will be broadcasted after being signed. It should be payable to allow sending Ether along with the request.
@@ -118,11 +110,6 @@ interface IZrSign {
     // The hash is associated with a specific wallet type and public key index
     // The function is payable to allow sending Ether along with the request
     function zrSignHash(SignTypes.ZrSignParams calldata params) external payable;
-
-    // Request a signature for data
-    // The data is associated with a specific wallet type and public key index
-    // The function is payable to allow sending Ether along with the request
-    function zrSignData(SignTypes.ZrSignParams calldata params) external payable;
 
     // Request a signature for a transaction
     // The transaction data is associated with a specific wallet type and public key index

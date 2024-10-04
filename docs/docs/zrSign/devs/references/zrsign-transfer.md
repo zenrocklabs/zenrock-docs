@@ -375,10 +375,6 @@ interface IZrSign {
         external
         payable;
 
-    function zrSignData(SignTypes.ZrSignParams calldata params)
-        external
-        payable;
-
     function zrSignTx(SignTypes.ZrSignParams calldata params) external payable;
 
     function isWalletTypeSupported(bytes32 walletTypeId)
@@ -459,30 +455,6 @@ abstract contract ZrSignConnect {
         });
 
         IZrSign(zrSign).zrSignHash{value: _fee}(params);
-    }
-
-    // Request a signature for a specific data payload
-    // This function uses the ZrSign contract to request a signature for a specific data payload
-    // Parameters:
-    // - walletTypeId: The ID of the wallet type associated with the data payload
-    // - fromAccountIndex: The index of the public key to be used for signing
-    // - dstChainId: The ID of the destination chain
-    // - payload: The data payload to be signed
-    function reqSignForData(
-        bytes32 walletTypeId,
-        uint256 walletIndex,
-        bytes32 dstChainId,
-        bytes memory payload
-    ) internal virtual {
-        uint256 _fee = calculateFeeForSign(abi.encode(payload));
-        SignTypes.ZrSignParams memory params = SignTypes.ZrSignParams({
-            walletTypeId: walletTypeId,
-            walletIndex: walletIndex,
-            dstChainId: dstChainId,
-            payload: payload,
-            broadcast: false
-        });
-        IZrSign(zrSign).zrSignData{value: _fee}(params);
     }
 
     // Request a signature for a transaction
