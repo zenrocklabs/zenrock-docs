@@ -23,7 +23,7 @@ Click on `requestNewEvmKey()` and set the right parameters. Attribute `requestNe
 
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
-![Request EVM Key](../../../static/img/requestNewEVMWallet.png)
+![Request EVM Key](../../../static/img/requestNewEvmWallet.png)
 
 </div>
 
