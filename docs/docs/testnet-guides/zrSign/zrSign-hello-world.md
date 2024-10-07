@@ -42,6 +42,8 @@ Lastly, request a signature for a message of your choice. Go to the `Write Contr
 0x8a9a9c58b754a98f1ff302a7ead652cfd23eb36a5791767b5d185067dd9481c2
 ```
 
+For more information about CAIP-2 chain ids that are currently supported, check out the [support document](../../zrSign/releases/addresses.md).
+
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
 ![SignMessage](../../../static/img/signMessage.png)
