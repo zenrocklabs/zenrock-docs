@@ -26,7 +26,6 @@ zrSign exposes core external functions that can be called either directly or by 
 Those are `zrKeyReq` to request a new public key as well as different signature request functions. 
 
 - `zrSignHash` - a signature request for a hash, which can be used to obfuscate the actual signing mechanisms.
-- `zrSignData` - a signature request for arbitrary data, for example personal sign requests.
 - `zrSignTx` - a signature request for unsigned transactions. Requires to assemble the unsigned tx and the signature to relay it to the destination chain.
 
 A more detailed description can be found at the ***[functions](functions.md)*** page.

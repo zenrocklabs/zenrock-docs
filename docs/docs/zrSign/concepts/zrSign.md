@@ -55,7 +55,6 @@ zrSign allows you to build applications for various use cases:
 1. The ***zrSign Smart Contract*** is a go-to access point for users to interact with zrSign services:
 
 - The `zrKey` function allows you to generate keys.
-- The `zrSignData` function allows you to request signatures for plain data.
 - The `zrSignHash` function allows you to request signatarus for encrypted data or hashes.
 - The `zrSignTx` function allows you to request signatures for unsigned transactions and also provides the option to sign and broadcast a transaction, which will get picked up by the relayer.
 
