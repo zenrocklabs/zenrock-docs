@@ -9,21 +9,15 @@ Make sure you have completed the [setup steps](./setup.md) before proceeding and
 
 ### 1. Fund your Wallet with ROCK
 
-Once your wallet is successfully connected, you will be redirected to a welcome page that contain some tasks for you to make sure you are setup correctly. The first step is to receive some testnet ROCK that allows you to pay for transaction fees on zrChain and to request keys and signatures later in the tutorial. Click on `Fund` to receive your first ROCK or on `Skip Tutorial` if you want to go directly to the next step.
+Once your wallet is successfully connected, you will be redirected to a welcome page that contain some tasks for you to make sure you are setup correctly. When first accessing the frontend with an empty wallet, you will immediately be prompted to request some ROCK tokens from the faucet. Check out our [Discord Server](https://discord.gg/zenrockfoundation) to access the faucet (channel [zenFaucet-Gardia](https://discord.com/channels/1226844560181952594/1280605155376763051)) to request testnet tokens. After successfully passing the verification, go to the `zenFaucet-Gardia` channel and follow the pinned instructions to request your ROCK.
+
+ROCK is the native token of zrChain and is required for gas fees, governance and keyring fees.
 
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
 ![ROCK faucet](../../../static/img/fund-wallet.png)
 
 </div>
-
-Once completed, you will receive a notification that you have successfully funded your wallet.
-
-Alternatively, you can request ROCK via the wallet menu on the top right or make a direct http request to the faucet: 
-
-```bash
-curl <https://faucet.gardia.zenrocklabs.io> -XPOST -d'{"address":"<YOUR ZENROCK ADDRESS>"}'
-```
 
 ### 2. Create a Username
 
