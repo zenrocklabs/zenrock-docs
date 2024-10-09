@@ -1,20 +1,10 @@
 ---
-title: zrSign Hello World Contract
-sidebar_label: zrSign Hello World
-sidebar_position: 2
+title: Interact With Your Contract
+sidebar_label: Interact With Your Contract
+sidebar_position: 6
 ---
 
-In this guide we will go over how to deploy a vanilla zrSign contract and interact with it. It should serve as a good starting point to get familiar with zrSign and let developerscustomize it to their own ideas and processes. 
-
-To get started, head to the [zrSign Hello World repository](https://github.com/zenrocklabs/zr-sign-hello-world/) and clone it on your machine.
-
-```bash
-git clone https://github.com/zenrocklabs/zr-sign-hello-world.git
-```
-
-Once you have the repository cloned, you can follow the steps in the README to set the right environment variables and build the project. When the contract is built, head to Etherscan and create your first zrSign key. 
-
-The deployed smart contract interfaces directly with the zrSign smart contract that Zenrock's MPCs are subscribed to. Read about its core functionality [here](../../zrSign/concepts/zrSign.md).
+Now that the contract is deployed on the testnet, we can interact with it. Go to etherscan and find the contract address you got from the deployment step.
 
 1. Request an EVM key
 
@@ -23,7 +13,7 @@ Click on `requestNewEvmKey()` and set the right parameters. Attribute `requestNe
 
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
-![Request EVM Key](../../../static/img/requestNewEvmWallet.png)
+![Request EVM Key](../../../../static/img/requestNewEvmWallet.png)
 
 </div>
 
@@ -48,11 +38,11 @@ Make sure to add the `0x` prefix to the chain id when interacting with the contr
 
 :::
 
-For more information about CAIP-2 chain ids that are currently supported, check out the [support document](../../zrSign/releases/addresses.md).
+For more information about CAIP-2 chain ids that are currently supported, check out the [support document](../../../zrSign/releases/addresses.md).
 
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
-![SignMessage](../../../static/img/signMessage.png)
+![SignMessage](../../../../static/img/signMessage.png)
 
 </div>
 
@@ -60,7 +50,7 @@ Once the transaction succeeded, the MPCs have published their responses for your
 
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
-![Signature Details](../../../static/img/signatureDetails.png)
+![Signature Details](../../../../static/img/signatureDetails.png)
 
 </div>
 
