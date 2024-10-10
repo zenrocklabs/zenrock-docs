@@ -1,6 +1,6 @@
 ---
-title: zrSign Developer Guide 
-sidebar_label: zrSign Developer Guide
+title: zrSign Direct & Omni 
+sidebar_label: zrSign Direct & Omni 
 sidebar_position: 1
 ---
 
