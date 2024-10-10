@@ -46,4 +46,4 @@ The ZrSignConnect contract is essential for several reasons:
 
 5. **Interoperability**: By using standard formats and encoding methods (like RLP), it ensures compatibility with various blockchain systems.
 
-In summary, the ZrSignConnect contract serves as a critical bridge between dApps and the ZrSign service, enabling secure and efficient management of wallets and signatures across multiple blockchain networks. Its abstraction and standardization make it an invaluable tool for developers building cross-chain applications or requiring advanced signature management capabilities.
+In summary, the ZrSignConnect contract serves as a critical link between dApps and the ZrSign service, enabling secure and efficient management of wallets and signatures across multiple blockchain networks. Its abstraction and standardization make it an invaluable tool for developers building cross-chain applications or requiring advanced signature management capabilities.
