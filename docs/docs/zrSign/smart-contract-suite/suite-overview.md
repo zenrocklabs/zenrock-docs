@@ -10,7 +10,7 @@ sidebar_position: 1
 
 The smart contract suite is referring to the [ZrSign](https://github.com/zenrocklabs/zr-sign) project repository, in particular the [contracts/zr](https://github.com/zenrocklabs/zr-sign/tree/main/contracts/zr) folder.
 
-The ZrSign smart contract suite provides a robust and flexible system for managing keys, signatures, and wallet operations across multiple blockchain networks. This suite is designed for developers who need to integrate advanced signing capabilities into their decentralized applications.
+The ZrSign smart contract suite provides a robust and flexible system for managing keys, signatures, and wallet operations across multiple blockchain networks. This suite is designed for developers who need to integrate MPC-based key and signing capabilities into their decentralized applications.
 
 ## Core Components
 
@@ -31,9 +31,11 @@ The ZrSign smart contract suite provides a robust and flexible system for managi
 - External configuration functions
 - Fee management and withdrawal of generated fees
 
+The deployed ZrSign smart contract is the one that is used to request wallets, signatures and manage transactions and where the MPC instances are subscribed to. You can find the deployed ZrSign smart contracts on the [releases page](../releases/addresses.md).
+
 ### 3. zrSignConnect.sol
 
-`zrSignConnect.sol` is an abstract contract that facilitates interaction with ZrSign:
+`zrSignConnect.sol` is an abstract contract that facilitates interaction with ZrSign. It's primary purpose is to provide a common interface for interacting with the deployed ZrSign smart contracts. It can be used as a base smart contract for developers to extend it to their own requirements, as described in the [ZrSign Direct Guide](../../testnet-guides/zrSign/zrSign-hello-world.md):
 
 - Helper functions for wallet requests
 - Signature and transaction signing requests
@@ -41,7 +43,7 @@ The ZrSign smart contract suite provides a robust and flexible system for managi
 
 ### 4. ZrSignUpgrader.sol
 
-`ZrSignUpgrader.sol` manages the upgrade process for the ZrSign contract:
+`ZrSignUpgrader.sol` manages the upgrade process for the ZrSign contract. This one is primarily for the ZrSign team to use:
 
 - Handles implementation upgrades
 - Transfers proxy admin roles
@@ -57,7 +59,7 @@ The ZrSign smart contract suite provides a robust and flexible system for managi
 
 ## Integration Guide
 
-To integrate ZrSign into your project:
+To integrate ZrSign into your project. You can use the [ZrSign Direct Guide](../../testnet-guides/zrSign/zrSign-hello-world.md) to get started.
 
 1. Deploy ZrSign using a proxy pattern for upgradeability.
 2. Inherit from zrSignConnect in your contract to interact with ZrSign.

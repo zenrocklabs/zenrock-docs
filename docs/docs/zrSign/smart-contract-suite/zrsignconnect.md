@@ -26,13 +26,13 @@ Initializes the contract with the address of the ZrSign contract.
 
 ### `requestNewEVMWallet`
 
-Requests a new EVM wallet from the ZrSign contract.
+Requests a new EVM wallet from the ZrSign contract. It will automatically set the right parameters for the EVM wallet request to the ZrSign contract.
 
 - `options`: Specifies additional options for the wallet request.
 
 ### `requestNewBTCWallet`
 
-Requests a new Bitcoin wallet from the ZrSign contract.
+Requests a new Bitcoin wallet from the ZrSign contract. It will automatically set the right parameters for the BTC wallet request to the ZrSign contract.
 
 - `options`: Specifies additional options for the wallet request.
 
@@ -42,7 +42,7 @@ Retrieves all EVM wallets associated with this contract.
 
 ### `getEVMWallet`
 
-Retrieves a specific EVM wallet by index.
+Retrieves a specific EVM wallet by index. The index is the wallet number in the array of wallets, starting from 0.
 
 - `index`: The index of the wallet to retrieve.
 
@@ -52,7 +52,7 @@ Retrieves all Bitcoin wallets associated with this contract.
 
 ### `getBTCWallet`
 
-Retrieves a specific Bitcoin wallet by index.
+Retrieves a specific Bitcoin wallet by index. The index is the wallet number in the array of wallets, starting from 0.
 
 - `index`: The index of the wallet to retrieve.
 
@@ -64,7 +64,7 @@ Requests a signature for a specific hash.
 
 - `walletTypeId`: The ID of the wallet type (EVM or BTC).
 - `walletIndex`: The index of the wallet to use for signing.
-- `dstChainId`: The destination chain ID.
+- `dstChainId`: The destination chain ID indicated in [CAIPs](../releases/addresses.md#caips-for-zrSign).
 - `payloadHash`: The hash of the payload to be signed.
 
 ### `reqSignForTx`
@@ -79,7 +79,7 @@ Requests a signature for a transaction.
 
 ### `reqSignForSimpleTx`
 
-Requests a signature for a simple transaction.
+Requests a signature for a simple transaction. SimpleTx is a zrSign transaction type that enables users to specify only the recipient, value, and data, while all other necessary details are automatically retrieved by the nodes. This eliminates the need for users or dApps to track nonces, gas parameters for EVMs, or manage UTXO composition for BTC. The only requirement for using SimpleTx is specifying wallet option 2.
 
 - `walletTypeId`: The ID of the wallet type (EVM or BTC).
 - `walletIndex`: The index of the wallet to use for signing.

@@ -10,7 +10,7 @@ This document provides a detailed overview of the `ZrSign` contract, which exten
 
 ## Contract Overview
 
-The `ZrSign` contract manages wallet type configurations, chain ID support, fee settings, and administrative functions for the Zenrock protocol.
+The `ZrSign` contract manages wallet type configurations, chain ID support, fee settings, and administrative functions for the Zenrock protocol. It is the main contract that is used to request wallets, signatures and manage transactions and where the MPC instances are subscribed to. It is mainly relevant for the Zenrock team to deploy and manage.
 
 ## Initialization
 

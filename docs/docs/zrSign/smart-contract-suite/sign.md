@@ -6,9 +6,9 @@ sidebar_position: 2
 
 # Sign Contract: Request Functions Documentation
 
-This document provides a detailed overview of the request functions in the Sign contract, designed for developers integrating with the Zenrock protocol.
+This document provides a detailed overview of the request functions in the Sign contract, designed for developers integrating with the ZrSign protocol.
 
-The `Sign.sol` contract contains the main functions that receive the various requests from the contract directly, or from third party smart contracts that are connected to the ZrSign contract.
+The `Sign.sol` contract contains the main functions that receive the various requests from the contract directly, or from third party smart contracts that are integrating the ZrSign contract.
 
 ## Key Request Function
 
@@ -18,9 +18,13 @@ This function initiates a key generation request for a specific wallet type.
 
 #### Parameters:
 - `params`: A struct containing:
-  - `walletTypeId`: Identifier for the wallet type
+  - `walletTypeId`: Identifier for the wallet type. 
   - `owner`: Address of the wallet owner
-  - `options`: Flags for additional options (e.g., monitoring)
+  - `options`: Flags for additional options (e.g., monitoring). Value `1` is a normal, regular wallet. Value `2` is a monitoring wallet, which means that Zenrock will actively monitor the wallet to compose UTXOs in the most efficient manner 
+
+##### Options Parameters:
+- `1`: Normal wallet. The key-holder or the key requesting smart contract needs to manage gas management and nonces.
+- `2`: Monitoring wallet. Zenrock will manage everything around the key, including gas management and nonces. Also in the case of BTC, Zenrock will compose UTXOs to the most efficient manner. If you are using the `simpleTx` function, this parameter is recommended. The request fees for the monitoring wallets are higher.
 
 #### Functionality:
 1. Validates the `options` parameter is non-zero.
@@ -45,7 +49,7 @@ Initiates a request to sign a hash.
 - `params`: A struct containing:
   - `walletTypeId`: Identifier for the wallet type
   - `walletIndex`: Index of the wallet to use
-  - `dstChainId`: Destination chain ID
+  - `dstChainId`: Destination chain ID, composed of the [supported CAIPs](../releases/addresses.md#caips-for-zrSign)
   - `payload`: Data to be signed (must be exactly 32 bytes)
   - `broadcast`: Flag for broadcasting (not applicable for hash signing)
 
@@ -75,7 +79,7 @@ Initiates a request to sign a transaction.
 
 ### `zrSignSimpleTx(SignTypes.ZrSignParams memory params)`
 
-Initiates a request to sign a simple transaction for monitored wallets.
+Initiates a request to sign a simple transaction for monitored wallets. SimpleTx is a zrSign transaction type that enables users to specify only the recipient, value, and data, while all other necessary details are automatically retrieved by the nodes. This eliminates the need for users or dApps to track nonces, gas parameters for EVMs, or manage UTXO composition for BTC. The only requirement for using SimpleTx is specifying wallet option 2.
 
 #### Parameters:
 - Similar to `zrSignTx`.
