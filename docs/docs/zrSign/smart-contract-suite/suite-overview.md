@@ -59,7 +59,7 @@ The deployed ZrSign smart contract is the one that is used to request wallets, s
 
 ## Integration Guide
 
-To integrate ZrSign into your project. You can use the [ZrSign Direct Guide](../../testnet-guides/zrSign/zrSign-hello-world.md) to get started.
+To integrate ZrSign into your project. You can use the [ZrSign Direct Guide](../../testnet-guides/zrSign/zrSign-tutorial/build-zrSign-hello-world.md) to get started.
 
 1. Deploy ZrSign using a proxy pattern for upgradeability.
 2. Inherit from zrSignConnect in your contract to interact with ZrSign.
