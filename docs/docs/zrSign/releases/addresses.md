@@ -44,6 +44,8 @@ Make sure to add the `0x` prefix to the chain id when interacting with the contr
 
 :::
 
+### Network CAIP-2 IDs
+
 Here are the CAIP-2 compliant chain IDs for the supported chains:
 
 | Network Name            | Chain Id | CAIP-2 |
@@ -56,3 +58,10 @@ Here are the CAIP-2 compliant chain IDs for the supported chains:
 | Binance Testnet         | 97       | 42a13880db2f2fe1c95fc8d04876a774745355a97dfe8f3397694d11f135eccf |
 | Base Sepolia            | 84532    | 8a9a9c58b754a98f1ff302a7ead652cfd23eb36a5791767b5d185067dd9481c2 |
 | BTC Testnet             |          | cc8dcc74cf3de5b0154f437b295f5d0709e6527ffb67b1201e78769ff0cccbf7 |
+
+### Wallet Types
+
+| Wallet Type            | CAIP-2 |
+|------------------------|------------------------------------------------------------------|
+| EVM                    | e146c2986893c43af5ff396310220be92058fb9f4ce76b929b80ef0d5307100a |
+| Bitcoin                | e03615811ae25b894de73e643038c13c37f602dc1e17ff1a02e5854893f3bd5e |
