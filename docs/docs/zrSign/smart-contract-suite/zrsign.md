@@ -4,17 +4,17 @@ sidebar_label: zrSign.sol
 sidebar_position: 2
 ---
 
-# ZrSign Contract: Developer Documentation
+## ZrSign Contract: Developer Documentation
 
 This document provides a detailed overview of the `ZrSign` contract, which extends the `Sign` contract and implements the `IZrSign` interface. It is designed for developers integrating with the Zenrock protocol. 
 
-## Contract Overview
+### Contract Overview
 
 The `ZrSign` contract manages wallet type configurations, chain ID support, fee settings, and administrative functions for the Zenrock protocol. It is the main contract that is used to request wallets, signatures and manage transactions and where the MPC instances are subscribed to. It is mainly relevant for the Zenrock team to deploy and manage.
 
-## Initialization
+### Initialization
 
-### `initializeV1()`
+#### `initializeV1()`
 
 Initializes the contract for version 1. This function should be called only once after deployment.
 
@@ -22,9 +22,9 @@ Initializes the contract for version 1. This function should be called only once
   1. Calls internal initialization functions
   2. Grants the `DEFAULT_ADMIN_ROLE` to the contract deployer
 
-## Configuration Functions
+### Configuration Functions
 
-### `walletTypeIdConfig(uint256 purpose, uint256 coinType, bool support)`
+#### `walletTypeIdConfig(uint256 purpose, uint256 coinType, bool support)`
 
 Configures support for specific wallet types based on purpose and coin type.
 
@@ -35,7 +35,7 @@ Configures support for specific wallet types based on purpose and coin type.
 - Access: Restricted to `DEFAULT_ADMIN_ROLE`
 - Emits: `WalletTypeIdSupport` event
 
-### `chainIdConfig(bytes32 walletTypeId, string memory caip, bool support)`
+#### `chainIdConfig(bytes32 walletTypeId, string memory caip, bool support)`
 
 Manages support for specific chain IDs, allowing adaptation to new blockchain networks.
 
@@ -46,9 +46,9 @@ Manages support for specific chain IDs, allowing adaptation to new blockchain ne
 - Access: Restricted to `DEFAULT_ADMIN_ROLE`
 - Emits: `ChainIdSupport` event
 
-## Fee Management
+### Fee Management
 
-### `updateMPCFee(uint256 newMPCFee)`
+#### `updateMPCFee(uint256 newMPCFee)`
 
 Sets the base fee required for initiating operations within the contract.
 
@@ -56,7 +56,7 @@ Sets the base fee required for initiating operations within the contract.
   - `newMPCFee`: The new base fee to be set for contract operations
 - Access: Restricted to `FEE_ROLE`
 
-### `updateRespGas(uint256 newRespGas)`
+#### `updateRespGas(uint256 newRespGas)`
 
 Updates the gas amount reserved for response transactions.
 
@@ -64,7 +64,7 @@ Updates the gas amount reserved for response transactions.
   - `newRespGas`: The new gas amount for response transactions
 - Access: Restricted to `FEE_ROLE`
 
-### `updateRespGasBuffer(uint256 newRespGasBuffer)`
+#### `updateRespGasBuffer(uint256 newRespGasBuffer)`
 
 Updates the gas buffer for response transactions.
 
@@ -72,28 +72,28 @@ Updates the gas buffer for response transactions.
   - `newRespGasBuffer`: The new gas buffer amount
 - Access: Restricted to `FEE_ROLE`
 
-### `withdrawMPCFees()`
+#### `withdrawMPCFees()`
 
 Allows the withdrawal of collected fees from the contract.
 
 - Access: Restricted to `FEE_ROLE`
 - Security: Implements nonReentrant guard
 
-## Administrative Functions
+### Administrative Functions
 
-### `pause()`
+#### `pause()`
 
 Pauses the contract, preventing certain operations.
 
 - Access: Restricted to `PAUSER_ROLE`
 
-### `unpause()`
+#### `unpause()`
 
 Unpauses the contract, re-enabling paused operations.
 
 - Access: Restricted to `PAUSER_ROLE`
 
-## Role-Based Access Control
+### Role-Based Access Control
 
 The contract uses the following roles for access control:
 
@@ -101,15 +101,14 @@ The contract uses the following roles for access control:
 - `FEE_ROLE`: For fee-related operations
 - `PAUSER_ROLE`: For pausing and unpausing the contract
 
-## Events
+### Events
 
 - `WalletTypeIdSupport`: Emitted when wallet type support is configured
 - `ChainIdSupport`: Emitted when chain ID support is configured
 
-## Integration Notes
+### Integration Notes
 
 - Ensure proper role assignment for administrative functions
 - Handle potential reverts due to access control or invalid parameters
 - Monitor emitted events for configuration changes and support updates
 - Be aware of the contract's pausable nature and its impact on operations
-

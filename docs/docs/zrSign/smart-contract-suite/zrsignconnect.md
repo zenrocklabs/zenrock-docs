@@ -4,11 +4,11 @@ sidebar_label: zrSignConnect.sol
 sidebar_position: 3
 ---
 
-# ZrSignConnect Contract Documentation
+## ZrSignConnect Contract Documentation
 
 The `ZrSignConnect` abstract contract provides a connection to the ZrSign smart contract, allowing for wallet management and transaction signing across different blockchain networks, including EVM-compatible chains and Bitcoin.
 
-## Constants
+### Constants
 
 - `WALLET_REQUESTED`: Set to 1, indicates a wallet has been requested.
 - `WALLET_REGISTERED`: Set to 2, indicates a wallet has been registered.
@@ -18,47 +18,47 @@ The `ZrSignConnect` abstract contract provides a connection to the ZrSign smart 
 - `EVM_WALLET_TYPE`: Constant for EVM wallet type identification.
 - `BTC_WALLET_TYPE`: Constant for Bitcoin wallet type identification.
 
-## Constructor
+### Constructor
 
 Initializes the contract with the address of the ZrSign contract.
 
-## Wallet Management Functions
+### Wallet Management Functions
 
-### `requestNewEVMWallet`
+#### `requestNewEVMWallet`
 
 Requests a new EVM wallet from the ZrSign contract. It will automatically set the right parameters for the EVM wallet request to the ZrSign contract.
 
 - `options`: Specifies additional options for the wallet request.
 
-### `requestNewBTCWallet`
+#### `requestNewBTCWallet`
 
 Requests a new Bitcoin wallet from the ZrSign contract. It will automatically set the right parameters for the BTC wallet request to the ZrSign contract.
 
 - `options`: Specifies additional options for the wallet request.
 
-### `getEVMWallets`
+#### `getEVMWallets`
 
 Retrieves all EVM wallets associated with this contract.
 
-### `getEVMWallet`
+#### `getEVMWallet`
 
 Retrieves a specific EVM wallet by index. The index is the wallet number in the array of wallets, starting from 0.
 
 - `index`: The index of the wallet to retrieve.
 
-### `getBTCWallets`
+#### `getBTCWallets`
 
 Retrieves all Bitcoin wallets associated with this contract.
 
-### `getBTCWallet`
+#### `getBTCWallet`
 
 Retrieves a specific Bitcoin wallet by index. The index is the wallet number in the array of wallets, starting from 0.
 
 - `index`: The index of the wallet to retrieve.
 
-## Signature Request Functions
+### Signature Request Functions
 
-### `reqSignForHash`
+#### `reqSignForHash`
 
 Requests a signature for a specific hash.
 
@@ -67,7 +67,7 @@ Requests a signature for a specific hash.
 - `dstChainId`: The destination chain ID indicated in [CAIPs](../releases/addresses.md#caips-for-zrSign).
 - `payloadHash`: The hash of the payload to be signed.
 
-### `reqSignForTx`
+#### `reqSignForTx`
 
 Requests a signature for a transaction.
 
@@ -77,7 +77,7 @@ Requests a signature for a transaction.
 - `payload`: The RLP-encoded transaction data.
 - `broadcast`: Flag indicating whether to broadcast the transaction immediately.
 
-### `reqSignForSimpleTx`
+#### `reqSignForSimpleTx`
 
 Requests a signature for a simple transaction. SimpleTx is a zrSign transaction type that enables users to specify only the recipient, value, and data, while all other necessary details are automatically retrieved by the nodes. This eliminates the need for users or dApps to track nonces, gas parameters for EVMs, or manage UTXO composition for BTC. The only requirement for using SimpleTx is specifying wallet option 2.
 
@@ -89,30 +89,30 @@ Requests a signature for a simple transaction. SimpleTx is a zrSign transaction 
 - `data`: Additional transaction data.
 - `broadcast`: Flag indicating whether to broadcast the transaction immediately.
 
-## Utility Functions
+### Utility Functions
 
-### `rlpEncodeData`
+#### `rlpEncodeData`
 
 Encodes data using RLP (Recursive Length Prefix) encoding.
 
-### `rlpEncodeTransaction`
+#### `rlpEncodeTransaction`
 
 Encodes a transaction using RLP encoding.
 
-### `toHexString`
+#### `toHexString`
 
 Converts an address or a uint256 value to a hexadecimal string.
 
-### `toChecksumHexString`
+#### `toChecksumHexString`
 
 Converts an address to a checksum-encoded hexadecimal string.
 
-## Events
+### Events
 
 - `Received`: Emitted when Ether is received by the contract.
 - `FallbackCalled`: Emitted when the fallback function is called.
 
-## Error
+### Error
 
 - `StringsInsufficientHexLength`: Thrown when the provided value cannot be represented within the specified hex length.
 
