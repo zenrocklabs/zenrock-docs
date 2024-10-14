@@ -49,7 +49,7 @@ Initiates a request to sign a hash.
 - `params`: A struct containing:
   - `walletTypeId`: Identifier for the wallet type
   - `walletIndex`: Index of the wallet to use
-  - `dstChainId`: Destination chain ID, composed of the [supported CAIPs](../releases/addresses.md#caips-for-zrSign)
+  - `dstChainId`: Destination chain ID, composed of the [supported CAIPs](../releases/addresses.md#network-caip-2-ids)
   - `payload`: Data to be signed (must be exactly 32 bytes)
   - `broadcast`: Flag for broadcasting (not applicable for hash signing)
 

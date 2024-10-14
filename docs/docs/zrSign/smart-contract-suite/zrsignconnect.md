@@ -64,7 +64,7 @@ Requests a signature for a specific hash.
 
 - `walletTypeId`: The ID of the wallet type (EVM or BTC).
 - `walletIndex`: The index of the wallet to use for signing.
-- `dstChainId`: The destination chain ID indicated in [CAIPs](../releases/addresses.md#caips-for-zrSign).
+- `dstChainId`: The destination chain ID indicated in [CAIPs](../releases/addresses.md#network-caip-2-ids).
 - `payloadHash`: The hash of the payload to be signed.
 
 #### `reqSignForTx`
