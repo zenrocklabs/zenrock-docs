@@ -35,7 +35,7 @@ The deployed ZrSign smart contract is the one that is used to request wallets, s
 
 ### 3. zrSignConnect.sol
 
-`zrSignConnect.sol` is an abstract contract that facilitates interaction with ZrSign. It's primary purpose is to provide a common interface for interacting with the deployed ZrSign smart contracts. It can be used as a base smart contract for developers to extend it to their own requirements, as described in the [ZrSign Direct Guide](../../testnet-guides/zrSign/zrSign-hello-world.md):
+`zrSignConnect.sol` is an abstract contract that facilitates interaction with ZrSign. It's primary purpose is to provide a common interface for interacting with the deployed ZrSign smart contracts. It can be used as a base smart contract for developers to extend it to their own requirements, as described in the [ZrSign Direct Guide](../../testnet-guides/zrSign/zrSign-tutorial/build-zrSign-hello-world.md):
 
 - Helper functions for wallet requests
 - Signature and transaction signing requests
@@ -59,7 +59,7 @@ The deployed ZrSign smart contract is the one that is used to request wallets, s
 
 ## Integration Guide
 
-To integrate ZrSign into your project. You can use the [ZrSign Direct Guide](../../testnet-guides/zrSign/zrSign-hello-world.md) to get started.
+To integrate ZrSign into your project. You can use the [ZrSign Direct Guide](../../testnet-guides/zrSign/zrSign-tutorial/build-zrSign-hello-world.md) to get started.
 
 1. Deploy ZrSign using a proxy pattern for upgradeability.
 2. Inherit from zrSignConnect in your contract to interact with ZrSign.
