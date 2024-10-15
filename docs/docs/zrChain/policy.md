@@ -16,6 +16,22 @@ Actions are valid for a defined number of blocks - if the terms of the policy ar
 
 This ensures that relevant accounts are notified of pending actions and prevents requests from getting stuck in a perpetually pending state.
 
+Policies are generally free from admin or sign context. What gives it the context is if the policy is applied in the workspace as an admin and/or sign policy. However, it is required that participants of the policy are part of the workspace. The following list shows which messages fall under which policy.
+
+#### Admin Policy Messages
+
+- `MsgAddWorkspaceOwner`
+- `MsgAppendChildWorkspace`
+- `MsgRemoveWorkspaceOwner`
+- `MsgUpdateWorkspace`
+
+#### Sign Policy Messages
+
+- `MsgNewICATransactionRequest`
+- `MsgNewKeyRequest`
+- `MsgNewSignTransactionRequest`
+- `MsgNewSignatureRequest`
+
 ### Passkeys
 
 **_Passkeys_** enable keys derived from biometrics to be used as workspace approvers. We will add them to the workspace so that users could approve an action for a trusted device they own, adding another factor to their approval process.
