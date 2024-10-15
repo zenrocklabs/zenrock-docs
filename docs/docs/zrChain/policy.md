@@ -20,12 +20,16 @@ Policies are generally free from admin or sign context. What gives it the contex
 
 #### Admin Policy Messages
 
+Admin policies govern high-level workspace management actions, such as modifying membership or changing ownership. These policies are designed for operations that require elevated privileges and stringent control.
+
 - `MsgAddWorkspaceOwner`
 - `MsgAppendChildWorkspace`
 - `MsgRemoveWorkspaceOwner`
 - `MsgUpdateWorkspace`
 
 #### Sign Policy Messages
+
+Sign policies, on the other hand, apply to routine transactions within a workspace. These policies ensure that day-to-day operations are properly authorized by the required number of workspace members before execution.
 
 - `MsgNewICATransactionRequest`
 - `MsgNewKeyRequest`
