@@ -23,7 +23,7 @@ The central component is the **_Zenrock Blockchain_** which provides a source-of
 - Restaking of ETH to increase economic security
 - Other standard Cosmos features such as staking, governance, IBC, etc.
 
-Besides the standard Cosmos modules, the Zenrock blockchain incorporates three additional modules that:
+Besides the standard Cosmos modules, the Zenrock blockchain incorporates four additional modules that:
 
 - Create and manage workspaces and keyrings in the [**_Identity Module_**](identity.md)
 - Request and manage keys as well as request signatures in the [**_Treasury Module_**](treasury.md)
@@ -54,7 +54,7 @@ The **_AVS Sidecar_** is an additional component that runs in parallel to the va
 
 The **_BTC Proxy_** is a component that runs alongside the zenrock blockchain and is mainly responsible for managing UTXOs and sending transactions to the Bitcoin network triggered from zrChain's workspaces and keys.
 
-### ZrSign Omni
+### zrSign Omni
 
 **_zrSign Omni_** is the next evolution step for zrSign to provide even better key and signature services by facilitating the benefits of zrChain through EVM smart contracts. Building on the foundation of [zrSign Direct](../zrSign/releases/zrSignDirect.md), this version brings significant performance and architecture improvements, such as workspaces and policies, a broader set of supported destination networks, access to the Cosmos ecosystem and much more.
 
