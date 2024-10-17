@@ -1,9 +1,17 @@
-# Website
+![Banner!](/docs/static/img/banner.png)
 
+# Zenrock Documentation
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-### Installation
+Here we are covering the Zenrock protocol stack, including zrChain and zrSign - Zenrock's products to expose the power of MPC to the masses.
+
+## Contributing to Zenrock Docs
+
+### Guidelines
+Contributing to the docs site is a great way to get involved in the dev community and help other developers along the way! Check out our guidelines [here](./CONTRIBUTING.md).
+
+## Installation
 
 ```
 $ yarn
