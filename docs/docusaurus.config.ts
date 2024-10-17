@@ -36,6 +36,8 @@ const config: Config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
+          editUrl: 'https://github.com/zenrocklabs/zenrock-docs/tree/main/',
+          includeCurrentVersion: true,
         },
         blog: false,
         theme: {
