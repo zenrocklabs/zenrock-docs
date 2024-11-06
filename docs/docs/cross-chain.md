@@ -14,7 +14,7 @@ Zenrock aims to solve this fragmentation by providing an MPC-based protocol that
 
 ### Cross-Chain Solutions
 
-The most common way to communicate cross chain is with a centralized bridge. While these bridges are useful, they come with their own set of risks such as single points of failure, loss of funds due to exploits and human error, and the need for users to trust the bridge with their assets. On top of that, it often includes many and larger smart contract interactions which can take a long time to execute and and therefore higher transaction fees. 
+The most common way to communicate cross chain is with a centralized bridge. While these bridges are useful, they come with their own set of risks such as single points of failure, loss of funds due to exploits and human error, and the need for users to trust the bridge with their assets. On top of that, it often includes many and larger smart contract interactions which can take a long time to execute and therefore higher transaction fees. 
 
 Most popular protocols like LayerZero, Wormhole, and Axelar often have a very strong integration with both sides of the bridge that allows them to reliably sent messages across and provide additional features like synchronous communication to confirm the successful execution of the message like it is with LayerZero. 
 
