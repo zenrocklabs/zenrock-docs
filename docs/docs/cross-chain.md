@@ -38,4 +38,4 @@ Broadcasting the transaction to the destination chain is classicly done by a rel
 
 ### Encouraging Developers to Build on Top of Zenrock
 
-With this universal, cheap, and fast cross-chain solution, Zenrock is encouraging developers to build on top of either `zrChain` in CosmWasm (Rust) or `zrSign` in Solidity. We are providing strong support for developers to build on top of our solutions and to provide a seamless experience for their users. 
+With this universal, cheap, and fast cross-chain solution, Zenrock is encouraging developers to build on top of either `zrChain` in CosmWasm (Rust) or `zrSign` in Solidity. We are providing strong support for developers to build on top of our solutions and to offer a seamless experience for their users. 
