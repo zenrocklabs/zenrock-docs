@@ -14,17 +14,21 @@ Zenrock aims to solve this fragmentation by providing an MPC-based protocol that
 
 ### Cross-Chain Solutions
 
-The most common way to communicate cross chain is with a centralized bridge. While these bridges are useful, they come with their own set of risks such as single points of failure, loss of funds due to exploits and human error, and the need for users to trust the bridge with their assets. On top of that, it often includes many and larger smart contract interactions which can take a long time to execute and and therefore higher transaction fees.
+The most common way to communicate cross chain is with a centralized bridge. While these bridges are useful, they come with their own set of risks such as single points of failure, loss of funds due to exploits and human error, and the need for users to trust the bridge with their assets. On top of that, it often includes many and larger smart contract interactions which can take a long time to execute and and therefore higher transaction fees. 
 
 Most popular protocols like LayerZero, Wormhole, and Axelar often have a very strong integration with both sides of the bridge that allows them to reliably sent messages across and provide additional features like synchronous communication to confirm the successful execution of the message like it is with LayerZero. 
+
+In Cosmos the [Inter-Blockchain Communication Protocol (IBC)](https://ibcprotocol.org/) is the standard way to communicate between blockchains. IBC is a protocol that allows for secure and reliable communication between different blockchains. It is supported by most of the major blockchain projects in Cosmos and is the standard way to send assets and messages in between. zrChain will also support IBC in the future to connect with other Cosmos-based blockchains and beyond. 
 
 ### How Zenrock MPC is Different
 
 Zenrock's MPC-generated keys can be used on supported blockchains natively without the need for a bridge. This means that unsigned transactions, once they are signed by the MPCs, can be sent directly to the destination chain's RPC where they are executed as a standard transaction and which can be found in the standard block explorers. 
 
-One key can be reused across multiple chains because the public key is derived into blockchain-specific addresses. An `secp256k1` key can be derived into an EVM-address starting with `0x` or a Zenrock address starting with `zen` for example. This makes the UX of using Zenrock seamless and native compared to other solutions. While the private key is secretly stored across multiple MPCs, the public keys are stored on `zrChain` and `zrSign` where they can be derived into multiple blockchain-specific addresses.
+One key can be reused across multiple chains because the public key is derived into blockchain-specific addresses. An `secp256k1` key can be derived into an EVM-address starting with `0x` or a Zenrock address starting with `zen`, and many more. This makes the UX of using Zenrock seamless and native compared to other solutions. While the private key is secretly stored across multiple MPCs, the public keys are stored on `zrChain` and `zrSign` where they can be derived into multiple blockchain-specific addresses.
 
 What is signed by the MPCs is solely determined by the user and can be as simple as a message or as complex as a swap. The MPCs do not know nor care about what is in the message as long as the request is approved by authorized and required parties within Zenrock's policy manager. This concept leaves developers the freedom to chose and craft the unsigned transactions as they see fit for their use cases. Zenrock itself is also working on solutions to facilitate MPC-based keys to provide compelling use cases like zenBTC.
+
+Broadcasting the transaction to the destination chain is classicly done by a relayer that assembles the unsigned transaction with the signature and broadcasts it to the destination chain. This is a simple process that is reliable and secure and can be executed by anyone, since all the required data can be found on zrChain and zrSign. Alternatively, zrSign can be incorporated with LayerZero to provide a more seamless integration on that side while IBC is also supported by zrChain.
 
 <div style={{maxWidth: "900px", margin: "0 auto"}}>
 
