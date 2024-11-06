@@ -1,7 +1,7 @@
 ---
 title: Frequently Asked Questions
 sidebar_label: FAQ
-sidebar_position: 7
+sidebar_position: 8
 ---
 
 ### How can I get in touch with the Zenrock Team? 
