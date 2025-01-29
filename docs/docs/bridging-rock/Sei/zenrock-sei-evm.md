@@ -10,15 +10,15 @@ sidebar_position: 12
 
 <div style={{maxWidth: "600px", margin: "0 auto"}}>
 
-![Keplr wallet balances](../../../static/img/sei-app-keplr-wallet.png)
+![Keplr Wallet Balances](../../../static/img/sei-app-keplr-wallet.png)
 
 </div>
 
-2. **Initiate a transfer:** Head to [Skip Build](https://go.skip.build/) to initiate a transfer from ROCK to Sei EVM.Select the desired amount to send and confirm the addresses match with the ones from [Sei App](https://app.sei.io).
+2. **Initiate a transfer:** Head to [Skip Build](https://go.skip.build/) to initiate a transfer from ROCK to Sei EVM. Select the desired amount to send and confirm the addresses match with the ones from [Sei App](https://app.sei.io).
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Skip zrchain init](../../../static/img/sei-app-skip-zrchain-init.png)
+![Skip zrChain Init](../../../static/img/sei-app-skip-zrchain-init.png)
 
 </div>
 
@@ -26,14 +26,14 @@ sidebar_position: 12
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Skip zrchain confirm](../../../static/img/sei-app-skip-zrchain-confirm.png)
+![Skip zrchain Confirm](../../../static/img/sei-app-skip-zrchain-confirm.png)
 
 </div>
 
-4. **Verify funds:** Check the balances have changed on [Sei App](https://app.sei.io) to confirm funds have arrived on Sei.
+4. **Verify funds:** Check that the balances have changed on [Sei App](https://app.sei.io) to confirm that the funds have arrived on Sei.
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 
-![Skip zrchain success](../../../static/img/sei-app-skip-zrchain-success.png)
+![Skip zrChain Success](../../../static/img/sei-app-skip-zrchain-success.png)
 
 </div>
