@@ -59,4 +59,4 @@ Setting up your Sei wallet with Keplr is NOT the recommended way to send ROCK to
 
 As a workaround, we recommend having both Sei accounts funded that you find in your Keplr Wallet and in the Sei address under [app.sei.io](https://app.sei.io). Don’t worry, both Sei accounts belong to you, and nobody else has access to them. When moving around funds on Sei, make sure the balance is high enough to cover transaction fees. For a smoother experience, we recommend importing the private key of your MetaMask account into Keplr to get the correct addresses derived.
 
-Sending ROCK from Sei EVM to Zenrock Mainnet works as described in the [Sei EVM to Zenrock Mainnet guide](/docs/docs/bridging-rock/Sei/zenrock-sei-evm); the only difference is that signing is performed with the Keplr wallet, and thus fees are deducted from the Keplr Wallet account.
+Sending ROCK from Sei EVM to Zenrock Mainnet works as described in the [Sei EVM to Zenrock Mainnet guide](sei-evm-zenrock.md). The only difference is that signing is performed with the Keplr wallet, and thus fees are deducted from the Keplr Wallet account.
