@@ -17,3 +17,13 @@ There can be a few reasons why you can't see your ROCK on Zenrock Mainnet (yet).
 ## I get an error during signing on Skip
 
 If you get an error during signing on Skip, it may be because Skip cannot fetch the correct chain information at this time. In this case, please refresh the page and try again until it works. 
+
+## Transaction failed on Skip.go 
+
+If you get an error on Skip.go one reason could be that you need to update the chain information in Keplr. To solve this, we suggest to delete cache data from Keplr and refresh the page. 
+
+<div style={{maxWidth: "800px", margin: "0 auto"}}>
+
+![Keplr Cache Issue](../../../static/img/keplr-cache.png)
+
+</div>
