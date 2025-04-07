@@ -77,7 +77,7 @@ It provides several services, including:
 
 The address service monitors (polls) the Zenrock Chain for new keys. When a Bitcoin key is generated, it:
 
-- Adds the Bitcoin address to a Bitcoin Node’s watch-only wallet.
+- Adds the Bitcoin address to a Bitcoin Node's watch-only wallet.
 - Tracks deposits to these addresses, which are made available for query by the proxy when generating transactions.
 
 To generate an unsigned transaction:
@@ -90,3 +90,16 @@ For zenBTC the Bitcoin Proxy performs two main actions:
 1. **Lock Service**: Obtains new deposits with sufficient confirmations from the Bitcoin node and starts a taint check of the deposited BTC. If it passes the taint check, a Merkle proof of its existence in the chain is generated, and zrChain is notified via a `NewVerifyDepositBlockInclusion` transaction.
 
 2. **Redemption/Unlock Service**: Polls zrchain for pending zenBTC redemptions and generates a redemption transaction to send Bitcoin to users. Fetches redemptions from the Zenrock Chain and uses the full list of available UTXOs and generates and unsigned redepemtion transaction and broadcasts it to zrChain for transaction validation and for singing by the MPC.
+
+## zenBTC Exchange Rate
+
+One key benefit of depositing BTC for zenBTC is the ability to generate yield on BTC. This yield generation results in 1 zenBTC being worth more than 1 BTC, which is reflected in the zenBTC exchange rate.
+
+The exchange rate mechanism works as follows:
+
+1. zrChain tracks all BTC deposits, redemptions, and zenBTC minting/burning events
+2. The system maintains separate supply pools for BTC and zenBTC
+3. Yield deposits add BTC to the custodied supply without increasing zenBTC supply
+4. The exchange rate is calculated as: custodied BTC / created zenBTC
+
+This mechanism allows users to withdraw more BTC than they originally deposited, as the yield generated from Eigenlayer rewards (converted to BTC) increases the BTC supply pool while maintaining the zenBTC supply.
