@@ -1,10 +1,14 @@
 ---
-title: zenBTC - How It Works
-sidebar_label: zenBTC - How It Works
-sidebar_position: 3
+title: zenBTC - Technical Details
+sidebar_label: zenBTC - Technical Details
+sidebar_position: 4
 ---
 
 This page provides a detailed technical overview of how zenBTC operates under the hood.
+
+## zenBTC on GitHub
+
+The zenBTC module is located in its own [GitHub repository](https://github.com/zenrocklabs/zenbtc). There you can find the available messages and queries for minting and redeeming zenBTC. It is open for contribution and comments.
 
 ## System Architecture
 
