@@ -15,7 +15,6 @@ Welcome to the Zenrock Blockchain ("zrChain") testnet guide, which covers its co
     - [Personal Sign](explore-ethereum/personal-sign.md)
     - [Uniswap Guide](explore-ethereum/uniswap.md)
     - [Policy Guide](explore-ethereum/policy-swap.md)
-- [zrSign Developer Guide](../zrSign/zrSign.md)
 
 ## General Information
 

@@ -4,7 +4,7 @@
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-Here we are covering the Zenrock protocol stack, including zrChain and zrSign - Zenrock's products to expose the power of MPC to the masses.
+Here we are covering the Zenrock protocol stack, including zrChain, zenBTC and zenTP - Zenrock's products to expose the power of MPC to the masses.
 
 ## Contributing to Zenrock Docs
 

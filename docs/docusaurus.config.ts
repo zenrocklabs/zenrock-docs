@@ -65,9 +65,14 @@ const config: Config = {
           to: 'zrChain/architecture',
         },
         {
-          label: 'zrSign',
+          label: 'zenBTC',
           position: 'left',
-          to: 'zrsign',
+          to: 'zenBTC/zenbtc-introduction',
+        },
+        {
+          label: 'zenTP',
+          position: 'left',
+          to: 'zenTP/zentp-introduction',
         },
         {
           href: 'https://github.com/zenrocklabs/zenrock',
