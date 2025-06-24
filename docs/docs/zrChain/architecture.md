@@ -53,7 +53,3 @@ The **_AVS Sidecar_** is an additional component that runs in parallel to the va
 ### BTC Proxy
 
 The **_BTC Proxy_** is a component that runs alongside the zenrock blockchain and is mainly responsible for managing UTXOs and sending transactions to the Bitcoin network triggered from zrChain's workspaces and keys.
-
-### zrSign Omni
-
-**_zrSign Omni_** is the next evolution step for zrSign to provide even better key and signature services by facilitating the benefits of zrChain through EVM smart contracts. Building on the foundation of [zrSign Direct](../zrSign/releases/zrSignDirect.md), this version brings significant performance and architecture improvements, such as workspaces and policies, a broader set of supported destination networks, access to the Cosmos ecosystem and much more.

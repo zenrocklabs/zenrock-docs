@@ -9,12 +9,12 @@ sidebar_position: 5
 From the private key controlling the digital assets, Zenrock's MPC protocol generates multiple independent secrets which are then distributed between MPC nodes. While Zenrock does run some MPC nodes by themselves but ultimately most of the nodes on the Zenrock keyring will be run by third parties.
 
 When an asset owner wants to sign a transaction or generate a public key, the request gets picked up by the MPC nodes which individually calculate their share of the key and signature
-and combined create the key material or signature respectively. Afterwards, the public key or the signature get published to the zrSign smart contract.
+and combined create the key material or signature respectively. Afterwards, the public key or the signature get published to zrchain where they are associated with their owners.
 
 ## The benefits of MPC
 By replacing cumbersome private key management with MPC, Zenrock makes digital assets immediately accessible, without compromising security. This allows users to enjoy the full benefit of digital assets as programmable money, and broadcast transactions instantly without fear of loss.
 
-The zrSign protocol transforms a simple custody solution into an blockchain-agnostic scaling mechanism—enabling digital asset managers to leapfrog the settlement delays, privacy issues, and security loopholes that arise from the centralized management of private keys.
+The zenrock protocol transforms a simple custody solution into an blockchain-agnostic scaling mechanism—enabling digital asset managers to leapfrog the settlement delays, privacy issues, and security loopholes that arise from the centralized management of private keys.
 
 ### Institutional-grade Security
 Private keys stored online are a prime target for hackers, who have looted billions in crypto assets by attacking centralized hot wallets.
@@ -40,7 +40,7 @@ Consensus-driven MPC liberates digital assets from these problems, setting them 
 
 ## Comparison to existing on-chain key management services
 
-To understand how the zrSign protocol differs from existing on-chain key management services,
+To understand how the zenrock protocol differs from existing on-chain key management services,
 it is helpful to differentiate between multisig wallets and dMPCs. 
 
 ### Multisig Wallets
@@ -79,4 +79,4 @@ In the context of digital assets, MPC can be used to replace individual private 
 MPC distributes the signing process between multiple computers. Each computer possesses a piece of private data representing a share of the key, 
 and together they cooperate to sign transactions in a distributed way.
 
-Zenrock implements dMPC and makes it accessible through the zrSign smart contract. 
+Zenrock implements dMPC and makes it accessible through zrchain. 

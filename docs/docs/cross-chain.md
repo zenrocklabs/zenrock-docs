@@ -24,11 +24,11 @@ In Cosmos the [Inter-Blockchain Communication Protocol (IBC)](https://ibcprotoco
 
 Zenrock's MPC-generated keys can be used on supported blockchains natively without the need for a bridge. This means that unsigned transactions, once they are signed by the MPCs, can be sent directly to the destination chain's RPC where they are executed as a standard transaction and which can be found in the standard block explorers. 
 
-One key can be reused across multiple chains because the public key is derived into blockchain-specific addresses. An `secp256k1` key can be derived into an EVM-address starting with `0x` or a Zenrock address starting with `zen`, and many more. This makes the UX of using Zenrock seamless and native compared to other solutions. While the private key is secretly stored across multiple MPCs, the public keys are stored on `zrChain` and `zrSign` where they can be derived into multiple blockchain-specific addresses.
+One key can be reused across multiple chains because the public key is derived into blockchain-specific addresses. An `secp256k1` key can be derived into an EVM-address starting with `0x` or a Zenrock address starting with `zen`, and many more. This makes the UX of using Zenrock seamless and native compared to other solutions. While the private key is secretly stored across multiple MPCs, the public keys are stored on `zrChain` where they can be derived into multiple blockchain-specific addresses.
 
 What is signed by the MPCs is solely determined by the user and can be as simple as a message or as complex as a swap. The MPCs do not know nor care about what is in the message as long as the request is approved by authorized and required parties within Zenrock's policy manager. This concept leaves developers the freedom to choose and craft the unsigned transactions as they see fit for their use cases. Zenrock itself is also working on solutions to facilitate MPC-based keys to provide compelling use cases like zenBTC.
 
-Broadcasting the transaction to the destination chain is classicly done by a relayer that assembles the unsigned transaction with the signature and broadcasts it to the destination chain. This is a simple process that is reliable and secure and can be executed by anyone, since all the required data can be found on zrChain and zrSign. Alternatively, zrSign can be incorporated with LayerZero to provide a more seamless integration on that side while IBC is also supported by zrChain.
+Broadcasting the transaction to the destination chain is classicly done by a relayer that assembles the unsigned transaction with the signature and broadcasts it to the destination chain. This is a simple process that is reliable and secure and can be executed by anyone, since all the required data can be found on zrChain. Alternatively IBC is also supported by zrChain.
 
 <div style={{maxWidth: "900px", margin: "0 auto"}}>
 
@@ -38,4 +38,4 @@ Broadcasting the transaction to the destination chain is classicly done by a rel
 
 ### Encouraging Developers to Build on Top of Zenrock
 
-With this universal, cheap, and fast cross-chain solution, Zenrock is encouraging developers to build on top of either `zrChain` in CosmWasm (Rust) or `zrSign` in Solidity. We are providing strong support for developers to build on top of our solutions and to offer a seamless experience for their users. 
+With this universal, cheap, and fast cross-chain solution, Zenrock is encouraging developers to build on top of `zrChain` in CosmWasm (Rust) or with the ROCK representation directly on Solana. We are providing strong support for developers to build on top of our solutions and to offer a seamless experience for their users.
