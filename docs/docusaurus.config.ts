@@ -56,7 +56,8 @@ const config: Config = {
       logo: {
         alt: 'Zenrock',
         srcDark: 'img/zenrock_logo_white_transp.svg',
-        src: 'img/zenrock_logo_dark_transp.svg'
+        src: 'img/zenrock_logo_dark_transp.svg',
+        href: 'https://zenrocklabs.io',
       },
       items: [
         {
