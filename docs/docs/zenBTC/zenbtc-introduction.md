@@ -6,7 +6,7 @@ sidebar_position: 4
 
 ## zenBTC: The First Native-Yield Bearing Wrapped Bitcoin
 
-zenBTC is a fully decentralized wrapped Bitcoin product with built-in native yield, anticipated to launch in Q1 2025. Positioned at the crossroads of two major ecosystems—wrapped Bitcoin solutions and liquid restaking tokens—zenBTC redefines Bitcoin interoperability and utility in DeFi.
+zenBTC is a fully decentralized wrapped Bitcoin product with built-in native yield, that launched in Q1 2025. Positioned at the crossroads of two major ecosystems—wrapped Bitcoin solutions and liquid restaking tokens — zenBTC redefines Bitcoin interoperability and utility in DeFi.
 
 <div style={{maxWidth: "900px", margin: "0 auto"}}>
 
@@ -22,11 +22,11 @@ zenBTC’s dMPC security is underpinned by Zenrock’s native utility and govern
 
 ### Finally, Native Yield-Bearing Bitcoin
 
-zenBTC uniquely allows users to accrue yield directly in Bitcoin (sats), growing their Bitcoin balance rather than awarding points or credits like competitors. No other wrapped Bitcoin product combines fully decentralized custody with native yield. Yield is generated from aggregated restaking – the safest real yield in crypto. To start, zenBTC is launching with an initial EigenLayer partnership. While users’ Bitcoin remains securely locked on the Bitcoin blockchain, Zenrock mints an ERC-20 tokenized representation on the back-end, which is deployed to secure other blockchains via EigenLayer in exchange for rewards. Demand for zenBTC as shared security collateral is expected to be significant, given the preference for BTC compared to alternative utility tokens.
+zenBTC uniquely allows users to accrue yield directly in Bitcoin (sats), growing their Bitcoin balance rather than awarding points or credits. No other wrapped Bitcoin product combines fully decentralized custody with native yield. Yield is generated from aggregated restaking – the safest real yield in crypto. To start, zenBTC is launching with an initial EigenLayer partnership. While users’ Bitcoin remains securely locked on the Bitcoin blockchain, Zenrock mints an ERC-20 tokenized representation on the back-end, which is deployed to secure other blockchains via EigenLayer in exchange for rewards. Demand for zenBTC as shared security collateral is expected to be significant, given the preference for BTC compared to alternative utility tokens.
 
 Through a collaboration with THORChain, these EigenLayer rewards are converted back into sats and held in a pool until the user redeems their zenBTC. Today’s processes for earning Bitcoin yield are complex, requiring significant time, education, and analysis — barriers that discourage adoption. By simplifying this process, zenBTC unlocks a new market segment: long-term Bitcoin holders and perp/margin traders seeking to use zenBTC as collateral.
 
-Looking ahead, zenBTC anticipates additional restaking partnerships with platforms like Jito and Babylon. These collaborations have the potential to further enhance the total yield offered, providing users with even greater earning opportunity over time.
+Looking ahead, zenBTC anticipates additional restaking partnerships with platforms like Jito. These collaborations have the potential to further enhance the total yield offered, providing users with even greater earning opportunity over time.
 
 ### Solana-First and Multichain Ready
 

@@ -6,19 +6,19 @@ sidebar_position: 2
 
 ## Overview
 
-The Zenrock Blockchain is the flagship product of the Zenrock project to provide bedrock security infrastructure that will support an omnichain future. Through our custom modules for identity and asset management, we provide a comprehensive means to build applications to **_natively_** interact with the largest blockchain networks.
+The Zenrock Blockchain is the flagship product of the Zenrock project to provide bedrock security infrastructure that will support an omnichain future. Through our custom modules for identity and asset management, we provide comprehensive means to build applications to **_natively_** interact with the largest blockchain networks.
 
 ### Policies
 
 Policies define the conditions that need to be met in order for the request to be processed by the corresponding keyring, like Zenrock's MPC. The policies contain participants that are eligible to approve and reject requests.
 
-Once a request is formed, by for example requesting a signature, actions for other workspace owners or admins are being created, as defined in the workspace's policy. Once the condition specified in the respective workspace policy is met, the request is published and can further be processed by the MPCs.
+Once a request is formed, for example by requesting a signature, actions for other workspace owners or admins are being created, as defined in the workspace's policy. Once the condition specified in the respective workspace policy is met, the request is published and can further be processed by the MPCs.
 
-While policies on Zenrock are already very powerful and help to split risk and control across multiple accounts, we are aiming to improve our policy engine to allow more nuanced policy conditions. 
+While policies on Zenrock are already very powerful and help to split risk and control across multiple accounts, Zenrock is aiming to improve its policy engine to allow more nuanced policy conditions.
 
-### zrChain Actively Validated Services
+### zrChain Actively Validated Services (AVS)
 
-zrChain adds economic security through an Eigenlayer integration which enables supplying economic collateral to a smart contract that is connected with zrChain's validation module. If validators misbehave, they risk getting slashed and losing their stake on zrChain directly as well as on the smart contract on Ethereum. 
+zrChain adds bitcoin's economic security through an Eigenlayer integration which enables supplying economic collateral to a smart contract that is connected with zrChain's validation module. If validators misbehave, they risk getting slashed and losing their stake on zrChain directly as well as on the smart contract on Ethereum. 
 
 ### Smart Contracts with CosmWasm
 
