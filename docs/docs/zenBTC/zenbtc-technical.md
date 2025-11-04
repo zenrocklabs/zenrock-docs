@@ -93,7 +93,7 @@ For zenBTC the Bitcoin Proxy performs two main actions:
 
 1. **Lock Service**: Obtains new deposits with sufficient confirmations from the Bitcoin node and starts a taint check of the deposited BTC. If it passes the taint check, a Merkle proof of its existence in the chain is generated, and zrChain is notified via a `NewVerifyDepositBlockInclusion` transaction.
 
-2. **Redemption/Unlock Service**: Polls zrchain for pending zenBTC redemptions and generates a redemption transaction to send Bitcoin to users. Fetches redemptions from the Zenrock Chain and uses the full list of available UTXOs and generates and unsigned redepemtion transaction and broadcasts it to zrChain for transaction validation and for singing by the MPC.
+2. **Redemption/Unlock Service**: Polls zrchain for pending zenBTC redemptions and generates a redemption transaction to send Bitcoin to users. Fetches redemptions from the Zenrock Chain and uses the full list of available UTXOs and generates and unsigned redepemtion transaction and broadcasts it to zrChain for transaction validation and for signing by the MPC.
 
 ## zenBTC Exchange Rate
 
