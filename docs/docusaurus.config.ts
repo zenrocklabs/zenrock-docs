@@ -108,7 +108,7 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://discord.gg/zenrockfoundation',
+              href: 'https://discord.gg/zenrock',
             },
             {
               label: 'Twitter',

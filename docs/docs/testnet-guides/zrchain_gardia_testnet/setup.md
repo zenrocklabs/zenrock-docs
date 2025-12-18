@@ -29,7 +29,7 @@ To manage your Zenrock account in Keplr, add the Zenrock network to the list of 
 
 ### Fund your Wallet with ROCK
 
-When first accessing the frontend with an empty wallet, you will immediately be prompted to request some ROCK tokens from the faucet. Check out our [Discord Server](https://discord.gg/zenrockfoundation) to access the faucet (channel [zenFaucet-Gardia](https://discord.com/channels/1226844560181952594/1280605155376763051)) to request testnet tokens. After successfully passing the verification, go to the faucet channel and follow the pinned instructions to request your ROCK.
+When first accessing the frontend with an empty wallet, you will immediately be prompted to request some ROCK tokens from the faucet. Check out our [Discord Server](https://discord.gg/zenrock) to access the faucet (channel [zenFaucet-Gardia](https://discord.com/channels/1226844560181952594/1280605155376763051)) to request testnet tokens. After successfully passing the verification, go to the faucet channel and follow the pinned instructions to request your ROCK.
 
 ROCK is the native token of zrChain and is required for gas fees, governance and keyring fees.
 

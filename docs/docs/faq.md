@@ -8,7 +8,7 @@ sidebar_position: 13
 
 You can find us on Discord and X/Twitter:
 
-- [Discord](https://discord.gg/zenrockfoundation)
+- [Discord](https://discord.gg/zenrock)
 - [X/Twitter](https://x.com/OfficialZenrock)
 
 ### What are the relevant links for Zenrock?
