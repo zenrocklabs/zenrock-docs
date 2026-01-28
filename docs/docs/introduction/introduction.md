@@ -31,13 +31,29 @@ Developers can also build their own dApps on zrChain through CosmWasm smart cont
 
 Read more about [zrChain](../zrChain/_category_.json).
 
-### zenBTC
+### Decentralized Custody Tokens (DCTs)
 
-ZenBTC is Zenrock's wrapped Bitcoin product that leverages decentralized multi-party computation (dMPC) infrastructure. By using MPCs, ZenBTC provides a more secure and transparent alternative to traditional wrapped Bitcoin solutions that are often opaque and centralized.
+DCTs are cross-chain assets secured by dMPC, eliminating centralized vaults and single points of failure. Unlike traditional wrapped assets that lock funds in a single custody contract, DCTs distribute custody across a network of wallets powered by dMPC.
 
-Bitcoin private keys are securely generated and managed across Zenrock’s and partners’ federated MPC nodes, eliminating the need for a single trusted custodian and distributing the custody of the deposited Bitcoin across multiple parties to prevent any single point of failure or mishandling.
+#### zenBTC
 
-Furthermore, zenBTC can be made available across many different networks as a wrapped token representation of Bitcoin with it being primarily managed through zrChain.
+zenBTC is Zenrock's flagship DCT: decentralized yield-bearing wrapped Bitcoin on Solana. By using dMPC, zenBTC provides a more secure and transparent alternative to traditional wrapped Bitcoin solutions. The underlying BTC is never lent out or used as risk capital—yield comes from protocol fees, not risky strategies.
+
+Bitcoin private keys are securely generated and managed across Zenrock's and partners' federated MPC nodes, eliminating the need for a single trusted custodian and distributing custody across multiple parties.
+
+#### zenZEC
+
+zenZEC is decentralized wrapped Zcash on Solana. Zcash pioneered zero-knowledge proofs in cryptocurrency, enabling shielded transactions. By bringing ZEC to Solana via the DCT standard, zenZEC inherits both Zcash's privacy heritage and Zenrock's decentralized custody guarantees.
+
+### Hush Protocol
+
+Hush is Zenrock's privacy layer for Solana, enabling users to shield assets and transact privately without revealing the link between deposit and withdrawal addresses. Built on Miden STARK zero-knowledge proofs, Hush provides:
+
+- **Privacy-preserving transactions**: Shield zenBTC or jitoSOL, transfer privately, and unshield to any address
+- **No trusted setup**: Miden STARKs require no ceremony or trusted parameters
+- **Post-quantum resistance**: Hash-based proofs remain secure against quantum attacks
+- **Tiered viewing keys**: Share transaction history with auditors without spending capability
+- **Built-in compliance**: OFAC screening at the sidecar level
 
 ## Going Omnichain with Zenrock
 

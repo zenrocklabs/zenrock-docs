@@ -71,6 +71,16 @@ const config: Config = {
           to: 'zenBTC/zenbtc-introduction',
         },
         {
+          label: 'zenZEC',
+          position: 'left',
+          to: 'zenZEC/zenzec-introduction',
+        },
+        {
+          label: 'Hush',
+          position: 'left',
+          to: 'Hush/hush-introduction',
+        },
+        {
           label: 'zenTP',
           position: 'left',
           to: 'zenTP/zentp-introduction',
