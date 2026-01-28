@@ -45,6 +45,8 @@ const config: Config = {
     ],
   ],
 
+  plugins: ['docusaurus-markdown-source-plugin'],
+
   presets: [
     [
       'classic',
