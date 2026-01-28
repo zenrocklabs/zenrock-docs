@@ -104,7 +104,7 @@ const config: Config = {
           to: 'zenTP/zentp-introduction',
         },
         {
-          href: 'https://github.com/zenrocklabs/zenrock',
+          href: 'https://github.com/zenrocklabs/zenrock-docs',
           label: 'GitHub',
           position: 'right',
         },

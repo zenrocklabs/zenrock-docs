@@ -8,7 +8,7 @@ sidebar_position: 3
 
 This guide walks through the complete Hush workflow: shielding assets, making private transfers, and unshielding to any address.
 
-**Use Hush:** [https://app.zenrocklabs.io/hush](https://app.zenrocklabs.io/hush)
+**Use Hush:** [https://app.zenrocklabs.io/services/hush/shield](https://app.zenrocklabs.io/services/hush/shield)
 
 ### Prerequisites
 

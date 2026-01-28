@@ -8,7 +8,7 @@ sidebar_position: 1
 
 Hush is Zenrock's privacy layer for Solana, enabling users to shield assets and transact privately without revealing the link between deposit and withdrawal addresses. Built on Miden STARK zero-knowledge proofs, Hush provides institutional-grade privacy with no trusted setup and post-quantum resistance.
 
-**Use Hush:** [https://app.zenrocklabs.io/hush](https://app.zenrocklabs.io/hush)
+**Use Hush:** [https://app.zenrocklabs.io/services/hush/shield](https://app.zenrocklabs.io/services/hush/shield)
 
 ### Supported Assets
 
