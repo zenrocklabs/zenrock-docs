@@ -34,9 +34,11 @@ export default function MarkdownActionsDropdown() {
       ? `${currentPath.slice(0, -1)}.md`
       : `${currentPath}.md`;
 
-  const fullUrl = typeof window !== 'undefined'
-    ? `${window.location.origin}${markdownUrl}`
-    : markdownUrl;
+  const pageUrl = typeof window !== 'undefined'
+    ? window.location.href
+    : '';
+
+  const prompt = `Read from this URL: ${pageUrl} and explain it to me`;
 
   const handleCopyMarkdown = async () => {
     try {
@@ -57,12 +59,23 @@ export default function MarkdownActionsDropdown() {
   };
 
   const handleOpenInClaude = () => {
-    window.open(`https://claude.ai/new?url=${encodeURIComponent(fullUrl)}`, '_blank');
+    window.open(`https://claude.ai/new?q=${encodeURIComponent(prompt)}`, '_blank');
     setIsOpen(false);
   };
 
   const handleOpenInChatGPT = () => {
-    window.open(`https://chatgpt.com/?url=${encodeURIComponent(fullUrl)}`, '_blank');
+    window.open(`https://chatgpt.com/?prompt=${encodeURIComponent(prompt)}`, '_blank');
+    setIsOpen(false);
+  };
+
+  const handleOpenInT3Chat = () => {
+    window.open(`https://t3.chat/?prompt=${encodeURIComponent(prompt)}`, '_blank');
+    setIsOpen(false);
+  };
+
+  const handleOpenInCursor = () => {
+    const cursorPrompt = `Read from this URL:\n${pageUrl}\nand explain it to me`;
+    window.open(`cursor://anysphere.cursor-deeplink/prompt?text=${encodeURIComponent(cursorPrompt)}`, '_blank');
     setIsOpen(false);
   };
 
@@ -107,8 +120,9 @@ export default function MarkdownActionsDropdown() {
         <div className="copy-page-menu">
           <button className="copy-page-menu-item" onClick={handleOpenMarkdown}>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+              <path d="M7 15V9l2 2 2-2v6"></path>
+              <path d="M17 9v6l-2-2"></path>
             </svg>
             <div className="copy-page-menu-item-content">
               <span className="copy-page-menu-item-title">View as Markdown</span>
@@ -116,8 +130,8 @@ export default function MarkdownActionsDropdown() {
             </div>
           </button>
           <button className="copy-page-menu-item" onClick={handleOpenInClaude}>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-              <path d="m3.127 10.604 3.135-1.76.053-.153-.053-.085H6.11l-.525-.032-1.791-.048-1.554-.065-1.505-.08-.38-.081L0 7.832l.036-.234.32-.214.455.04 1.009.069 1.513.105 1.097.064 1.626.17h.259l.036-.105-.089-.065-.068-.064-1.566-1.062-1.695-1.121-.887-.646-.48-.327-.243-.306-.104-.67.435-.48.585.04.15.04.593.456 1.267.981 1.654 1.218.242.202.097-.068.012-.049-.109-.181-.9-1.626-.96-1.655-.428-.686-.113-.411a2 2 0 0 1-.068-.484l.496-.674L4.446 0l.662.089.279.242.411.94.666 1.48 1.033 2.014.302.597.162.553.06.17h.105v-.097l.085-1.134.157-1.392.154-1.792.052-.504.25-.605.497-.327.387.186.319.456-.045.294-.19 1.23-.37 1.93-.243 1.29h.142l.161-.16.654-.868 1.097-1.372.484-.545.565-.601.363-.287h.686l.505.751-.226.775-.707.895-.585.759-.839 1.13-.524.904.048.072.125-.012 1.897-.403 1.024-.186 1.223-.21.553.258.06.263-.218.536-1.307.323-1.533.307-2.284.54-.028.02.032.04 1.029.098.44.024h1.077l2.005.15.525.346.315.424-.053.323-.807.411-3.631-.863-.872-.218h-.12v.073l.726.71 1.331 1.202 1.667 1.55.084.383-.214.302-.226-.032-1.464-1.101-.565-.497-1.28-1.077h-.084v.113l.295.432 1.557 2.34.08.718-.112.234-.404.141-.444-.08-.911-1.28-.94-1.44-.759-1.291-.093.053-.448 4.821-.21.246-.484.186-.403-.307-.214-.496.214-.98.258-1.28.21-1.016.19-1.263.112-.42-.008-.028-.092.012-.953 1.307-1.448 1.957-1.146 1.227-.274.109-.477-.247.045-.44.266-.39 1.586-2.018.956-1.25.617-.723-.004-.105h-.036l-4.212 2.736-.75.096-.324-.302.04-.496.154-.162 1.267-.871z"/>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" fillRule="evenodd">
+              <path d="M13.827 3.52h3.603L24 20h-3.603l-6.57-16.48zm-7.258 0h3.767L16.906 20h-3.674l-1.343-3.461H5.017l-1.344 3.46H0L6.57 3.522zm4.132 9.959L8.453 7.687 6.205 13.48H10.7z"></path>
             </svg>
             <div className="copy-page-menu-item-content">
               <span className="copy-page-menu-item-title">Open in Claude</span>
@@ -130,6 +144,27 @@ export default function MarkdownActionsDropdown() {
             </svg>
             <div className="copy-page-menu-item-content">
               <span className="copy-page-menu-item-title">Open in ChatGPT</span>
+              <span className="copy-page-menu-item-desc">Ask questions about this page</span>
+            </div>
+          </button>
+          <button className="copy-page-menu-item" onClick={handleOpenInT3Chat}>
+            <svg width="16" height="16" viewBox="0 0 258 199" fill="currentColor">
+              <path fillRule="evenodd" clipRule="evenodd" d="M165.735 25.0701L188.947 0.972412H0.465994V25.0701H165.735Z"></path>
+              <path d="M163.981 96.3239L254.022 3.68314L221.206 3.68295L145.617 80.7609L163.981 96.3239Z"></path>
+              <path d="M233.658 131.418C233.658 155.075 214.48 174.254 190.823 174.254C171.715 174.254 155.513 161.738 150 144.439L146.625 133.848L127.329 153.143L129.092 157.336C139.215 181.421 163.034 198.354 190.823 198.354C227.791 198.354 257.759 168.386 257.759 131.418C257.759 106.937 244.399 85.7396 224.956 74.0905L220.395 71.3582L202.727 89.2528L210.788 93.5083C224.403 100.696 233.658 114.981 233.658 131.418Z"></path>
+              <path fillRule="evenodd" clipRule="evenodd" d="M88.2625 192.669L88.2626 45.6459H64.1648L64.1648 192.669H88.2625Z"></path>
+            </svg>
+            <div className="copy-page-menu-item-content">
+              <span className="copy-page-menu-item-title">Open in T3 Chat</span>
+              <span className="copy-page-menu-item-desc">Ask questions about this page</span>
+            </div>
+          </button>
+          <button className="copy-page-menu-item" onClick={handleOpenInCursor}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22.106 5.68L12.5.135a.998.998 0 00-.998 0L1.893 5.68a.84.84 0 00-.419.726v11.186c0 .3.16.577.42.727l9.607 5.547a.999.999 0 00.998 0l9.608-5.547a.84.84 0 00.42-.727V6.407a.84.84 0 00-.42-.726zm-.603 1.176L12.228 22.92c-.063.108-.228.064-.228-.061V12.34a.59.59 0 00-.295-.51l-9.11-5.26c-.107-.062-.063-.228.062-.228h18.55c.264 0 .428.286.296.514z"></path>
+            </svg>
+            <div className="copy-page-menu-item-content">
+              <span className="copy-page-menu-item-title">Open in Cursor</span>
               <span className="copy-page-menu-item-desc">Ask questions about this page</span>
             </div>
           </button>
