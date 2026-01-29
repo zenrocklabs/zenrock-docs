@@ -4,6 +4,11 @@ sidebar_label: Introduction
 sidebar_position: 1
 ---
 
+<div style={{textAlign: 'center', marginBottom: '2rem'}}>
+  <img src="/img/hush_logo_purple.svg" alt="Hush Protocol" style={{maxWidth: '280px', width: '100%'}} />
+  <p style={{fontSize: '1.1rem', color: 'var(--ifm-color-primary)', marginTop: '0.5rem', fontWeight: 500}}>The Privacy Layer of Solana</p>
+</div>
+
 ## What is Hush?
 
 Hush is Zenrock's privacy layer for Solana, enabling users to shield assets and transact privately without revealing the link between deposit and withdrawal addresses. Built on Miden STARK zero-knowledge proofs, Hush provides institutional-grade privacy with no trusted setup and post-quantum resistance.
