@@ -1,8 +1,8 @@
 {
   "label": "DCT Framework",
-  "position": 6,
+  "position": 3,
   "link": {
     "type": "generated-index",
-    "description": "Decentralized Custody Tokens - cross-chain assets secured by zrChain's dMPC infrastructure."
+    "description": "Decentralized Custody Tokens - cross-chain assets secured by dMPC, eliminating centralized vaults and single points of failure."
   }
 }

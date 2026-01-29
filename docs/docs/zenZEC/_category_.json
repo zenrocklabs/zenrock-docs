@@ -1,8 +1,8 @@
 {
   "label": "zenZEC",
-  "position": 4,
+  "position": 5,
   "link": {
     "type": "generated-index",
-    "description": "Decentralized wrapped Zcash on Solana, secured by dMPC."
+    "description": "Decentralized wrapped Zcash on Solana, inheriting Zcash's privacy heritage and Zenrock's custody guarantees."
   }
 }

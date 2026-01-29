@@ -1,7 +1,7 @@
 ---
-title: Multi-Party Computation
-sidebar_label: MPC
-sidebar_position: 5
+title: Distributed Multi-Party Computation (dMPC)
+sidebar_label: dMPC
+sidebar_position: 2
 ---
 
 ## Zenrock's Multi-Party Computation
@@ -21,7 +21,7 @@ Private keys stored online are a prime target for hackers, who have looted billi
 
 MPC offers the possibility of storing crypto assets without compromising security. But when the devices running the MPC protocol are centralized, a single point of failure is reintroduced.
 
-Zenrock's MPC distributes private key shares over a distributed MPC architecture, completely eliminating the single point of failure. Each MPC Node on the network has its own secrets. But the loss of a single secret doesn’t give an attacker any advantage in gaining control over the digital assets.
+Zenrock's MPC distributes private key shares over a distributed MPC architecture, completely eliminating the single point of failure. Each MPC Node on the network has its own secrets. But the loss of a single secret doesn't give an attacker any advantage in gaining control over the digital assets.
 
 Instead of hacking a single machine and walking away with the private key, a hacker would need to compromise all the machines in the MPC Network.
 
@@ -41,20 +41,20 @@ Consensus-driven MPC liberates digital assets from these problems, setting them 
 ## Comparison to existing on-chain key management services
 
 To understand how the zenrock protocol differs from existing on-chain key management services,
-it is helpful to differentiate between multisig wallets and dMPCs. 
+it is helpful to differentiate between multisig wallets and dMPCs.
 
 ### Multisig Wallets
 
-A multisig wallet is a type of cryptocurrency wallet requiring multiple signatures from different parties for transactions. 
-It's set up with several private keys distributed among individuals or entities, with a predetermined number needed to authorize transactions. 
-Users create transactions and send them to the wallet, which verifies and collects the required signatures from authorized signers. 
+A multisig wallet is a type of cryptocurrency wallet requiring multiple signatures from different parties for transactions.
+It's set up with several private keys distributed among individuals or entities, with a predetermined number needed to authorize transactions.
+Users create transactions and send them to the wallet, which verifies and collects the required signatures from authorized signers.
 Once enough signatures are gathered, the wallet combines them to execute the transaction securely.
 
-These wallets are commonly used in scenarios where multiple parties need joint control over funds, 
-enhancing security by requiring consensus before transactions. They're ideal for businesses, organizations, or partnerships 
+These wallets are commonly used in scenarios where multiple parties need joint control over funds,
+enhancing security by requiring consensus before transactions. They're ideal for businesses, organizations, or partnerships
 seeking to mitigate risks associated with unauthorized access or fraud.
 
-The most popular example for this type is Gnosis, a digital wallet designed for managing and cryptocurrencies and digital assets through multi signature. 
+The most popular example for this type is Gnosis, a digital wallet designed for managing and cryptocurrencies and digital assets through multi signature.
 
 ### Shamir's Secret Sharing Scheme
 
@@ -64,19 +64,19 @@ Unlike MPC TSS, where signing is truly distributed and each signer directly sign
 
 ### Multi Party Computation
 
-Multi-Party Computation (dMPC) is a cryptographic protocol that allows multiple parties to jointly 
-compute a function over their inputs while keeping those inputs private. It ensures that no single party can learn the inputs of others, 
-and the output is revealed only to authorized participants. 
+Multi-Party Computation (dMPC) is a cryptographic protocol that allows multiple parties to jointly
+compute a function over their inputs while keeping those inputs private. It ensures that no single party can learn the inputs of others,
+and the output is revealed only to authorized participants.
 dMPC achieves this by distributing the computation among the participating parties, with each party holding a share of the data and contributing to the final result.
 
-In dMPC, each party privately inputs their data into the protocol, which then orchestrates the computation across all participants. 
-Through secure computation techniques such as secret sharing and cryptographic protocols like secure multiparty computation (MPC), 
-dMPC ensures that the computation is performed without any party revealing its private data to others. 
-Once the computation is complete, the output is revealed to the authorized parties without exposing any individual inputs, 
+In dMPC, each party privately inputs their data into the protocol, which then orchestrates the computation across all participants.
+Through secure computation techniques such as secret sharing and cryptographic protocols like secure multiparty computation (MPC),
+dMPC ensures that the computation is performed without any party revealing its private data to others.
+Once the computation is complete, the output is revealed to the authorized parties without exposing any individual inputs,
 maintaining privacy and confidentiality throughout the process.
 
-In the context of digital assets, MPC can be used to replace individual private keys for the signing of transactions. 
-MPC distributes the signing process between multiple computers. Each computer possesses a piece of private data representing a share of the key, 
+In the context of digital assets, MPC can be used to replace individual private keys for the signing of transactions.
+MPC distributes the signing process between multiple computers. Each computer possesses a piece of private data representing a share of the key,
 and together they cooperate to sign transactions in a distributed way.
 
-Zenrock implements dMPC and makes it accessible through zrchain. 
+Zenrock implements dMPC and makes it accessible through zrchain.

@@ -1,6 +1,6 @@
 ---
-title: Welcome to the Zen
-sidebar_label: Project Overview
+title: Welcome to Zenrock
+sidebar_label: Overview
 sidebar_position: 1
 slug: /
 ---

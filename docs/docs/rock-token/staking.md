@@ -1,3 +1,9 @@
+---
+title: Staking $ROCK
+sidebar_label: Staking
+sidebar_position: 5
+---
+
 # Staking $ROCK
 
 Staking rewards on $ROCK center around the **Node Reward Pool (NRP)**: a dedicated on-chain module that distributes rewards to validators and their delegators.

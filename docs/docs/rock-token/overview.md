@@ -1,3 +1,9 @@
+---
+title: $ROCK Token
+sidebar_label: Overview
+sidebar_position: 1
+---
+
 # $ROCK Token
 
 $ROCK is the native token of zrChain and the value capture mechanism for all products developed by Zenrock or developed by third parties leveraging Zenrock's infrastructure.

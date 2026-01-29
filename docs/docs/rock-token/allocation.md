@@ -1,3 +1,9 @@
+---
+title: Token Allocation
+sidebar_label: Allocation
+sidebar_position: 6
+---
+
 # Token Allocation
 
 ## Fixed Supply

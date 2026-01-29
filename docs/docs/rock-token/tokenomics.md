@@ -1,3 +1,9 @@
+---
+title: Tokenomic Design
+sidebar_label: Tokenomics
+sidebar_position: 3
+---
+
 # Fee Distribution
 
 Every fee from every product built on Zenrock's infrastructure, whether developed by Zenrock Labs or an external team, is handled according to the same tokenomic framework.

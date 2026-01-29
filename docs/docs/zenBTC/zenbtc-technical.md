@@ -82,7 +82,7 @@ zrChain is the main interface to Zenrock's MPC system. It lets users create work
 In contrast to regular BTC keys we apply zenBTC metadata to keys used for zenBTC. Those contain for example the Solana address where the zenBTC should be minted to and also provide some information for the sidecars to report relevant data.
 
 More more detailed information about zrChain, take a look at the [zrchain docs](../zrChain/architecture.md).
-If you want to learn more about our MPCs, take a look at the [mpc docs](../mpc.md).
+If you want to learn more about our MPCs, take a look at the [dMPC docs](../zrChain/dmpc.md).
 
 ### Sidecars
 

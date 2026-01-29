@@ -1,7 +1,7 @@
 ---
-title: MPC Cross-Chain Policy
-sidebar_label: Cross-Chain Strategy
-sidebar_position: 6
+title: Cross-Chain Operations
+sidebar_label: Cross-Chain
+sidebar_position: 7
 ---
 
 This page is dedicated to the cross-chain strategy of the Zenrock MPC nodes and to highlight the simplicity of MPC-based cross-chain messaging compared to other solutions.
@@ -32,7 +32,7 @@ Broadcasting the transaction to the destination chain is classicly done by a rel
 
 <div style={{maxWidth: "900px", margin: "0 auto"}}>
 
-![Cross-Chain Process](../static/img/cross-chain-process.png)
+![Cross-Chain Process](../../static/img/cross-chain-process.png)
 
 </div>
 

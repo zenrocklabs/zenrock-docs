@@ -1,3 +1,9 @@
+---
+title: Protocol Revenue
+sidebar_label: Protocol Revenue
+sidebar_position: 2
+---
+
 # Protocol Revenue
 
 All Zenrock products generate fees that flow through $ROCK tokenomics. Fees are converted to $ROCK and distributed according to the 35/30/30/5 split (see [Tokenomics](./tokenomics.md)).
