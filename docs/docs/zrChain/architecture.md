@@ -20,7 +20,6 @@ The central component is the **_Zenrock Blockchain_** which provides a source-of
 - Keyring registration & management
 - Signature generation & management
 - Policy control - enabling multi-party control of signatures
-- Restaking of ETH to increase economic security
 - Other standard Cosmos features such as staking, governance, IBC, etc.
 
 Besides the standard Cosmos modules, the Zenrock blockchain incorporates four additional modules that:
@@ -28,7 +27,7 @@ Besides the standard Cosmos modules, the Zenrock blockchain incorporates four ad
 - Create and manage workspaces and keyrings in the [**_Identity Module_**](identity.md)
 - Request and manage keys as well as request signatures in the [**_Treasury Module_**](treasury.md)
 - Create and define policies in the [**_Policy Module_**](policy.md)
-- Enabling the use of additional collateral in the form of restaked ETH with the [**_Validation Module_**](validation.md)
+- Managing validator stake and voting power with the [**_Validation Module_**](validation.md)
 
 Users can interact with the Zenrock Blockchain using a self-hosted wallet or any registered keyring - such as the Zenrock MPC system.
 The Zenrock blockchain gives users the ability to interact with custom modules, stake tokens and take part in governance. As a platform agnostic signature generation & key management service, it provides unified access to some of the largest blockchain ecosystems.
@@ -46,9 +45,9 @@ The first enterprise-grade keyring is the Zenrock Multi-Party-Computation system
 **_Relayers_** assemble unsigned transactions and the returned signatures and broadcast these to the relevant network.
 In case of private transactions, where no details about the payload are disclosed, the requesting party needs to run their own relayer.
 
-### AVS Sidecar
+### Oracle Sidecar
 
-The **_AVS Sidecar_** is an additional component that runs in parallel to the validator node. The AVS sidecar enables the use of additional collateral in the form of restaked ETH, combining this with native ROCK stake to calculate the validators' voting powers. Our AVS contract on Ethereum is monitored by every validator's sidecar, adding new deposits of collateral to the overall stake of zrchain's economic security package.
+The **_Oracle Sidecar_** is an additional component that runs in parallel to the validator node. The oracle sidecar provides price feeds and external data to zrChain through vote extensions, enabling validators to reach consensus on off-chain data. This includes ROCK and BTC price data used for fee calculations and economic security metrics.
 
 ### BTC Proxy
 

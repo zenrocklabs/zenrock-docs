@@ -23,7 +23,7 @@ Zenrock lets users directly interact with their favorite dapps across supported 
 
 ### zrChain
 
-zrChain is Zenrock's own blockchain and the home of the native ROCK token. It is a sovereign application-specific blockchain built with the Cosmos SDK. zrChain is secured by the economic security of the ROCK token, but also through Bitcoin's economic security through a new Eigenlayer integration as zrChain's AVS (Actively Validated Services).
+zrChain is Zenrock's own blockchain and the home of the native ROCK token. It is a sovereign application-specific blockchain built with the Cosmos SDK. zrChain is secured by the economic security of the ROCK token and Zenrock's dMPC network, which eliminates single points of failure in key management.
 
 zrChain comes with various tools to make MPC easier to use and access as well as manage the keys and their assets. Workspaces play the core role where users can collectively manage their MPC keys and signatures to interact across various blockchain networks backed by zrChain's own policy engine that handles authorizations.
 

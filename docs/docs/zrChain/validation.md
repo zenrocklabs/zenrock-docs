@@ -6,7 +6,7 @@ sidebar_position: 7
 
 Zenrock's **_Validation Module_** is zrChain's economic security module, effectively replacing the staking module.
 
-Besides the features of the staking module, the validation module also facilitates the support of vote extensions which are necessary to support additional economic security through an EigenLayer integration.
+Besides the features of the staking module, the validation module also facilitates the support of vote extensions which enable validators to vote on external data (such as price feeds) as part of the consensus process.
 
 ### Vote Extensions
 
@@ -14,10 +14,10 @@ Using Vote Extensions, validators can vote on arbitrary data as part of the cons
 
 ### Sidecar
 
-The oracle is querying the latest price and restaking contract state data and is running as a separate sidecar daemon running a GRPC server. This means that the blockchain node can query the GRPC port of the oracle sidecar running locally to get the most recent price and contract state data and vote on it every block.
+The oracle is querying the latest price data and is running as a separate sidecar daemon running a GRPC server. This means that the blockchain node can query the GRPC port of the oracle sidecar running locally to get the most recent price data and vote on it every block.
 
 This novel architecture enables the zenrock blockchain to offer the same level of security for our critical oracle infrastructure as the rest of the Zenrock chain.
 
 ### Running a Validator on zrChain
 
-For details on how to run a validator including the avs sidecar on zrChain, please refer to the [Zenrock Validator Repository](https://github.com/zenrocklabs/zenrock-validators). 
+For details on how to run a validator including the oracle sidecar on zrChain, please refer to the [Zenrock Validator Repository](https://github.com/zenrocklabs/zenrock-validators). 

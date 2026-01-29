@@ -6,11 +6,11 @@ sidebar_position: 4
 
 ## zenBTC: The First Native-Yield Bearing Wrapped Bitcoin
 
-zenBTC is a fully decentralized wrapped Bitcoin product with built-in native yield, that launched in Q1 2025. Positioned at the crossroads of two major ecosystems—wrapped Bitcoin solutions and liquid restaking tokens — zenBTC redefines Bitcoin interoperability and utility in DeFi.
+zenBTC is a fully decentralized wrapped Bitcoin product with built-in native yield, that launched in Q1 2025. Positioned as the first decentralized custody token (DCT) combining institutional-grade security with native yield, zenBTC redefines Bitcoin interoperability and utility in DeFi.
 
 <div style={{maxWidth: "900px", margin: "0 auto"}}>
 
-![Wrapped BTC vs Liquid Restaking Tokens](../../static/img/wrapped-btc-lrt.png)
+![Wrapped BTC vs Decentralized Custody Tokens](../../static/img/wrapped-btc-lrt.png)
 
 </div>
 
@@ -22,11 +22,13 @@ zenBTC’s dMPC security is underpinned by Zenrock’s native utility and govern
 
 ### Finally, Native Yield-Bearing Bitcoin
 
-zenBTC uniquely allows users to accrue yield directly in Bitcoin (sats), growing their Bitcoin balance rather than awarding points or credits. No other wrapped Bitcoin product combines fully decentralized custody with native yield. Yield is generated from aggregated restaking – the safest real yield in crypto. To start, zenBTC is launching with an initial EigenLayer partnership. While users’ Bitcoin remains securely locked on the Bitcoin blockchain, Zenrock mints an ERC-20 tokenized representation on the back-end, which is deployed to secure other blockchains via EigenLayer in exchange for rewards. Demand for zenBTC as shared security collateral is expected to be significant, given the preference for BTC compared to alternative utility tokens.
+zenBTC uniquely allows users to accrue yield directly in Bitcoin (sats), growing their Bitcoin balance rather than awarding points or credits. No other wrapped Bitcoin product combines fully decentralized custody with native yield. Yield is generated from protocol fees: 35% of zenBTC custody fees and 5% of all zrChain fees are distributed to zenBTC holders. The underlying BTC is never lent out or used as risk capital, ensuring the safest form of Bitcoin yield in crypto. While users' Bitcoin remains securely locked on the Bitcoin blockchain via dMPC, yield accumulates through organic protocol activity rather than external DeFi strategies.
 
-Through a collaboration with THORChain, these EigenLayer rewards are converted back into sats and held in a pool until the user redeems their zenBTC. Today’s processes for earning Bitcoin yield are complex, requiring significant time, education, and analysis — barriers that discourage adoption. By simplifying this process, zenBTC unlocks a new market segment: long-term Bitcoin holders and perp/margin traders seeking to use zenBTC as collateral.
+Protocol fees are automatically converted to BTC and reflected in the zenBTC exchange rate, meaning users' zenBTC balance grows in purchasing power over time. Today's processes for earning Bitcoin yield are complex, requiring significant time, education, and analysis—barriers that discourage adoption. By simplifying this process, zenBTC unlocks a new market segment: long-term Bitcoin holders and perp/margin traders seeking to use zenBTC as collateral.
 
-Looking ahead, zenBTC anticipates additional restaking partnerships with platforms like Jito. These collaborations have the potential to further enhance the total yield offered, providing users with even greater earning opportunity over time.
+As the Zenrock ecosystem grows, protocol fee revenue is expected to increase proportionally, providing zenBTC holders with sustainable and growing yield over time.
+
+Yield breakdown: [https://app.zenrocklabs.io/zenbtc/yield](https://app.zenrocklabs.io/zenbtc/yield)
 
 ### Solana-First and Multichain Ready
 
@@ -52,7 +54,7 @@ zenBTC enters a competitive market where existing players are increasingly scrut
 
 This controversy created a massive gap in the market, sparking demand for decentralized alternatives. As a result, new wrapped Bitcoin products grew AUM by $2.3 billion in this year alone. However, none of these products pair fully decentralized security with native yield, leaving zenBTC uniquely positioned to address this unmet need. On Solana specifically, zenBTC faces limited competition, with cbBTC being the only other product operating at scale. Yet, cbBTC faces the same centralization concerns as wBTC due to its affiliation with Coinbase. By contrast, zenBTC offers fully decentralized custody through Zenrock’s dMPC technology, combined with native yield—a first-of-its-kind value proposition.
 
-Most wrapped Bitcoin products were developed before decentralized security technologies like distributed MPC (dMPC) existed, relying instead on multi-sig wallets. Transitioning to decentralized custody now poses a significant challenge for these competitors. Achieving true decentralization would require a complete overhaul of technology stacks, including rewriting smart contracts for existing assets—a costly and time-intensive process. Further, most competing products have incredibly difficult user experiences. For example, tBTC is minted on ETH and then bridged. Achieving yield on BTC is never easy in DeFi. Yield generation typically requires advanced liquid restaking capabilities enabled through partnerships with platforms like EigenLayer or Babylon. For existing competitors, integrating these solutions would require substantial infrastructure updates and obtaining explicit user consent for yield participation. This opt-in process, while necessary for regulatory and technical compliance, could be cumbersome for products already operating at scale, introducing friction and potentially introducing outflow risk.
+Most wrapped Bitcoin products were developed before decentralized security technologies like distributed MPC (dMPC) existed, relying instead on multi-sig wallets. Transitioning to decentralized custody now poses a significant challenge for these competitors. Achieving true decentralization would require a complete overhaul of technology stacks, including rewriting smart contracts for existing assets—a costly and time-intensive process. Further, most competing products have incredibly difficult user experiences. For example, tBTC is minted on ETH and then bridged. Achieving yield on BTC is never easy in DeFi. Most wrapped Bitcoin products either offer no yield or require users to manually deploy assets into risky DeFi protocols. zenBTC's protocol fee-based yield is automatic and requires no additional action from users—the underlying BTC is never exposed to external protocol risk.
 
 <div style={{maxWidth: "900px", margin: "0 auto"}}>
 

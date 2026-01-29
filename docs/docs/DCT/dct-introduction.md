@@ -39,7 +39,7 @@ DCTs are more than wrappers—they're a security foundation for DeFi. Developers
 
 - Structured products
 - Leveraged vaults
-- Restaking strategies
+- Yield aggregation protocols
 - Lending protocols
 
 **The underlying custody stays the same.** Users choose their exposure to different DeFi products while the custodial security guarantees remain constant.

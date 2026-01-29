@@ -16,9 +16,9 @@ Once a request is formed, for example by requesting a signature, actions for oth
 
 While policies on Zenrock are already very powerful and help to split risk and control across multiple accounts, Zenrock is aiming to improve its policy engine to allow more nuanced policy conditions.
 
-### zrChain Actively Validated Services (AVS)
+### zrChain Security Model
 
-zrChain adds bitcoin's economic security through an Eigenlayer integration which enables supplying economic collateral to a smart contract that is connected with zrChain's validation module. If validators misbehave, they risk getting slashed and losing their stake on zrChain directly as well as on the smart contract on Ethereum. 
+zrChain's security is underpinned by the ROCK token, which validators stake to participate in consensus. The validation module manages stake, voting power, and slashing conditions. Misbehaving validators risk losing their staked ROCK, ensuring honest participation in the network. 
 
 ### Smart Contracts with CosmWasm
 
