@@ -8,11 +8,18 @@ This page provides a detailed technical overview of how zenTP operates under the
 
 ## zenTP on GitHub
 
-The zenTP module is located as a module under the [zrchain repository](https://github.com/zenrocklabs/zrchain/tree/main/x/zentp). There you can find the available messages and queries for bridging ROCK.
+The zenTP module is located under the [zrchain repository](https://github.com/zenrocklabs/zrchain/tree/main/x/zentp). Key files include:
+- [README.md](https://github.com/zenrocklabs/zrchain/tree/main/x/zentp/README.md) - Module documentation with CLI examples
+- [types/](https://github.com/zenrocklabs/zrchain/tree/main/x/zentp/types) - Message and parameter definitions
+- [keeper/](https://github.com/zenrocklabs/zrchain/tree/main/x/zentp/keeper) - Core bridging logic
 
 ## System Architecture
 
-zenTP is built directly on zrchain and works in cooperation with the sidecars and mpc infrastructure. The system consists of the following key components:
+zenTP is built directly on zrchain and works in cooperation with the sidecars and mpc infrastructure.
+
+> **Important**: zenTP currently supports **Solana only** as a destination chain. For bridging to other chains like Sei, use standard IBC protocols (e.g., via [Skip.build](https://go.skip.build/)).
+
+The system consists of the following key components:
 
 1. [**zrChain**](#zrchain): Facilitates signature requests to Zenrock's MPC network for minting ROCK on the Solana SPL. Also sidecars notify Zenrock Chain about burn events on Solana SPL which then mint ROCK to the indicated recipient.
 2. [**Sidecars**](#sidecars): Report the state, and relevant emitted events from the Solana ROCK SPL to Zenrock Chain
@@ -52,3 +59,38 @@ The sidecars are used for various purposes like reporting BTC and ROCK prices to
 ### MPC Infrastructure
 
 The MPCs handle minting operations of ROCK on Solana based on instructions from Zenrock Chain. The zenTP module holds the minting Solana keys in its params which conduct the mint transactions on Solana. When a request for minting ROCK to a Solana address is published, the zenTP module makes a sign-transaction request with the unsigned mint transaction to the MPC for the key indicated in the params. The returned signature and the unsigned transaction are assembled by the relayers and broadcast to Solana where the transaction gets executed.
+
+### Address Validation
+
+zenTP validates destination addresses before processing transfers. The validation ensures:
+
+1. **Chain ID Validation**: Only Solana chain IDs are currently supported
+2. **Address Format**: Recipient addresses must be valid for the destination chain (e.g., valid Solana base58 addresses)
+
+Invalid addresses will be rejected with an `invalid recipient address` error.
+
+## CLI Reference
+
+Power users can interact with zenTP directly via the CLI:
+
+### Query Commands
+
+```bash
+# View module parameters (including fee configuration)
+zenrockd query zentp params
+
+# Query burn operations
+zenrockd query zentp burns [id] [denom]
+```
+
+### Transaction Commands
+
+```bash
+# Initiate a bridge transfer
+zenrockd tx zentp bridge [amount] [denom] [source-address] [destination-chain] [recipient-address]
+
+# Example: Bridge 1000 ROCK to Solana
+zenrockd tx zentp bridge 1000000000 urock zen1... solana:mainnet <solana-recipient-address>
+```
+
+For more details, see the [zenTP module README](https://github.com/zenrocklabs/zrchain/tree/main/x/zentp).

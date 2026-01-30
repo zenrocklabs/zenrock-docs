@@ -61,6 +61,8 @@ To use zenTP, you'll need:
 
 **Contract Address:** `5VsPJ2EG7jjo3k2LPzQVriENKKQkNUTzujEzuaj4Aisf`
 
+> **Note**: The mint address is configurable via module parameters. To verify the current address, query `zenrockd query zentp params` or check on-chain state.
+
 - Native SPL token (not wrapped)
 - Same ticker: ROCK
 - Same total supply cap: 1 billion
@@ -92,7 +94,7 @@ The total supply across both chains remains constant—tokens are burned on one 
 
 - **Transfer time**: Usually completes within 1-2 minutes
 - **Minimum transfer**: No minimum, but consider gas costs
-- **No fees**: zenTP transfers are currently free (only network gas fees apply)
+- **Bridge fees**: zenTP charges a 0.5% bridge fee plus a 200 ROCK flat fee per transfer (in addition to network gas fees). Fee exemptions may apply for certain addresses.
 - **Irreversible**: Once submitted, transfers cannot be cancelled
 
 ## Next Steps

@@ -55,7 +55,7 @@ User → Solana: Burn zenZEC
          ↓
 Sidecar Oracle: Detect burn event, report to zrChain
          ↓
-zrChain: Wait for maturity period (100-200 blocks)
+zrChain: Wait for maturity period (maturity_height = current_height + redemption_delay_blocks)
          ↓
 zrChain: Create Redemption object
          ↓
@@ -72,6 +72,8 @@ Zcash Proxy → Zcash Network: Broadcast signed transaction
 |-----------|-----|-------|
 | Mint | $5 flat | Converted to $ROCK |
 | Redeem | 50 bps | Deducted from redemption amount |
+
+**Note**: Fee parameters are governance-configurable via the DCT module. The `Solana.Fee` field in the asset params stores the fee value. Query current fees with `zenrockd query dct params`.
 
 ### Supply Tracking
 
@@ -99,13 +101,18 @@ zenZEC operations go through the DCT module, not the zenBTC module:
 - **Asset type**: `ASSET_ZENZEC`
 - **Header storage**: `ZcashBlockHeaders`
 
-This separation ensures zenBTC (production code) is never affected by DCT operations.
+**Important**: The DCT module explicitly rejects `ASSET_ZENBTC` deposits with the error: "zenBTC deposits must use the zenBTC module's VerifyDepositBlockInclusion endpoint, not DCT". This separation ensures:
+1. zenBTC (production v0 code) remains isolated and stable
+2. Newer DCT assets (zenZEC and future assets) use the generalized DCT framework (v1+)
+3. Block headers are stored separately (BTC in `BtcBlockHeaders`, ZCash in `ZcashBlockHeaders`)
 
 ### Shielded Transaction Support
 
 The current zenZEC implementation handles **transparent** Zcash addresses only. Deposits from shielded (z-address) transactions are not supported—users must send from a transparent (t-address).
 
-Redemptions can be sent to either transparent or shielded addresses, depending on user preference.
+**Technical Reason**: The deposit verification process requires generating a Merkle proof of transaction inclusion in a block. Shielded transactions encrypt their data (sender, receiver, amount) using zero-knowledge proofs, making it impossible to generate a Merkle proof that proves a specific deposit amount to a specific address. Only transparent transactions have visible on-chain data that can be used for proof generation.
+
+Redemptions can be sent to either transparent or shielded addresses, depending on user preference, since the proxy constructs the outgoing transaction.
 
 ### Integration Points
 

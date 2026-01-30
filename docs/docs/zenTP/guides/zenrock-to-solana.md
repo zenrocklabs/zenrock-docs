@@ -100,6 +100,8 @@ Your Zenrock Wallet                   zrChain                         Solana
 | Solana mint | ~10 seconds |
 | Total | 1-2 minutes |
 
+> **Note**: These times are estimates and may vary based on network conditions, sidecar oracle reporting frequency, and MPC cluster availability. During high-load periods, transfers may take longer.
+
 ## Troubleshooting
 
 **Transaction stuck?**

@@ -170,9 +170,12 @@ Does NOT reveal:
 ### Proof generation is slow
 
 - STARK proof generation happens locally in your browser
-- First proof may take 10-30 seconds as WASM loads
-- Subsequent proofs are faster (~5-10 seconds)
-- Use a modern browser with good WebAssembly support
+- First proof may take 10-30 seconds as WASM loads and initializes
+- Subsequent proofs are faster (~5-10 seconds in browser, ~1 second native)
+- Use a modern browser with good WebAssembly support (Chrome/Firefox recommended)
+- Performance varies by device - desktop is significantly faster than mobile
+
+> **Performance Note**: Native release builds achieve ~1 second proof generation. Browser WASM performance depends on JIT compilation and memory availability.
 
 ## Security Best Practices
 

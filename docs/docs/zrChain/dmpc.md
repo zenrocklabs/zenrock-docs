@@ -4,79 +4,118 @@ sidebar_label: dMPC
 sidebar_position: 2
 ---
 
-## Zenrock's Multi-Party Computation
+# Distributed Multi-Party Computation
 
-From the private key controlling the digital assets, Zenrock's MPC protocol generates multiple independent secrets which are then distributed between MPC nodes. While Zenrock does run some MPC nodes by themselves but ultimately most of the nodes on the Zenrock keyring will be run by third parties.
+At the core of Zenrock's dMPC is a threshold signature scheme (TSS). To produce a valid signature, multiple parties exchange key fragments, but the private key is never assembled. No participant, including Zenrock, ever has enough information to reconstruct it.
 
-When an asset owner wants to sign a transaction or generate a public key, the request gets picked up by the MPC nodes which individually calculate their share of the key and signature
-and combined create the key material or signature respectively. Afterwards, the public key or the signature get published to zrchain where they are associated with their owners.
+**The key doesn't exist in any single location because it was never created in full. Only mathematical fragments exist.**
 
-## The benefits of MPC
-By replacing cumbersome private key management with MPC, Zenrock makes digital assets immediately accessible, without compromising security. This allows users to enjoy the full benefit of digital assets as programmable money, and broadcast transactions instantly without fear of loss.
+This allows zrChain to control wallets on any third-party blockchain without any party ever knowing the underlying private key.
 
-The zenrock protocol transforms a simple custody solution into an blockchain-agnostic scaling mechanism—enabling digital asset managers to leapfrog the settlement delays, privacy issues, and security loopholes that arise from the centralized management of private keys.
+zrChain launched with a genesis set of 8 dMPC operators and 60+ validators. These infrastructure providers possess significant cumulative stake across 50+ chains with geographic distribution across 22+ countries. Over time, the dMPC operator set will expand to 16, then 32, each time increasing the cryptographic threshold and security guarantees.
 
-### Institutional-grade Security
-Private keys stored online are a prime target for hackers, who have looted billions in crypto assets by attacking centralized hot wallets.
+## dMPC with Secure Enclaves
 
-MPC offers the possibility of storing crypto assets without compromising security. But when the devices running the MPC protocol are centralized, a single point of failure is reintroduced.
+Zenrock combines distributed Multi-Party Computation with hardware-backed secure enclaves to provide strong cryptographic security, operational resilience, and verifiable trust—without relying on a single trusted machine or operator.
 
-Zenrock's MPC distributes private key shares over a distributed MPC architecture, completely eliminating the single point of failure. Each MPC Node on the network has its own secrets. But the loss of a single secret doesn't give an attacker any advantage in gaining control over the digital assets.
+### Core Principle
 
-Instead of hacking a single machine and walking away with the private key, a hacker would need to compromise all the machines in the MPC Network.
+Private keys are never stored or reconstructed in full. Instead, they are:
 
-### Flexible governance
-MPC nodes can be mapped to specific organizational requirements, with various different numbers of trustees arranged in sets and subsets, and limited by specific thresholds.
+- **Cryptographically split** across multiple independent parties using MPC
+- **Executed inside secure enclaves**, which provide hardware-enforced isolation and runtime integrity guarantees
 
-### Optimal for Omnichain Integration
-MPC is inherently best suited for an omnichain world as an off-chain technology. Unlike multi-signature solutions, which are chain-specific and often unavailable in certain ecosystems, MPC operates independently of the underlying blockchain. This flexibility ensures broader compatibility and accessibility, allowing digital asset owners to maintain control without being limited by the capabilities of individual blockchains.
+This layered approach ensures that both key material and execution logic remain protected, even in the presence of compromised infrastructure.
 
-## Why MPC is the future
-Just as Bitcoin takes the trust out of transactions by removing the third party, MPC can take the trust out of private key management.
+### What is a Secure Enclave?
 
-But unless the MPC protocol is driven by decentralized consensus, it risks replicating the same security loopholes and settlement delays of centralized private key management.
+A secure enclave is a protected execution environment provided by modern hardware. Code running inside an enclave is:
 
-Consensus-driven MPC liberates digital assets from these problems, setting them free to be securely staked, loaned, or traded in the rapidly growing DeFi ecosystem.
+- Isolated from the host operating system and hypervisor
+- Protected from memory inspection or tampering
+- Able to produce cryptographic attestations proving what code is running
 
-## Comparison to existing on-chain key management services
+In Zenrock's architecture, each MPC participant runs inside its own enclave, ensuring that:
 
-To understand how the zenrock protocol differs from existing on-chain key management services,
-it is helpful to differentiate between multisig wallets and dMPCs.
+- Key shares are never exposed to the host machine
+- Signing logic cannot be modified without detection
+- Even privileged system access cannot extract sensitive material
 
-### Multisig Wallets
+## dMPC Signing Flow
 
-A multisig wallet is a type of cryptocurrency wallet requiring multiple signatures from different parties for transactions.
-It's set up with several private keys distributed among individuals or entities, with a predetermined number needed to authorize transactions.
-Users create transactions and send them to the wallet, which verifies and collects the required signatures from authorized signers.
-Once enough signatures are gathered, the wallet combines them to execute the transaction securely.
+**Distributed Key Generation:** The private key is generated collaboratively by multiple enclave-resident participants using an MPC protocol. Each enclave receives a unique key share. The full private key never exists anywhere.
 
-These wallets are commonly used in scenarios where multiple parties need joint control over funds,
-enhancing security by requiring consensus before transactions. They're ideal for businesses, organizations, or partnerships
-seeking to mitigate risks associated with unauthorized access or fraud.
+**Attested Execution:** Each enclave produces a signed attestation proving the exact MPC code it is running and that the code is executing inside genuine enclave hardware. Only attested enclaves are permitted to participate.
 
-The most popular example for this type is Gnosis, a digital wallet designed for managing and cryptocurrencies and digital assets through multi signature.
+**Isolated Key Storage:** Key shares are encrypted inside their respective enclaves and cannot be accessed by the host system, administrators, or cloud provider.
 
-### Shamir's Secret Sharing Scheme
+**Signing Request:** When a transaction needs to be signed, a request is sent to the required number of enclaves.
 
-***[Shamir's Secret Sharing](https://medium.com/keylesstech/a-beginners-guide-to-shamir-s-secret-sharing-e864efbf3648)*** is a cryptographic scheme that divides sensitive data like private keys into parts. Users can define the total number of parts, and a specific subset of parts required to recreate the whole.
+**Distributed Signing:** Each enclave computes a partial signature using its internal key share. These partial signatures reveal no information about the private key.
 
-Unlike MPC TSS, where signing is truly distributed and each signer directly signs the transaction, in SSSS the shares need to be reassembled on a single machine, or by a single trusted actor. This introduces a single point of failure.
+**Signature Assembly:** The partial signatures are combined into a standard blockchain signature, indistinguishable from one produced by a single private key.
 
-### Multi Party Computation
+**At no point is the private key reconstructed—inside or outside an enclave.**
 
-Multi-Party Computation (dMPC) is a cryptographic protocol that allows multiple parties to jointly
-compute a function over their inputs while keeping those inputs private. It ensures that no single party can learn the inputs of others,
-and the output is revealed only to authorized participants.
-dMPC achieves this by distributing the computation among the participating parties, with each party holding a share of the data and contributing to the final result.
+### Threshold Signature Protocol: GG21
 
-In dMPC, each party privately inputs their data into the protocol, which then orchestrates the computation across all participants.
-Through secure computation techniques such as secret sharing and cryptographic protocols like secure multiparty computation (MPC),
-dMPC ensures that the computation is performed without any party revealing its private data to others.
-Once the computation is complete, the output is revealed to the authorized parties without exposing any individual inputs,
-maintaining privacy and confidentiality throughout the process.
+Zenrock's dMPC uses the **GG21 threshold signature protocol** for distributed signing. GG21 (Gennaro & Goldfeder, 2020) is a state-of-the-art threshold ECDSA protocol that enables:
 
-In the context of digital assets, MPC can be used to replace individual private keys for the signing of transactions.
-MPC distributes the signing process between multiple computers. Each computer possesses a piece of private data representing a share of the key,
-and together they cooperate to sign transactions in a distributed way.
+- **Non-interactive signing**: Participants can compute signature shares independently after an initial setup phase
+- **Identifiable abort**: If a participant misbehaves, they can be identified and excluded
+- **Efficient resharing**: Key shares can be refreshed or redistributed without changing the public key
 
-Zenrock implements dMPC and makes it accessible through zrchain.
+The protocol ensures that even with a threshold number of participants, the full private key is never reconstructed during the signing process.
+
+For technical details on the GG21 protocol, see the original paper: *"Fast Multiparty Threshold ECDSA with Fast Trustless Setup"* (Gennaro, Goldfeder, 2020).
+
+## Security Guarantees
+
+### Defense in Depth
+
+- **MPC** prevents any single party from controlling a key
+- **Enclaves** prevent key shares from being extracted or tampered with
+- **Attestation** ensures only approved code can participate
+
+### Compromise Resistance
+
+An attacker would need to breach multiple independent systems, defeat hardware-level isolation, and do so simultaneously within a signing threshold. This is substantially harder than compromising a single HSM, server, or operator.
+
+### Verifiable Trust
+
+Because enclaves produce cryptographic attestations, external systems can verify that signing operations originate from approved, unmodified code and that keys are being used only within expected security boundaries.
+
+## Operational Flexibility
+
+Zenrock's dMPC supports:
+
+- Threshold policies (e.g., M-of-N signers)
+- Key refresh without changing public keys
+- Geographic distribution requirements
+- Custom approval workflows via zrChain policies
+
+## Comparison to Other Approaches
+
+### vs. Multisig Wallets
+
+Multisig wallets require multiple signatures from different private keys. Each key exists in full somewhere—creating multiple single points of failure. Multisig is also chain-specific: a Bitcoin multisig doesn't work on Ethereum.
+
+dMPC is chain-agnostic. The same key infrastructure works across any blockchain that supports standard signatures.
+
+### vs. Shamir's Secret Sharing
+
+Shamir's scheme splits a secret into shares that must be reassembled on a single machine to reconstruct the key. This reintroduces a single point of failure at reconstruction time.
+
+With dMPC, the key is **never reconstructed**. Signing happens distributedly—each party computes a partial signature, and these are combined without ever assembling the key.
+
+### vs. Single HSM
+
+Hardware Security Modules protect keys but create a single point of failure. If the HSM is compromised or destroyed, the key is lost or exposed.
+
+dMPC distributes trust across multiple independent parties and hardware environments. No single compromise can affect the key.
+
+## Learn More
+
+- [zrChain Architecture](./architecture.md) - How dMPC integrates with the blockchain
+- [Treasury Module](./treasury.md) - Managing signing requests
+- [Workspaces](./identity.md) - Organizational key management

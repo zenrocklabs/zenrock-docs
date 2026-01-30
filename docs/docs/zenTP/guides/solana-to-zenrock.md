@@ -100,6 +100,8 @@ Your Solana Wallet                    zenTP Program                    zrChain
 | zrChain detection | ~30-60 seconds |
 | Total | 1-2 minutes |
 
+> **Note**: These times are estimates and may vary based on network conditions, sidecar oracle reporting frequency, and MPC cluster availability. During high-load periods, transfers may take longer.
+
 ## Troubleshooting
 
 **Transaction stuck?**

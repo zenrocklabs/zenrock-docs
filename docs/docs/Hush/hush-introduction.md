@@ -19,14 +19,19 @@ Hush is Zenrock's privacy layer for Solana, enabling users to shield assets and 
 
 - **zenBTC** - Zenrock's decentralized wrapped Bitcoin
 - **jitoSOL** - Jito's liquid staking token
+- **zenZEC** - Zenrock's wrapped Zcash (coming soon)
+
+> **Note**: zenZEC support is implemented in the protocol (`SHIELD_ASSET_ZENZEC = 3`) but may not be enabled on all networks. Check network parameters for current availability.
 
 ### Core Operations
 
 | Operation | Description | Fee |
 |-----------|-------------|-----|
-| **Shield** | Deposit tokens into the privacy pool | Free |
-| **Shielded Transfer** | Send privately within the pool | 0.01 jitoSOL flat |
-| **Unshield** | Withdraw to any Solana address | 0.50% |
+| **Shield** | Deposit tokens into the privacy pool | Configurable (currently 0%) |
+| **Shielded Transfer** | Send privately within the pool | Flat fee per asset (configurable) |
+| **Unshield** | Withdraw to any Solana address | Percentage fee (configurable) |
+
+> **Note**: All fees are governance-configurable parameters. Current defaults are subject to change. Fees accumulate in the Protocol Fee Pool and can be claimed by governance.
 
 ### How It Works
 

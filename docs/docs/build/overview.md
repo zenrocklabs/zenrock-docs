@@ -84,5 +84,5 @@ We want you to succeed because when you succeed, the whole ecosystem benefits.
 **Reach out to begin building:**
 
 - [Discord](https://discord.gg/zenrock)
-- [Twitter](https://x.com/OfficialZenrock)
+- [Twitter](https://x.com/zenrock)
 - [Website](https://www.zenrocklabs.io)

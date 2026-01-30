@@ -140,7 +140,7 @@ const config: Config = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/OfficialZenrock'
+              href: 'https://x.com/zenrock'
             },
           ],
         },

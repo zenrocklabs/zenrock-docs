@@ -10,7 +10,9 @@ zenZEC is Zenrock's second Decentralized Custody Token (DCT): **decentralized wr
 
 **Mint zenZEC:** [https://app.zenrocklabs.io/zenzec/crucible](https://app.zenrocklabs.io/zenzec/crucible)
 
-**Solana CA:** JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS
+**Solana CA (Mainnet):** JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS
+
+*The canonical mint address is stored in zrChain DCT module params. Query with: `zenrockd query dct params`*
 
 ### Privacy Heritage
 
@@ -46,7 +48,12 @@ zenZEC uses the same DCT framework as zenBTC:
 | Mint | $5 flat |
 | Redeem | 50 bps |
 
-Fees are converted to $ROCK and distributed according to Zenrock's tokenomic architecture.
+Fees are governance-configurable parameters stored in the DCT module params. The values shown above are the current mainnet configuration. Fee amounts are converted to $ROCK and distributed according to Zenrock's tokenomic architecture.
+
+To query current fee parameters:
+```bash
+zenrockd query dct params
+```
 
 ### Differences from zenBTC
 
@@ -55,7 +62,7 @@ Fees are converted to $ROCK and distributed according to Zenrock's tokenomic arc
 | Underlying | Bitcoin | Zcash |
 | Native Yield | Yes (from protocol fees) | No |
 | Privacy (underlying) | Transparent | Optional shielded txs |
-| Block Confirmations | ~6 | ~6 |
+| Block Confirmations | ~6 (~1 hour) | ~6 (~7-8 minutes) |
 
 zenZEC does not currently offer native yield. It is a straightforward wrapped asset providing decentralized custody and Solana liquidity for Zcash.
 

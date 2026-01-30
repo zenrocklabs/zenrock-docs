@@ -1,10 +1,12 @@
 ---
-title: Sei Bridging Setup
-sidebar_label: Sei Setup
+title: Sei Bridging Setup (IBC via Skip)
+sidebar_label: Sei Setup (IBC)
 sidebar_position: 5
 ---
 
-Welcome to the documentation for transferring ROCK between Sei and zrChain. This page shows the process of using MetaMask as well as Keplr through the [app.sei.io](http://app.sei.io) webpage and further highlights common errors.
+> **Note**: This guide describes bridging ROCK between Sei and zrChain using **IBC through Skip.build**, not the zenTP protocol. zenTP is specifically designed for Solana bridging. For Solana transfers, see [Solana Setup](solana-setup.md).
+
+Welcome to the documentation for transferring ROCK between Sei and zrChain using [Skip.build](https://go.skip.build/). This page shows the process of using MetaMask as well as Keplr through the [app.sei.io](http://app.sei.io) webpage and further highlights common errors.
 
 To follow this guide, you need to have some SEI to cover transaction fees as well as ROCK (either Sei EVM or on Sei).
 

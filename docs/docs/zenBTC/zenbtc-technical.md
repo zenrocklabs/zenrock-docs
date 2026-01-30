@@ -8,7 +8,7 @@ This page provides a detailed technical overview of how zenBTC operates under th
 
 ## zenBTC on GitHub
 
-The zenBTC module is located in its own [GitHub repository](https://github.com/zenrocklabs/zenbtc). There you can find the available messages and queries for minting and redeeming zenBTC. It is open for contribution and comments.
+The zenBTC module is located in the [zenrock monorepo](https://github.com/zenrocklabs/zenrock/tree/main/zrchain/x/zenbtc). There you can find the available messages and queries for minting and redeeming zenBTC. It is open for contribution and comments.
 
 ## System Architecture
 
@@ -27,8 +27,10 @@ The zenBTC ecosystem operates through a system of interconnected components acro
 
 1. **zenBTC SPL Token (Solana)**
    - Primary token interface on Solana for users to trade, send, and interact with zenBTC
-   - Contract Address: `9hX59xHHnaZXLU6quvm5uGY2iDiT3jczaReHy6A6TYKw`
+   - Contract Address (Mainnet): `9hX59xHHnaZXLU6quvm5uGY2iDiT3jczaReHy6A6TYKw`
    - Minting and burning controlled by dMPC-signed transactions from zrChain
+
+   **Note**: The mint address is a configurable chain parameter (`Solana.MintAddress`). Query the canonical address: `zenrockd query zenbtc params`
 
 2. **zrChain Treasury Module**
    - Manages all interactions with the MPC infrastructure
@@ -41,7 +43,7 @@ The zenBTC system follows a carefully orchestrated process:
 
 **Deposit & Verification:**
 1. User deposits BTC to a dMPC-controlled address on Bitcoin
-2. Bitcoin Proxy detects the deposit after sufficient confirmations (typically 6 blocks)
+2. Bitcoin Proxy detects the deposit after sufficient confirmations (typically 6 blocks, ~1 hour on Bitcoin mainnet)
 3. Proxy generates a Merkle proof demonstrating transaction inclusion and submits to zrChain
 4. zrChain validators verify the block header via enshrined oracle consensus
 5. Upon successful verification, a `PendingMintTransaction` is created
@@ -56,12 +58,12 @@ The zenBTC system follows a carefully orchestrated process:
 **Redemption:**
 1. User burns zenBTC tokens on Solana
 2. Sidecar oracle detects the burn event
-3. Burn enters maturity period (100-200 blocks) to protect against Solana reorganizations
+3. Burn enters maturity period to protect against Solana reorganizations. The maturity height is calculated as `current_block_height + redemption_delay_blocks`, where `redemption_delay_blocks = RedemptionDelaySeconds / block_time`. Default delay is 7 days.
 4. Bitcoin Proxy constructs unsigned redemption transaction
 5. Transaction is signed through distributed MPC
 6. Proxy broadcasts signed transaction to Bitcoin network
 
-This architecture ensures that every zenBTC token is fully backed by BTC held in decentralized custody, with strict supply invariants: `Custodied BTC = Pending + Minted zenBTC`.
+This architecture ensures that every zenBTC token is fully backed by BTC held in decentralized custody, with strict supply invariants: `CustodiedBTC = PendingZenBTC + MintedZenBTC`.
 
 #### Supply Accounting
 
@@ -147,6 +149,8 @@ The exchange rate mechanism works as follows:
 1. zrChain tracks all BTC deposits, redemptions, and zenBTC minting/burning events
 2. The system maintains separate supply pools for BTC and zenBTC
 3. Yield deposits add BTC to the custodied supply without increasing zenBTC supply
-4. The exchange rate is calculated as: custodied BTC / created zenBTC
+4. The exchange rate is calculated as: `CustodiedBTC / (MintedZenBTC + PendingZenBTC)`
+
+This formula accounts for both minted tokens in circulation and pending mints that have been verified but not yet executed on Solana.
 
 This mechanism allows users to withdraw more BTC than they originally deposited, as protocol fee revenue (converted to BTC) is deposited into the custodied supply without increasing zenBTC supply.

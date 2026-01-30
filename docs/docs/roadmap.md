@@ -59,4 +59,4 @@ Expect continued shipping.
 - **Platform**: [https://app.zenrocklabs.io](https://app.zenrocklabs.io)
 - **Website**: [https://www.zenrocklabs.io](https://www.zenrocklabs.io)
 - **Discord**: [https://discord.gg/zenrock](https://discord.gg/zenrock)
-- **Twitter**: [https://x.com/OfficialZenrock](https://x.com/OfficialZenrock)
+- **Twitter**: [https://x.com/zenrock](https://x.com/zenrock)

@@ -40,7 +40,7 @@ Click on the `Create Policy` button which prompts a modal where you can enter a 
 
 </div>
 
-In the next step chose the participants from the workspace and select which should be part of the policy. In the case following this guide, we want both parties to approve a request, therefore, both participants are added. Also increasind the counter to 2 indicates that both parties need to approve under this policy.  
+In the next step choose the participants from the workspace and select which should be part of the policy. In the case following this guide, we want both parties to approve a request, therefore, both participants are added. Also increasing the counter to 2 indicates that both parties need to approve under this policy.  
 
 <div style={{maxWidth: "400px", margin: "0 auto"}}>
 

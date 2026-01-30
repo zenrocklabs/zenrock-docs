@@ -34,20 +34,23 @@ This eliminates UTXO fragmentation while maintaining privacy.
 | Receiving | Incoming note created, claimed on next spend |
 | Max incoming claims | 24 per transaction |
 
+> **Note**: The V8 circuit supports up to 24 total input notes (balance note + incoming notes combined). If a balance note is present, up to 23 incoming notes can be claimed. If no balance note exists, all 24 slots can be used for incoming notes.
+
 ### Key Hierarchy
 
 Hush implements tiered keys for different permission levels:
 
 ```
 spending_key (root secret - NEVER share)
-    │
-    ├── nullifier_key ────────┐
-    │                         ├── full_viewing_key
-    ├── incoming_vk_priv ─────┘
-    │         │
-    │         └── incoming_vk_pub ── incoming_viewing_key
-    │
-    └── spending_binding ── (included in address)
+    |
+    +-- spending_pubkey -----> (used in note commitments)
+    |       Formula: hmerge(spending_key, [SPENDING_PUBKEY_DOMAIN, 0, 0, 0])
+    |
+    +-- nullifier_key --------+
+    |                         +-- full_viewing_key
+    +-- incoming_vk_priv -----+
+              |
+              +-- incoming_vk_pub --> incoming_viewing_key
 ```
 
 | Key | Spend | View Spent | Decrypt Received | Decrypt Sent |
@@ -55,6 +58,14 @@ spending_key (root secret - NEVER share)
 | spending_key | Yes | Yes | Yes | Yes |
 | full_viewing_key | No | Yes | Yes | Yes |
 | incoming_viewing_key | No | No | Yes | No |
+
+**Key Derivations:**
+- **spending_pubkey**: Derived from spending_key using a domain-separated RPO hash. This is included in ALL note commitments (shields, transfers, change notes) to bind the note to the recipient's identity.
+- **nullifier_key**: Used to derive nullifiers that prove ownership without revealing the commitment.
+- **incoming_vk_priv/pub**: ECDH keypair for decrypting incoming transfer amounts.
+
+**Security Note - Spending Binding:**
+The `spending_pubkey` serves as a "spending binding" that prevents a critical attack vector: if an attacker obtains only the `incoming_viewing_key`, they can see incoming amounts but CANNOT spend them because the commitment requires knowledge of the `spending_key` to derive the matching `spending_pubkey`.
 
 **Use Cases:**
 - **spending_key**: User's master key, full control
@@ -65,19 +76,26 @@ spending_key (root secret - NEVER share)
 
 ### Commitment & Nullifier Structure
 
-**Balance Note:**
+**V8 Unified Note Format (Current):**
+
+All notes (shields, transfers, change) use the same commitment structure:
+
 ```
-commitment = RPO(merge(note_secret, randomness), [0, 0, sequence, amount])
+commitment = hmerge(hmerge(hmerge(note_secret, randomness), spending_pubkey), [amount, 0, 0, asset])
 nullifier  = RPO(nullifier_key, commitment)
 ```
 
-**Incoming Note:**
-```
-commitment = RPO(merge(merge(note_secret, randomness), spending_binding), [amount, 0, 0, asset])
-nullifier  = RPO(nullifier_key, commitment)
-```
+Where:
+- `note_secret`: 32 bytes derived from the recipient's spending key
+- `randomness`: 32 bytes of cryptographic randomness
+- `spending_pubkey`: Derived from recipient's spending_key (binds note to recipient)
+- `amount`: Token amount in smallest units
+- `asset`: Asset type identifier (1=zenBTC, 2=jitoSOL, 3=zenZEC)
 
-The `spending_binding` in incoming note commitments binds the note to the recipient's identity, preventing attacks where an attacker with only the `incoming_viewing_key` could spend the note.
+**Security Properties:**
+- The `spending_pubkey` binding prevents attacks where someone with only the `incoming_viewing_key` could spend funds
+- The unified format means shields, transfers, and change notes are indistinguishable in the Merkle tree
+- Asset binding in the commitment prevents cross-asset confusion attacks
 
 ### Nullifier System
 
@@ -87,6 +105,21 @@ Nullifiers prevent double-spending while preserving privacy:
 2. When spent, the nullifier is permanently recorded
 3. Attempting to spend the same commitment again produces the same nullifier, which is rejected
 4. Knowing a nullifier reveals nothing about which commitment it corresponds to without the spending key
+
+### Chain-ID Binding (Replay Attack Prevention)
+
+All Hush proofs are cryptographically bound to a specific chain ID, preventing replay attacks between testnet and mainnet:
+
+- When generating a proof, the chain ID (e.g., "zenrock-testnet-1" or "zenrock-mainnet-1") is hashed using RPO with a domain separator
+- This `chain_id_hash` is included in the `outputs_commitment` structure verified by the circuit
+- A proof generated on testnet will fail verification on mainnet (and vice versa)
+
+**Security Property**: Even if an attacker obtains a valid proof from one chain, they cannot replay it on another chain. The circuit enforces that the chain ID used during proof generation matches the chain where verification occurs.
+
+**Implementation Details**:
+- Domain separator: `zenrock.hush.chain_id.v1`
+- Hash formula: `chain_id_hash = RPO(chain_id || CHAIN_ID_DOMAIN)`
+- Verified in: `ComputeOutputsCommitmentV7()` in `merkle.go`
 
 ### Shield Flow
 
@@ -149,15 +182,42 @@ When unshielding jitoSOL, users can request native SOL funding to cover Solana t
 
 This enables privacy-preserving withdrawals to fresh wallets with zero SOL balance.
 
+### Protocol Fee Pool
+
+Fees collected from shielded operations accumulate in a per-asset Protocol Fee Pool rather than being burned:
+
+| Fee Type | Flow |
+|----------|------|
+| Shield Fee | Deducted at shield time, added to fee pool |
+| Transfer Fee | Deducted from shielded supply, added to fee pool |
+| Unshield Fee | Deducted before Solana transfer, added to fee pool |
+
+**Fee Pool Operations:**
+- Fees are tracked per-asset in `ProtocolFeePool map[asset]amount`
+- Governance can claim accumulated fees via `MsgClaimProtocolFees`
+- Claims create an unshield request to transfer tokens from the vault
+
+**Supply Invariant:**
+```
+TotalShielded + PendingUnshields + TotalUnshielded + ProtocolFeePool = TotalEverShielded
+```
+
+**Governance Parameters:**
+- `shield_fee`: Percentage fee on shields (currently 0)
+- `shielded_transfer_fee`: Flat fee per transfer (per-asset configured)
+- `unshield_fee_bps`: Basis points fee on unshields
+- `sol_fund_amount`: SOL amount for funded unshields
+- `sol_fund_fee_bps`: Additional fee for SOL funding
+
 ### Supply Accounting
 
-| Event | Solana Vault | TotalShielded | PendingUnshields | TotalUnshielded | FeesBurned |
-|-------|--------------|---------------|------------------|-----------------|------------|
+| Event | Solana Vault | TotalShielded | PendingUnshields | TotalUnshielded | ProtocolFeePool |
+|-------|--------------|---------------|------------------|-----------------|-----------------|
 | Shield | +tokens | +amount | — | — | — |
 | Unshield | — | −(amount+fee) | +amount | — | +fee |
 | Complete | −tokens | — | −amount | +amount | — |
 
-**Invariant**: `TotalShielded + PendingUnshields + TotalUnshielded + FeesBurned = TotalEverShielded`
+**Invariant**: `TotalShielded + PendingUnshields + TotalUnshielded + ProtocolFeePool = TotalEverShielded`
 
 ### Browser Security Model
 

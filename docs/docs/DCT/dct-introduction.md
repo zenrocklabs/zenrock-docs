@@ -28,10 +28,12 @@ DCTs distribute custody across a network of EOAs (standard wallets) powered by d
 
 ### Current DCTs
 
-| Token | Underlying Asset | Chain | Status |
-|-------|------------------|-------|--------|
-| zenBTC | Bitcoin | Solana | Live |
-| zenZEC | Zcash | Solana | Live |
+| Token | Underlying Asset | Chain | Module | Status |
+|-------|------------------|-------|--------|--------|
+| zenBTC | Bitcoin | Solana | `x/zenbtc` | Live |
+| zenZEC | Zcash | Solana | `x/dct` | Live |
+
+> **Architecture Note**: zenBTC uses a dedicated `x/zenbtc/` module separate from the general DCT framework. This separation ensures production stability for the Bitcoin wrapped asset, which was the first DCT deployed. The DCT module (`x/dct/`) handles zenZEC and future wrapped assets. Both modules share the same security properties and dMPC infrastructure.
 
 ### DCTs as a Security Foundation
 
@@ -63,14 +65,16 @@ DCTs are more than wrappers—they're a security foundation for DeFi. Developers
 
 ### Fee Structure
 
-All DCTs share a common fee structure:
+DCT fees are configurable per-asset and denominated in basis points (bps), not fixed dollar amounts:
 
-| Action | Fee |
-|--------|-----|
-| Mint | $5 flat |
-| Redeem | 50 bps |
+| Action | Fee Model |
+|--------|-----------|
+| Mint | Basis-point fee configured per-asset in zrChain params |
+| Redeem | Basis-point fee (`burn_fee_bps`) applied on Solana |
 
-Fees are converted to $ROCK and distributed according to Zenrock's tokenomic architecture.
+The actual fee percentages are set via governance and can be queried from the module parameters. Fees are collected and distributed according to Zenrock's tokenomic architecture.
+
+> **Note**: Fee rates may vary by asset. Check the current params for the specific asset you are using.
 
 ### Supported Operations
 

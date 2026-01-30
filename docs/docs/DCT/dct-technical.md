@@ -39,9 +39,11 @@ External Chain (BTC/ZEC)     zrChain                    Solana
 Dedicated outpost services monitor external blockchains for deposits to dMPC-controlled addresses:
 
 1. **Block Scanning**: Outposts scan new blocks for transactions to designated deposit addresses
-2. **Confirmation Tracking**: Wait for sufficient confirmations (typically 6 for Bitcoin, similar for Zcash)
+2. **Confirmation Tracking**: Wait for sufficient confirmations (typically required block confirmations for Zcash)
 3. **Change Filtering**: Identify and filter change outputs
 4. **Merkle Proof Generation**: Generate cryptographic proof of transaction inclusion
+
+> **Note**: The DCT module currently supports **zenZEC only**. zenBTC is handled by a dedicated `x/zenbtc/` module for production stability. Attempts to use DCT for Bitcoin deposits will be rejected.
 
 When a deposit achieves sufficient confirmations, the outpost submits a verification message to zrChain.
 
@@ -134,6 +136,8 @@ The DCT system maintains strict supply invariants:
 **Invariant**: `Custodied = Pending + Minted`
 
 This invariant is enforced at every state transition, ensuring wrapped token supply is always fully backed.
+
+> **Code Reference**: Supply tracking is implemented in `x/dct/keeper/msg_server_verify_deposit_block_inclusion.go`. The `CustodiedAmount` and `PendingAmount` fields are updated atomically during deposit verification.
 
 ### Timeout & Retry Handling
 

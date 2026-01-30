@@ -135,13 +135,26 @@ When seeking help, include:
 - Browser and wallet versions
 - Steps to reproduce the issue
 
+## Error Code Reference
+
+The zenTP module may return the following error codes:
+
+| Error Code | Message | Meaning | Solution |
+|------------|---------|---------|----------|
+| 1100 | `expected gov account as only signer for proposal message` | Governance-only action attempted by non-governance account | This operation requires a governance proposal |
+| 1102 | `invalid module account` | The specified module account is invalid | Check the module account address |
+| 1103 | `insufficient balance` | Not enough ROCK to complete the transfer | Ensure you have enough ROCK including fees (0.5% + 200 ROCK flat fee) |
+| 1104 | `invalid address` | The provided address format is invalid | Verify the recipient address format for the destination chain |
+| 1105 | `invalid fee exemption` | Fee exemption configuration is invalid | Contact support if you believe you should be exempt |
+| 1106 | `fee exemption not found` | No fee exemption exists for this address | Standard fees will apply |
+
 ## FAQ
 
 **Q: How long should a transfer take?**
 A: Typically 1-2 minutes. If longer than 5 minutes, check troubleshooting steps above.
 
 **Q: Are there fees for zenTP transfers?**
-A: zenTP itself has no fees. You only pay network gas fees (SOL on Solana, ROCK on zrChain).
+A: Yes. zenTP charges a 0.5% bridge fee plus a 200 ROCK flat fee for transfers from Zenrock to Solana. Transfers from Solana to Zenrock incur network gas fees only (SOL on Solana). Certain addresses may be exempt from bridge fees.
 
 **Q: Can I cancel a transfer?**
 A: No, once submitted, transfers cannot be cancelled. They will complete or fail automatically.

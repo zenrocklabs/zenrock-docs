@@ -18,7 +18,7 @@ The most common way to communicate cross chain is with a centralized bridge. Whi
 
 Most popular protocols like LayerZero, Wormhole and Axelar often have a very strong integration with both sides of the bridge that allows them to reliably send messages across and provide additional features like synchronous communication to confirm the successful execution of the message like it is with LayerZero.
 
-In Cosmos the [Inter-Blockchain Communication Protocol (IBC)](https://ibcprotocol.org/) is the standard way to communicate between blockchains. IBC is a protocol that allows for secure and reliable communication between different blockchains. It is supported by most of the major blockchain projects in Cosmos and is the standard way to send assets and messages in between. zrChain will also support IBC in the future to connect with other Cosmos-based blockchains and beyond.
+In Cosmos the [Inter-Blockchain Communication Protocol (IBC)](https://ibcprotocol.org/) is the standard way to communicate between blockchains. IBC is a protocol that allows for secure and reliable communication between different blockchains. It is supported by most of the major blockchain projects in Cosmos and is the standard way to send assets and messages in between. zrChain supports IBC (Inter-Blockchain Communication Protocol) to connect with other Cosmos-based blockchains. As a Cosmos SDK chain, zrChain has native IBC capabilities for cross-chain token transfers and interchain accounts.
 
 ### How Zenrock MPC is Different
 
