@@ -67,7 +67,7 @@ The 30% NRP share is vested over 36 months (not distributed immediately). This c
 
 ## Related Documentation
 
-- [Overview](./overview.md) - Token basics and utility
+- [Introduction](./introduction.md) - Token basics and utility
 - [Staking](./staking.md) - NRP mechanism and reward details
 - [Protocol Revenue](./protocol-revenue.md) - Specific fee structures
 - [Token Allocation](./allocation.md) - Initial distribution

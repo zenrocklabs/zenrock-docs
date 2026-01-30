@@ -1,7 +1,7 @@
 ---
-title: CLI Reference
-sidebar_label: CLI Reference
-sidebar_position: 3
+title: CLI Workflows
+sidebar_label: CLI Workflows
+sidebar_position: 5
 ---
 
 # Zenrock CLI Guide

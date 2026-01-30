@@ -36,4 +36,20 @@ zenBTC operates through the following flow:
 - [Validation Module](./validation.md) - Block header consensus
 - [Treasury Module](./treasury.md) - Key management
 
-*For source code, see the [zenBTC module on GitHub](https://github.com/zenrocklabs/zenrock/tree/main/zrchain/x/zenbtc).*
+### CLI Reference
+
+Query zenBTC state using `zenrockd`:
+
+```bash
+# Query module parameters (mint address, fees, delays)
+zenrockd query zenbtc params
+
+# List pending mint transactions awaiting Solana confirmation
+zenrockd query zenbtc pending-mint-transactions
+
+# Query current zenBTC supply and exchange rate
+zenrockd query zenbtc supply
+
+# List all available zenBTC queries
+zenrockd query zenbtc --help
+```

@@ -16,7 +16,7 @@ Custody and privacy are just the beginning. As Zenrock Labs and external teams s
 
 Additional assets beyond BTC and ZEC, bringing more cross-chain liquidity with institutional-grade security.
 
-The [DCT framework](./DCT/dct-introduction.md) is designed for extensibility---any asset can be brought to Solana through the same decentralized custody infrastructure.
+The [DCT framework](./DCT/introduction.md) is designed for extensibility---any asset can be brought to Solana through the same decentralized custody infrastructure.
 
 ### Hush Applications
 
@@ -26,7 +26,7 @@ DeFi primitives built on the shielded compute layer:
 - Confidential trading
 - Anonymous payment rails
 
-See [Hush Protocol](./Hush/hush-introduction.md) for the privacy layer architecture.
+See [Hush Protocol](./Hush/introduction.md) for the privacy layer architecture.
 
 ### Developer Tooling
 
@@ -36,7 +36,7 @@ Infrastructure to accelerate third-party building:
 - Documentation and examples
 - Integration templates
 
-Builders interested in getting started should review [Build on zrChain](./build/overview.md).
+Builders interested in getting started should review [Build on zrChain](./build/introduction.md).
 
 ### Protocol Upgrades
 

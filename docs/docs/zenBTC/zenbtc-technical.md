@@ -6,9 +6,23 @@ sidebar_position: 4
 
 This page provides a detailed technical overview of how zenBTC operates under the hood.
 
-## zenBTC on GitHub
+## CLI Reference
 
-The zenBTC module is located in the [zenrock monorepo](https://github.com/zenrocklabs/zenrock/tree/main/zrchain/x/zenbtc). There you can find the available messages and queries for minting and redeeming zenBTC. It is open for contribution and comments.
+Query zenBTC state using `zenrockd`:
+
+```bash
+# Query module parameters (mint address, fees, delays)
+zenrockd query zenbtc params
+
+# List pending mint transactions awaiting Solana confirmation
+zenrockd query zenbtc pending-mint-transactions
+
+# Query current zenBTC supply and exchange rate
+zenrockd query zenbtc supply
+
+# List all available zenBTC queries
+zenrockd query zenbtc --help
+```
 
 ## System Architecture
 

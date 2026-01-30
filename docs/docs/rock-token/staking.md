@@ -80,7 +80,7 @@ Stake your $ROCK with validators through the Zenrock Platform to earn both basel
 
 ## Related Documentation
 
-- [Overview](./overview.md) - Token basics and utility
+- [Introduction](./introduction.md) - Token basics and utility
 - [Tokenomics](./tokenomics.md) - Fee distribution framework
 - [Protocol Revenue](./protocol-revenue.md) - Fee sources
 - [Token Allocation](./allocation.md) - Initial distribution

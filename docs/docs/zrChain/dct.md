@@ -32,4 +32,20 @@ DCT is intentionally separate from zenBTC to ensure production stability:
 - [zenBTC Module](./zenbtc.md) - Bitcoin-specific implementation
 - [Validation Module](./validation.md) - Block header consensus
 
-*For source code, see the [DCT module on GitHub](https://github.com/zenrocklabs/zenrock/tree/main/zrchain/x/dct).*
+### CLI Reference
+
+Query DCT state using `zenrockd`:
+
+```bash
+# Query module parameters
+zenrockd query dct params
+
+# List pending mint transactions for DCT assets
+zenrockd query dct pending-mint-transactions
+
+# Query DCT supply for a specific asset
+zenrockd query dct supply [asset]
+
+# List all available DCT queries
+zenrockd query dct --help
+```

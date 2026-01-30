@@ -73,7 +73,7 @@ There is no second business quietly capturing value outside the token:
 
 ## Related Documentation
 
-- [Overview](./overview.md) - Token basics
+- [Introduction](./introduction.md) - Token basics
 - [Tokenomics](./tokenomics.md) - Fee distribution design
 - [Protocol Revenue](./protocol-revenue.md) - Fee structures and allocations
 - [Staking](./staking.md) - Staking rewards and mechanisms

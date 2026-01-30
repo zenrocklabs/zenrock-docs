@@ -81,27 +81,32 @@ const config: Config = {
         {
           label: 'zrChain',
           position: 'left',
-          to: 'zrChain/architecture',
+          to: 'zrChain/introduction',
         },
         {
           label: 'zenBTC',
           position: 'left',
-          to: 'zenBTC/zenbtc-introduction',
+          to: 'zenBTC/introduction',
         },
         {
           label: 'Hush',
           position: 'left',
-          to: 'Hush/hush-introduction',
+          to: 'Hush/introduction',
         },
         {
           label: 'Build',
           position: 'left',
-          to: 'build/overview',
+          to: 'build/introduction',
         },
         {
           label: '$ROCK',
           position: 'left',
-          to: 'rock-token/overview',
+          to: 'rock-token/introduction',
+        },
+        {
+          label: 'Litepaper',
+          href: '/zenrock-litepaper.pdf',
+          position: 'right',
         },
         {
           href: 'https://github.com/zenrocklabs/zenrock-docs',

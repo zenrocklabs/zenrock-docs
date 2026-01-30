@@ -65,7 +65,7 @@ The vesting structure ensures long-term alignment:
 
 ## Related Documentation
 
-- [Overview](./overview.md) - Token basics and utility
+- [Introduction](./introduction.md) - Token basics and utility
 - [Tokenomics](./tokenomics.md) - Fee distribution framework
 - [Staking](./staking.md) - How protocol rewards work
 - [Protocol Revenue](./protocol-revenue.md) - Fee structures

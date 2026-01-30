@@ -83,7 +83,7 @@ As more products launch and usage grows, protocol revenue scales accordingly. Th
 
 ## Related Documentation
 
-- [Overview](./overview.md) - Token basics
+- [Introduction](./introduction.md) - Token basics
 - [Tokenomics](./tokenomics.md) - Fee distribution details
 - [Staking](./staking.md) - How protocol rewards reach stakers
 - [Token Allocation](./allocation.md) - Initial distribution

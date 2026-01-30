@@ -47,4 +47,20 @@ The **Hush Module** (`x/hush/`) provides gold-standard privacy for zenBTC and ji
 - [Treasury Module](./treasury.md) - Key management for signing
 - [dMPC](./dmpc.md) - How unshield transactions are signed
 
-*For source code, see the [Hush module on GitHub](https://github.com/zenrocklabs/zenrock/tree/main/zrchain/x/hush).*
+### CLI Reference
+
+Query Hush state using `zenrockd`:
+
+```bash
+# Query module parameters (fees, supported assets)
+zenrockd query hush params
+
+# Query the current Merkle root for the shielded pool
+zenrockd query hush merkle-root
+
+# Query shielded supply for an asset
+zenrockd query hush supply [asset]
+
+# List all available Hush queries
+zenrockd query hush --help
+```

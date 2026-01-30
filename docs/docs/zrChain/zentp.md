@@ -32,4 +32,17 @@ The **zenTP Module** (`x/zentp/`) implements the cross-chain transfer protocol f
 - [Cross-Chain Operations](./cross-chain.md) - General cross-chain strategy
 - [Validation Module](./validation.md) - Oracle consensus mechanism
 
-*For source code, see the [zenTP module on GitHub](https://github.com/zenrocklabs/zenrock/tree/main/zrchain/x/zentp).*
+### CLI Reference
+
+Query zenTP state using `zenrockd`:
+
+```bash
+# Query module parameters (transfer limits, fees)
+zenrockd query zentp params
+
+# List pending cross-chain transfers
+zenrockd query zentp pending-transfers
+
+# List all available zenTP queries
+zenrockd query zentp --help
+```
