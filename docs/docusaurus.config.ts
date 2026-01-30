@@ -75,11 +75,11 @@ const config: Config = {
         alt: 'Zenrock',
         srcDark: 'img/zenrock_logo_white_transp.svg',
         src: 'img/zenrock_logo_dark_transp.svg',
-        href: 'https://zenrocklabs.io',
+        href: '/',
       },
       items: [
         {
-          label: 'Zenrock Blockchain',
+          label: 'zrChain',
           position: 'left',
           to: 'zrChain/architecture',
         },
@@ -89,19 +89,19 @@ const config: Config = {
           to: 'zenBTC/zenbtc-introduction',
         },
         {
-          label: 'zenZEC',
-          position: 'left',
-          to: 'zenZEC/zenzec-introduction',
-        },
-        {
           label: 'Hush',
           position: 'left',
           to: 'Hush/hush-introduction',
         },
         {
-          label: 'zenTP',
+          label: 'Build',
           position: 'left',
-          to: 'zenTP/zentp-introduction',
+          to: 'build/overview',
+        },
+        {
+          label: '$ROCK',
+          position: 'left',
+          to: 'rock-token/overview',
         },
         {
           href: 'https://github.com/zenrocklabs/zenrock-docs',
