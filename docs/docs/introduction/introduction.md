@@ -4,9 +4,9 @@ slug: /
 title: Overview
 ---
 
-# Zenrock Comprehensive Litepaper
+# Zenrock
 
-*Decentralized Custody, Privacy and More — 2.3.2026*
+*Decentralized Custody, Privacy and More*
 
 **Zenrock is on a mission to expand and grow what is possible onchain with products and services users actually want. Our technology stack and deep cryptographic and cross-chain expertise allow us to venture into areas previously untapped.**
 
