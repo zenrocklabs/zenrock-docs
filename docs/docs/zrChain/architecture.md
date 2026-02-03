@@ -56,9 +56,25 @@ The first enterprise-grade keyring is the Zenrock Multi-Party-Computation system
 **_Relayers_** assemble unsigned transactions and the returned signatures and broadcast these to the relevant network.
 In case of private transactions, where no details about the payload are disclosed, the requesting party needs to run their own relayer.
 
-### Oracle Sidecar
+### Enshrined Oracle via Vote Extensions
 
-The **_Oracle Sidecar_** is an additional component that runs in parallel to the validator node. The oracle sidecar provides price feeds and external data to zrChain through vote extensions, enabling validators to reach consensus on off-chain data. This includes ROCK and BTC price data used for fee calculations and economic security metrics.
+zrChain's oracle mechanism is enshrined directly into consensus through CometBFT Vote Extensions. Each validator runs an **Oracle Sidecar** alongside their validator node that monitors external blockchains and feeds data into the zrChain consensus process.
+
+**During each block:**
+
+1. **ExtendVote**: Validators query their sidecar for the latest external chain state (block headers, account nonces, events, prices) and include cryptographic hashes in their vote extension
+2. **PrepareProposal**: The block proposer aggregates vote extensions and validates that hash commitments match the actual data
+3. **PreBlocker**: Only data achieving supermajority consensus (>2/3 voting power) is applied to chain state
+
+This design ensures that external chain data is verified by the majority of validators before being used. **By enshrining the oracle mechanism directly into core consensus, zrChain ensures that as long as the chain itself is secure, every instruction passed to the dMPC is legitimate.**
+
+Critical fields like block headers require supermajority consensus, while less critical data like gas prices can proceed with simple majority. The sidecar monitors multiple blockchains simultaneously:
+
+| Chain | Data Observed |
+|-------|---------------|
+| Bitcoin & Zcash | Block headers for SPV-style verification |
+| Solana | Account nonces, mint/burn events |
+| Price Feeds | ROCK and BTC prices for fee calculations |
 
 ### BTC Proxy
 

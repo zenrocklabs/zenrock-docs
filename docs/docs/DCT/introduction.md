@@ -65,16 +65,12 @@ DCTs are more than wrappers—they're a security foundation for DeFi. Developers
 
 ### Fee Structure
 
-DCT fees are configurable per-asset and denominated in basis points (bps), not fixed dollar amounts:
+| Action | Fee |
+|--------|-----|
+| Mint | $5 flat |
+| Redeem | 50 bps (0.50%) |
 
-| Action | Fee Model |
-|--------|-----------|
-| Mint | Basis-point fee configured per-asset in zrChain params |
-| Redeem | Basis-point fee (`burn_fee_bps`) applied on Solana |
-
-The actual fee percentages are set via governance and can be queried from the module parameters. Fees are collected and distributed according to Zenrock's tokenomic architecture.
-
-> **Note**: Fee rates may vary by asset. Check the current params for the specific asset you are using.
+All fees are converted to $ROCK and distributed according to Zenrock's tokenomic architecture (see [Protocol Revenue](/rock-token/protocol-revenue)).
 
 ### Supported Operations
 

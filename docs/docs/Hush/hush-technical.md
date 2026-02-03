@@ -106,6 +106,12 @@ Nullifiers prevent double-spending while preserving privacy:
 3. Attempting to spend the same commitment again produces the same nullifier, which is rejected
 4. Knowing a nullifier reveals nothing about which commitment it corresponds to without the spending key
 
+### Decoy Nullifiers
+
+Each transaction is padded with **decoy nullifiers** so that no one can determine how many inputs each transaction has. **This provides an even greater level of privacy than Zcash**, where input/output counts per transaction are public and could be used to assist in probabilistically deanonymizing users.
+
+By obscuring the actual number of commitments being spent in each transaction, Hush prevents statistical analysis attacks that rely on transaction graph structure.
+
 ### Chain-ID Binding (Replay Attack Prevention)
 
 All Hush proofs are cryptographically bound to a specific chain ID, preventing replay attacks between testnet and mainnet:

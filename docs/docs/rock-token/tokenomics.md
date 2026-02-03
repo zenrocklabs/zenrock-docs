@@ -38,10 +38,10 @@ When Zenrock Labs develops a product, Labs is counted as both Zenrock Labs (35%)
 zenBTC yield comes ONLY from protocol fees. BTC is never lent out, levered up, or used as risk capital.
 
 zenBTC holders receive:
-1. **35% of zenBTC custody fees** (the 30% builder share redirected to yield, plus the 5% allocation)
-2. **5% of ALL zrChain fees** (the direct zenBTC allocation)
+1. **30% builder share from zenBTC fees** — On zenBTC (though developed by Zenrock Labs), the 30% builder share is redirected to zenBTC yield rather than going to Labs
+2. **5% of ALL zrChain fees** — The universal zenBTC allocation from all ecosystem products
 
-This means zenBTC effectively receives 35% of its own product's redemption fees plus 5% of all ecosystem fees.
+Combined, this means **35% of zenBTC custody fees** (the 30% redirected builder share + 5% direct allocation) flow to zenBTC holders, plus 5% of all other ecosystem fees.
 
 ## Zenrock Labs Alignment
 
@@ -56,6 +56,14 @@ Projects that underfund their Labs end up with stalled development, missed partn
 The 35% fee share allows Zenrock Labs to direct all offchain revenue through the tokenomics top of funnel, creating 100% alignment between Labs and the protocol.
 
 **If Labs signs an offchain agreement, all resulting economics are treated as protocol revenue and distributed through the same fee structure.** There is no second business quietly capturing value outside the token. Labs cannot win if the token holder does not win. The token holder cannot win if Labs does not win.
+
+### Offchain Revenue Routing
+
+Most projects have a Labs company that needs revenue but is cut out of the tokenomic model. This leads to hidden offchain deals, backdoor arrangements, and quiet revenue streams that never touch the token. The result: usage grows but the token does not benefit.
+
+**Zenrock Labs agrees to route all economic activity through the protocol.** If Zenrock Labs signs an offchain agreement, all resulting revenue is treated as protocol revenue and distributed through the same publicly visible tokenomic fee structure. There is no second business quietly capturing value outside the protocol.
+
+This creates structural alignment: as a $ROCK holder, you do not have to guess whether some unseen side deal is draining your upside. All offchain revenue flows through the same tokenomics as onchain fees.
 
 ## Structural Token Sink
 

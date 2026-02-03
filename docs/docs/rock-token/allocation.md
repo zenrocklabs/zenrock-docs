@@ -48,7 +48,7 @@ Insiders (team and investors) are subject to a 12-month cliff followed by 24-mon
 Protocol rewards are distributed from the Node Reward Pool over 36 months per fee event. See [Staking](./staking.md) for the detailed vesting schedule.
 
 The NRP receives:
-- 8% of total supply at genesis (~61.8M ROCK) for baseline rewards
+- 8% of total supply at genesis (80M ROCK) for baseline rewards
 - 30% of all protocol fees for protocol rewards
 
 ### Other Categories

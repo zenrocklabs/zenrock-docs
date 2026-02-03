@@ -12,7 +12,7 @@ Staking rewards on $ROCK center around the **Node Reward Pool (NRP)**: a dedicat
 
 The NRP is funded from two sources:
 
-1. **Genesis Allocation**: 8% of total supply at genesis (~61.8M ROCK)
+1. **Genesis Allocation**: 8% of total supply at genesis (80M ROCK)
 2. **Protocol Fees**: 30% of all fees earned on zrChain (the "staker share")
 
 All staking rewards flow from the NRP to validators and their delegators.
@@ -39,7 +39,7 @@ Baseline rewards are fixed block emissions paid to stakers, funded by the NRP's 
 
 **Total baseline emissions over the 5-year schedule: ~22.2M ROCK**
 
-The NRP's 8% genesis allocation (~61.8M ROCK) provides ample coverage for baseline emissions plus protocol rewards distributions.
+The NRP's 8% genesis allocation (80M ROCK) provides ample coverage for baseline emissions plus protocol rewards distributions.
 
 ## Protocol Rewards
 

@@ -27,11 +27,13 @@ Hush is Zenrock's privacy layer for Solana, enabling users to shield assets and 
 
 | Operation | Description | Fee |
 |-----------|-------------|-----|
-| **Shield** | Deposit tokens into the privacy pool | Configurable (currently 0%) |
-| **Shielded Transfer** | Send privately within the pool | Flat fee per asset (configurable) |
-| **Unshield** | Withdraw to any Solana address | Percentage fee (configurable) |
+| **Shield** | Deposit tokens into the privacy pool | Free |
+| **Shielded Transfer** | Send privately within the pool | 0.01 jitoSOL |
+| **Unshield** | Withdraw to any Solana address | 0.50% |
 
-> **Note**: All fees are governance-configurable parameters. Current defaults are subject to change. Fees accumulate in the Protocol Fee Pool and can be claimed by governance.
+For jitoSOL unshields, users can optionally request 0.01 SOL funding (+10 bps) to enable withdrawals to fresh wallets with zero SOL balance.
+
+Fees are collected into a protocol fee pool and distributed according to Zenrock's tokenomic architecture, flowing value to $ROCK holders via the Node Reward Pool.
 
 ### How It Works
 
@@ -54,6 +56,12 @@ Hush is Zenrock's privacy layer for Solana, enabling users to shield assets and 
 - Unshield recipient address (visible on Solana)
 - Total pool size (aggregate of all shielded funds)
 
+### Why jitoSOL?
+
+The pool is denominated in jitoSOL rather than native SOL so users do not have to sacrifice staking yield while remaining private. **No opportunity cost means no reason to leave.**
+
+This design allows the pool to grow continuously without tradeoffs, and as the pool grows, privacy guarantees strengthen for everyone—larger anonymity sets mean stronger privacy for all participants.
+
 ### Why Miden STARKs?
 
 Hush uses Miden STARKs as its proof system, chosen for two critical properties:
@@ -61,13 +69,31 @@ Hush uses Miden STARKs as its proof system, chosen for two critical properties:
 - **No Trusted Setup**: Unlike Groth16 or PLONK, Miden STARKs require no ceremony or trusted parameters
 - **Post-Quantum Resistance**: Hash-based proofs remain secure against known quantum attacks
 
+### The Vision
+
+Hush is a **shielded compute layer**: a fully Turing-complete VM built on Solana. Any application that can be built on Solana can be built privately via Hush.
+
+The pool is denominated in jitoSOL rather than native SOL so users do not have to sacrifice staking yield while remaining private. No opportunity cost means no reason to leave. This design allows the pool to grow continuously without tradeoffs, and as the pool grows, privacy guarantees strengthen for everyone.
+
+At launch, shielding, unshielding, and transferring are enabled. Users can also perform partial transfers and partial withdrawals, which increases the privacy guarantees for the entire pool by allowing large deposits to strengthen anonymity for smaller ones.
+
+Over time, Zenrock Labs and third parties will build on Hush, bringing DeFi, payments, and other applications into the shielded layer. The goal is privacy and usability without tradeoffs: everything you have on Solana, but private.
+
 ### Compliance
 
-Hush implements OFAC compliance at the validator sidecar level:
+Hush is designed to incorporate core compliance features:
+
+- **OFAC wallet screening**: All shielding transactions are screened via a CipherOwl integration
+- **AML/Theft screening**: All shielding transactions are screened via CipherOwl integration
+- **Terrorist financing/CSAM screening**: All shielding transactions are screened via CipherOwl integration
+- **Regional geo-blocking**: Sanctioned regions are prohibited from interacting with Hush
+- **Viewing keys for audibility**: Users retain a record of their shielded activity that they can release to auditors at their own discretion
+
+**How Compliance Works:**
 
 1. User shields tokens on Solana (shielder address visible in event)
-2. Validator sidecar runs OFAC check via CipherOwl
-3. **Sanctioned addresses**: Event dropped, tokens remain in vault (can be recovered)
+2. Validator sidecar runs compliance checks via CipherOwl
+3. **Flagged addresses**: Event dropped, tokens remain in vault (can be recovered)
 4. **Clean addresses**: Event reported to zrChain, commitment added to Merkle tree
 
 The shielder address is intentionally not propagated to zrChain state—privacy for compliant users is preserved.

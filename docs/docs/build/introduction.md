@@ -55,7 +55,12 @@ The dMPC infrastructure is general-purpose. Novel use cases include:
 
 ## Revenue Share
 
-**Builders earn 30% of all fees their products generate**, distributed in $ROCK according to protocol tokenomics.
+**Builders have the ability to receive, or direct the distribution of, 30% of all fees their products generate**, distributed in $ROCK according to protocol tokenomics.
+
+This 30% can be:
+- Taken directly by the builder
+- Redirected to other purposes at the builder's discretion (e.g., zenBTC redirects this share to yield for holders)
+- Split between multiple contributing teams
 
 In instances where multiple teams contribute to a product, revenue allocation is configured at the protocol level.
 
@@ -63,7 +68,7 @@ See [Protocol Revenue](../rock-token/protocol-revenue.md) for the complete fee d
 
 ## Builder Support
 
-Zenrock supports builders with:
+**Zenrock Foundation and Zenrock Labs support builders with:**
 
 - **Marketing and awareness** - Co-marketing opportunities and ecosystem visibility
 - **Compliance support** - Guidance on regulatory considerations
@@ -71,6 +76,10 @@ Zenrock supports builders with:
 - **Technical integration** - Engineering support and documentation
 
 We want you to succeed because when you succeed, the whole ecosystem benefits.
+
+### Enhanced Support for Aligned Builders
+
+While there is no obligation for builders to route offchain revenue through Zenrock's tokenomics, **DAO/Foundation level support may be enhanced for those who decide to pursue this path**—mirroring Zenrock Labs' commitment to full alignment with the protocol.
 
 ## Getting Started
 

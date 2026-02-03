@@ -4,9 +4,13 @@ sidebar_label: zenBTC - Introduction
 sidebar_position: 4
 ---
 
-## zenBTC: The First Native-Yield Bearing Wrapped Bitcoin
+## zenBTC: Decentralized Yield-Bearing Wrapped Bitcoin
 
-zenBTC is a fully decentralized wrapped Bitcoin product with built-in native yield, that launched in Q1 2025. Positioned as the first decentralized custody token (DCT) combining institutional-grade security with native yield, zenBTC redefines Bitcoin interoperability and utility in DeFi.
+**Mint zenBTC:** [https://zenbtc.app.zenrocklabs.io/](https://zenbtc.app.zenrocklabs.io/)
+
+**Solana CA:** `9hX59xHHnaZXLU6quvm5uGY2iDiT3jczaReHy6A6TYKw`
+
+zenBTC is Zenrock's flagship DCT: **decentralized yield-bearing wrapped Bitcoin on Solana.** Launched in Q1 2025, it is the first decentralized custody token (DCT) combining institutional-grade security with native yield, redefining Bitcoin interoperability and utility in DeFi.
 
 <div style={{maxWidth: "900px", margin: "0 auto"}}>
 
@@ -20,15 +24,24 @@ zenBTC leverages Zenrock’s proprietary distributed MPC (dMPC) technology to el
 
 zenBTC’s dMPC security is underpinned by Zenrock’s native utility and governance token, $ROCK, which serves as the foundation of the entire Zenrock ecosystem. $ROCK drives network participation through carefully designed incentives. Key and signature request fees for zenBTC—triggered during minting and burning—are received in or converted to $ROCK. Additionally, $ROCK functions as a reward mechanism for validators who maintain the dMPC network. These validators play a critical role in key assembly, with network security strengthening as more validators join.
 
-### Finally, Native Yield-Bearing Bitcoin
+### Native Yield-Bearing Bitcoin
 
-zenBTC uniquely allows users to accrue yield directly in Bitcoin (sats), growing their Bitcoin balance rather than awarding points or credits. No other wrapped Bitcoin product combines fully decentralized custody with native yield. Yield is generated from protocol fees: 35% of zenBTC custody fees and 5% of all zrChain fees are distributed to zenBTC holders. The underlying BTC is never lent out or used as risk capital, ensuring the safest form of Bitcoin yield in crypto. While users' Bitcoin remains securely locked on the Bitcoin blockchain via dMPC, yield accumulates through organic protocol activity rather than external DeFi strategies.
+The underlying BTC is never lent out, levered up, or used as risk capital. There are no basis trades, no delta-neutral strategies, no opaque vaults, no dependencies on other firms. **Your BTC is in decentralized custody, designed for security.**
 
-Protocol fees are automatically converted to BTC and reflected in the zenBTC exchange rate, meaning users' zenBTC balance grows in purchasing power over time. Today's processes for earning Bitcoin yield are complex, requiring significant time, education, and analysis—barriers that discourage adoption. By simplifying this process, zenBTC unlocks a new market segment: long-term Bitcoin holders and perp/margin traders seeking to use zenBTC as collateral.
+**Yield is funded by real protocol fees:** 5% of all zrChain fees flow to zenBTC, plus 35% of zenBTC custody fees directly. Unlike most yield-bearing products that pay in points or governance tokens, **zenBTC yield is paid directly in sats on the Bitcoin blockchain, distributed daily.**
 
-As the Zenrock ecosystem grows, protocol fee revenue is expected to increase proportionally, providing zenBTC holders with sustainable and growing yield over time.
+### Self-Balancing Yield Mechanism
 
-Yield breakdown: [https://app.zenrocklabs.io/zenbtc/yield](https://app.zenrocklabs.io/zenbtc/yield)
+Because zenBTC is permissionless to mint and redeem, yield is set by the market, not by marketing. The yield rate is a function of two variables:
+
+1. Total zenBTC supply
+2. Total Zenrock protocol fees
+
+As Zenrock earns more fees, yield rises. As yield rises, more users may choose to mint zenBTC to capture it, increasing supply and pushing yield back down. The cycle works in both directions: if yield falls too low, users redeem, supply decreases, and yield rises again.
+
+**The result is a self-balancing mechanism that naturally discovers the market-clearing yield for low-risk BTC on Solana.** No governance votes, no manual rate setting, no emissions schedules. Just supply and demand.
+
+**Yield breakdown:** [https://app.zenrocklabs.io/zenbtc/yield](https://app.zenrocklabs.io/zenbtc/yield)
 
 ### Solana-First and Multichain Ready
 

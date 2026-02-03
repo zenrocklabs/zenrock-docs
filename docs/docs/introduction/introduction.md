@@ -7,11 +7,19 @@ slug: /
 
 ## Welcome to Zenrock
 
-The Zenrock project is a unique combination of blockchain and MPC technology deployed in a form factor that exposes new ways of interacting and accessing native assets in a cross-chain manner. Zenrock provides permissionless access to institutional-grade private key management and exposes its functionality and products across networks like Bitcoin, Solana, EVM, and Cosmos.
+**Zenrock is on a mission to expand and grow what is possible onchain with products and services users actually want.** Our technology stack and deep cryptographic and cross-chain expertise allow us to venture into areas previously untapped.
 
-Zenrock already offers a custody platform with zrChain, a Cosmos-based sovereign blockchain, alongside MPC-enabled products that go beyond pure custody like minting of zenBTC on Solana and Ethereum, as well as moving native ROCK token between zrChain and Solana.
+**$ROCK is the value capture mechanism for the Zenrock ecosystem**, including all products developed by Zenrock Labs or by third parties leveraging Zenrock's infrastructure.
 
-Developers can already access and build on those platforms to benefit from Zenrock's custody solution.
+### The Zenrock Ecosystem
+
+- **Zenrock**: A permissionless ecosystem supported by Zenrock Labs and the Zenrock Foundation
+- **zrChain**: A purpose-built Layer 1 for distributed multi-party computation (dMPC)—flexible infrastructure powering everything in the Zenrock ecosystem
+- **Decentralized Custody Tokens (DCTs)**: Cross-chain assets secured by dMPC, eliminating centralized vaults and single points of failure. The first two DCTs, zenBTC and zenZEC, are live on Solana
+- **Hush Protocol**: A Zcash-inspired privacy layer on Solana. Shield assets, transfer privately, earn yield, and withdraw anywhere without exposing your wallets
+- **Future Products**: dMPC unlocks use cases across DeFi, privacy, identity, key management, and beyond
+
+**$ROCK benefits from ecosystem growth:** Every product built on zrChain, by Zenrock Labs or anyone else, flows revenue through the same tokenomics. More products, more fees, more value to $ROCK.
 
 ### Remote Control For Your Assets
 

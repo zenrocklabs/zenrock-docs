@@ -105,7 +105,7 @@ const config: Config = {
         },
         {
           label: 'Litepaper',
-          href: '/zenrock-litepaper.pdf',
+          href: 'pathname:///zenrock-litepaper.pdf',
           position: 'right',
         },
         {
