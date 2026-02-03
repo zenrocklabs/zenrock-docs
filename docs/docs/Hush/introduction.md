@@ -7,6 +7,8 @@ title: Hush Protocol
 
 Use Hush: [https://hushprotocol.xyz](https://hushprotocol.xyz)
 
+Security Audit: [Hush Protocol Audit (PDF)](/zenrock-hush-protocol-audit.pdf)
+
 Hush is the privacy layer for Solana.
 
 Solana is fast, cheap, and increasingly the default venue for DeFi. But it's a public ledger. Every transaction, every balance, every decision is visible to anyone. For many users and use cases, that's a problem. And as Solana is used for more things (rent payment, salary, car payment, stock trading, and more), the need for privacy will only grow.
