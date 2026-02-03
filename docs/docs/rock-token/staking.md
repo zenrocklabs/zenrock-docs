@@ -1,35 +1,23 @@
 ---
+sidebar_position: 6
 title: Staking $ROCK
-sidebar_label: Staking
-sidebar_position: 5
 ---
 
 # Staking $ROCK
 
-Staking rewards on $ROCK center around the **Node Reward Pool (NRP)**: a dedicated on-chain module that distributes rewards to validators and their delegators.
+Staking rewards on $ROCK centers around the **Node Reward Pool (NRP)**: a dedicated onchain module pre-funded with 8% of total supply at genesis. The NRP receives 30% of all fees earned on zrChain. All staking rewards flow from the NRP to validators and their delegators.
 
-## Node Reward Pool (NRP)
+Staked $ROCK earns rewards from two sources:
 
-The NRP is funded from two sources:
+* Baseline Rewards
+* Protocol Rewards
 
-1. **Genesis Allocation**: 8% of total supply at genesis (80M ROCK)
-2. **Protocol Fees**: 30% of all fees earned on zrChain (the "staker share")
+The rewards a staker receives at any given point is the sum of the two.
 
-All staking rewards flow from the NRP to validators and their delegators.
-
-## Reward Sources
-
-Staked $ROCK earns rewards from two sources, and the rewards a staker receives at any given point is the sum of both:
-
-1. **Baseline Rewards** - Fixed block emissions
-2. **Protocol Rewards** - Fee-based distributions
-
-## Baseline Rewards
-
-Baseline rewards are fixed block emissions paid to stakers, funded by the NRP's genesis allocation. The per-block reward follows this schedule:
+**Baseline Rewards** are fixed block emissions paid to stakers, funded by the NRP's genesis allocation. The per-block reward follows this schedule:
 
 | Effective Date | Block Reward | Annual Emission |
-|----------------|--------------|-----------------|
+| :---- | :---- | :---- |
 | 2026-01-01 | 2.25 ROCK | ~12.2M ROCK |
 | 2027-01-01 | 1.0 ROCK | ~5.4M ROCK |
 | 2028-01-01 | 0.5 ROCK | ~2.7M ROCK |
@@ -37,50 +25,26 @@ Baseline rewards are fixed block emissions paid to stakers, funded by the NRP's 
 | 2030-01-01 | 0.1 ROCK | ~0.54M ROCK |
 | 2031-01-01 | 0 ROCK | 0 |
 
-**Total baseline emissions over the 5-year schedule: ~22.2M ROCK**
+Total baseline emissions over the 5-year schedule: ~22.2M ROCK.
 
-The NRP's 8% genesis allocation (80M ROCK) provides ample coverage for baseline emissions plus protocol rewards distributions.
+**Protocol Rewards** are based on fees earned by the protocol (including offchain revenue routed through the tokenomics). The 30% share of all fees flows to the NRP and is distributed over time according to the following schedule:
 
-## Protocol Rewards
+* 1/3 paid linearly over 30 days following the fee event
+* 1/3 paid linearly over 5 months after that
+* 1/3 paid linearly over 30 months after that
 
-Protocol rewards are based on fees earned by the protocol, including offchain revenue routed through the tokenomics. The 30% staker share of all fees flows to the NRP and is distributed over time according to the following vesting schedule:
+**Implementation note:** To avoid unbounded state growth, fees are aggregated into monthly epochs (30-day periods). Each epoch accumulates all fees received during that period, then distributes them according to the schedule above. Distribution happens per-block for smooth rewards, but aggregation is monthly. This bounds onchain state to approximately 36 active epoch buckets regardless of transaction volume.
 
-### Vesting Schedule (36 months total)
+**Example:** Assume during month 1, 100 $ROCK is earned as fees. 30 $ROCK flows to the NRP per the tokenomics. When the epoch closes after 30 days:
 
-| Period | Duration | Share |
-|--------|----------|-------|
-| Tranche 1 | 30 days after fee event | 1/3 |
-| Tranche 2 | 5 months after Tranche 1 | 1/3 |
-| Tranche 3 | 30 months after Tranche 2 | 1/3 |
+- Over the next 30 days (month 2), 10 $ROCK is released at a constant rate (~0.33 ROCK/day)
+- Over the following 5 months (months 3-7), 10 $ROCK is released (~0.067 ROCK/day)
+- Over the following 30 months (months 8-37), the final 10 $ROCK is released (~0.011 ROCK/day)
 
-### How Vesting Works
+Total distribution period: 36 months from epoch close.
 
-Fees are aggregated into monthly epochs (30-day periods). Distribution occurs per-block for smooth rewards, with approximately 36 active epoch buckets at any given time.
+This schedule smooths rewards and creates predictable returns, **but more importantly, it creates a structural token sink.**
 
-### Example Calculation
+**Because rewards are distributed over 36 months rather than immediately, there is always a growing backlog of $ROCK committed to future payouts. As protocol activity increases, the pipeline of pending distributions grows. Tokens that would otherwise be liquid are locked in the distribution queue, temporarily removed from circulating supply.**
 
-If 100 $ROCK is earned in fees during month 1:
-
-1. **30 $ROCK flows to NRP** (30% staker share)
-2. **Month 2**: 10 $ROCK released (~0.33 ROCK/day from Tranche 1)
-3. **Months 3-7**: 10 $ROCK released (~0.067 ROCK/day from Tranche 2)
-4. **Months 8-37**: 10 $ROCK released (~0.011 ROCK/day from Tranche 3)
-
-### Why Vesting Matters
-
-The 36-month vesting schedule creates a structural token sink:
-
-- **Growing Backlog**: As fees accumulate, a larger portion of tokens are committed to future payouts
-- **Reduced Circulation**: Tokens in the vesting queue are effectively removed from circulating supply
-- **Aligned Incentives**: Long-term stakers benefit most, discouraging short-term speculation
-
-## How to Stake
-
-Stake your $ROCK with validators through the Zenrock Platform to earn both baseline and protocol rewards. Rewards are distributed proportionally based on your stake relative to the total staked amount.
-
-## Related Documentation
-
-- [Introduction](./introduction.md) - Token basics and utility
-- [Tokenomics](./tokenomics.md) - Fee distribution framework
-- [Protocol Revenue](./protocol-revenue.md) - Fee sources
-- [Token Allocation](./allocation.md) - Initial distribution
+The more successful the protocol becomes, the larger this sink grows. It's not a temporary lockup or an artificial staking mechanism. It's a perpetual feature of how the protocol works, bringing stability and transparency to changes in circulating supply.

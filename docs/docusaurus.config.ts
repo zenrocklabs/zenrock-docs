@@ -84,9 +84,19 @@ const config: Config = {
           to: 'zrChain/introduction',
         },
         {
+          label: 'DCT',
+          position: 'left',
+          to: 'DCT/introduction',
+        },
+        {
           label: 'zenBTC',
           position: 'left',
           to: 'zenBTC/introduction',
+        },
+        {
+          label: 'zenZEC',
+          position: 'left',
+          to: 'zenZEC/introduction',
         },
         {
           label: 'Hush',
@@ -94,14 +104,19 @@ const config: Config = {
           to: 'Hush/introduction',
         },
         {
+          label: '$ROCK',
+          position: 'left',
+          to: 'rock-token/introduction',
+        },
+        {
           label: 'Build',
           position: 'left',
           to: 'build/introduction',
         },
         {
-          label: '$ROCK',
+          label: 'zenTP',
           position: 'left',
-          to: 'rock-token/introduction',
+          to: 'zenTP/introduction',
         },
         {
           label: 'Litepaper',

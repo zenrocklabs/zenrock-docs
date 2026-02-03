@@ -1,79 +1,20 @@
 ---
-title: The Role of Zenrock Labs
-sidebar_label: Zenrock Labs
 sidebar_position: 4
+title: The Role of Zenrock Labs
 ---
 
 # The Role of Zenrock Labs
 
 Crypto loves the slogan **"all value accrues to the token."** In practice, that is usually fiction.
 
-Real protocols need a real operating company to:
+Real protocols need a real operating company to build product, ship integrations, support partners, run audits, handle compliance, grow awareness through BD and events, help third-party builders deploy, and maintain core infrastructure. That's Zenrock Labs. And all of this costs money.
 
-- Build product and ship integrations
-- Support partners and run audits
-- Handle compliance and grow awareness
-- Help third-party builders deploy
-- Maintain core infrastructure
+**Zenrock Labs is the most important developer contributing to the Zenrock ecosystem and thus has a key place in zrChain tokenomics with a fixed 35% share of protocol fees. This fee share in turn will allow Zenrock Labs to direct all offchain revenue it earns to the tokenomics top of funnel, maximizing alignment while strengthening the transparency between Zenrock Labs and the protocol.**
 
-That's Zenrock Labs. And all of this costs money.
+Projects that underfund their Labs Co end up with stalled development, missed partnerships, and slow ecosystem growth. The token holder suffers. **A well-resourced Labs Co means more products, faster growth, stronger partnerships, and a more valuable network.**
 
-## Why Labs Alignment Matters
+**But here is the problem: very often Labs Co has no direct way to participate in the protocol's success: they are completely cut out of the tokenomic model.** So invariably they find other ways to make money. Offchain deals, backdoor arrangements, quiet revenue streams that never touch the token. **Labs Co says "all value accrues to the token" while quietly building a separate business on the side. This activity is pervasive.**
 
-Projects that underfund their Labs end up with stalled development, missed partnerships, and slow ecosystem growth. The token holder suffers.
+**Zenrock Labs does not operate that way.** We see transparency as a structural advantage. $ROCK tokenholders are not stakeholders in Zenrock Labs and we don't suggest they are, but we understand that it is crucial for the protocol to align disparate economic incentives by design.  **So instead of backroom deals that benefit a Labs Co while the token flatlines, we built alignment into the protocol itself with a simple transparent revenue share that aligns and benefits all parties.**
 
-**A well-resourced Labs means more products, faster growth, stronger partnerships, and a more valuable network.**
-
-But here is the problem: very often Labs has no direct way to participate in the protocol's success---they are completely cut out of the tokenomic model. So invariably they find other ways to make money. Offchain deals, backdoor arrangements, quiet revenue streams that never touch the token.
-
-**Zenrock does not operate that way.** We see transparency as a structural advantage. Instead of backroom deals that benefit Labs while the token flatlines, we built alignment into the protocol itself with a simple transparent revenue share that aligns and benefits all parties.
-
-## The 35% Fee Share
-
-**Zenrock Labs receives 35% of all protocol fees, permanently enshrined in the protocol.**
-
-This is not a tax on the protocol---it is an investment in everything that makes the protocol worth owning. This fee share allows Zenrock Labs to direct all offchain revenue through the tokenomics top of funnel, creating 100% alignment between Labs and the protocol.
-
-See [Protocol Revenue](./protocol-revenue.md) for the complete fee distribution breakdown.
-
-## Full Alignment Design
-
-**Labs cannot win if the token holder does not win. The token holder cannot win if Labs does not win. Full alignment, by design.**
-
-To be clear: this is not charity. Zenrock Labs is a for-profit business. But we understand a few things that many projects seem to have forgotten:
-
-- *A thriving ecosystem benefits Labs far more than hoarding economics ever could.*
-- *A rising token price is the most powerful tool in crypto: It attracts builders, users, partners, liquidity, attention. It creates a flywheel that no amount of offchain deal-making can replicate.*
-
-When the token succeeds alongside the project, that's where true network effects are built. That's the system we designed.
-
----
-
-# Offchain Revenues
-
-When projects pretend their Labs does not need durable economics, one of three things happens:
-
-- **Opaque cash sweeps:** quiet arrangements where money flows back to Labs through hidden mechanisms
-- **Offchain deals that siphon value:** the classic "vampire economics" problem where usage and fees grow but the token does not benefit
-- **Constant token selling:** creating perpetual sell pressure of the magnitude that has destroyed countless promising projects
-
-This is why you see protocols with explosive usage paired with tokens that go nowhere. **The onchain story says one thing. The offchain arrangements say another.**
-
-## Structural Commitment
-
-Zenrock is structured differently. Labs receives its 35%, and in exchange, **Labs is structurally committed to routing all economic activity through the protocol.** This is a design principle, not merely a promise.
-
-**If Labs signs an offchain agreement, all resulting economics are treated as protocol revenue and distributed through the same fee structure.**
-
-There is no second business quietly capturing value outside the token:
-
-- Offchain deals are structurally designed to benefit $ROCK holders
-- As a $ROCK holder, you do not have to guess whether some unseen side deal is draining your upside
-- You want Labs to pursue as many profitable offchain deals as possible, because all of that revenue flows through the protocol as if it originated onchain
-
-## Related Documentation
-
-- [Introduction](./introduction.md) - Token basics
-- [Tokenomics](./tokenomics.md) - Fee distribution design
-- [Protocol Revenue](./protocol-revenue.md) - Fee structures and allocations
-- [Staking](./staking.md) - Staking rewards and mechanisms
+To that end, **Zenrock Labs receives an enshrined 35% of all protocol fees.** This isn't a hidden offchain drain on the protocol. **It's a transparent investment in everything that makes the protocol worth owning.**
