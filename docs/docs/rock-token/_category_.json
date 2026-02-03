@@ -1,0 +1,8 @@
+{
+  "label": "$ROCK Token",
+  "position": 7,
+  "link": {
+    "type": "generated-index",
+    "description": "Native token of zrChain - gas, governance, and economic foundation for the Zenrock ecosystem."
+  }
+}

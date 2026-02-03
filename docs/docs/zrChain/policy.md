@@ -41,3 +41,32 @@ Sign policies, on the other hand, apply to routine transactions within a workspa
 **_Passkeys_** enable keys derived from biometrics to be used as workspace approvers. We will add them to the workspace so that users could approve an action for a trusted device they own, adding another factor to their approval process.
 
 When passkeys are implemented, approvals can only be sourced from a certain device or classic Web2 account. This will add a second layer of security to the workspace. Passkeys may be used to ease access and improve the usability of policies.
+
+### CosmWasm Integration
+
+The policy module includes `MsgUpdateWasmParams` for managing CosmWasm module parameters. This allows the admin authority to update wasm params without requiring a full governance proposal.
+
+#### MsgUpdateWasmParams
+
+Updates CosmWasm module parameters including code upload permissions and instantiation defaults.
+
+```protobuf
+message MsgUpdateWasmParams {
+  string authority = 1;  // Admin or governance address
+  WasmParams params = 2;
+}
+
+message WasmParams {
+  WasmAccessConfig code_upload_access = 1;
+  WasmAccessType instantiate_default_permission = 2;
+}
+```
+
+**Access Types**:
+| Type | Description |
+|------|-------------|
+| `WASM_ACCESS_TYPE_NOBODY` | No one can perform the action |
+| `WASM_ACCESS_TYPE_EVERYBODY` | Anyone can perform the action |
+| `WASM_ACCESS_TYPE_ANY_OF_ADDRESSES` | Only specified addresses can perform the action |
+
+This message is restricted to the admin authority address configured in module params.

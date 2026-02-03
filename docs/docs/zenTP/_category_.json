@@ -1,9 +1,9 @@
 {
-    "label": "zenTP",
-    "position": 4,
-    "link": {
-      "type": "generated-index",
-      "description": "This directory gives further information about zenTP."
-    }
+  "label": "zenTP",
+  "position": 9,
+  "link": {
+    "type": "generated-index",
+    "description": "Zenrock Transfer Protocol - bridge $ROCK between Solana and zrChain."
   }
+}
   

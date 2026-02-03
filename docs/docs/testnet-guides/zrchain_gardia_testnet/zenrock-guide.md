@@ -52,7 +52,7 @@ Now it’s time to create your first key. After creating a workspace, a prompt a
 
 </div>
 
-### 4. Check your workspaces
+### 5. Check your Workspaces
 
 If not redirected after clicking on `finish` go to your [workspace overview](https://gardia.zenrocklabs.io/workspaces) to see the workspace that you just created and see it also has a key listed in it. 
 
@@ -62,7 +62,7 @@ If not redirected after clicking on `finish` go to your [workspace overview](htt
 
 </div>
 
-Click on the workspace to open it and see the key that you just created. You can also the the derived addresses for the key and their balance.
+Click on the workspace to open it and see the key that you just created. You can also see the derived addresses for the key and their balance.
 
 <div style={{maxWidth: "800px", margin: "0 auto"}}>
 

@@ -18,10 +18,31 @@ Lastly, a keyring provider can set the costs that occur for each key and signatu
 
 ### Workspaces
 
-**_Workspaces_** allow users (workspace owners) to manage sets of keys. This allows key rotation and decouples the risk from managing wallets through one single account.
+**_Workspaces_** are the core organizational primitive on zrChain. Every dMPC key belongs to a workspace, not to an individual account. A workspace is a shared governance container, analogous to a team vault, where owners request keys, authorize signatures, and control access. This decouples key management from any single blockchain account, enabling teams, institutions, and individuals to manage cross-chain wallets under a shared governance structure.
 
-Apart from having associated keys, workspace settings also define [policies](policy.md) for admin and signature tasks.
+#### Dual-Policy Model
 
-Policies define governance of the workspace. They typically specify which combination of accounts must provide approval for a signature to be considered valid.
+Each workspace supports multiple owners and enforces a dual-policy model:
 
-Policies also provide a governance structure for workspace changes and can be used to prevent giving a single account full control over the workspace.
+- **Admin Policy**: Governs structural changes including adding or removing owners, creating child workspaces, and modifying workspace settings
+- **Sign Policy**: Gates all cryptographic operations including key requests and signature requests
+
+Owners configure policies through zrChain's [policy module](policy.md), ranging from simple single-owner approval to complex multi-signature thresholds.
+
+#### Workspace Hierarchies
+
+Workspaces can form hierarchies where **child workspaces inherit their parent's policies by default**. This enables organizational structures that mirror real-world team setups:
+
+- A parent workspace can define organization-wide security policies
+- Child workspaces inherit these policies automatically
+- Child workspaces can override inherited policies with stricter requirements
+- This hierarchy allows departments, teams, or projects to operate with appropriate autonomy while maintaining organizational security standards
+
+#### Institutional Use Cases
+
+Workspaces give zrChain a programmable access control layer that makes dMPC practical for real teams and institutions:
+
+- **Treasury management**: Multiple signers required for large transactions
+- **Departmental autonomy**: Engineering, operations, and finance teams can each have child workspaces with appropriate policies
+- **Audit compliance**: Admin policy changes can require board-level approval while day-to-day signing uses team-level thresholds
+- **Key rotation**: Rotate keys without changing the workspace governance structure

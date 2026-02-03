@@ -19,7 +19,12 @@ const config: Config = {
   projectName: 'zenrock', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -28,6 +33,19 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  themes: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        docsRouteBasePath: '/',
+        indexBlog: false,
+      },
+    ],
+  ],
+
+  plugins: ['docusaurus-markdown-source-plugin'],
 
   presets: [
     [
@@ -57,26 +75,41 @@ const config: Config = {
         alt: 'Zenrock',
         srcDark: 'img/zenrock_logo_white_transp.svg',
         src: 'img/zenrock_logo_dark_transp.svg',
-        href: 'https://zenrocklabs.io',
+        href: '/',
       },
       items: [
         {
-          label: 'Zenrock Blockchain',
+          label: 'zrChain',
           position: 'left',
-          to: 'zrChain/architecture',
+          to: 'zrChain/introduction',
         },
         {
           label: 'zenBTC',
           position: 'left',
-          to: 'zenBTC/zenbtc-introduction',
+          to: 'zenBTC/introduction',
         },
         {
-          label: 'zenTP',
+          label: 'Hush',
           position: 'left',
-          to: 'zenTP/zentp-introduction',
+          to: 'Hush/introduction',
         },
         {
-          href: 'https://github.com/zenrocklabs/zenrock',
+          label: 'Build',
+          position: 'left',
+          to: 'build/introduction',
+        },
+        {
+          label: '$ROCK',
+          position: 'left',
+          to: 'rock-token/introduction',
+        },
+        {
+          label: 'Litepaper',
+          href: 'pathname:///zenrock-litepaper.pdf',
+          position: 'right',
+        },
+        {
+          href: 'https://github.com/zenrocklabs/zenrock-docs',
           label: 'GitHub',
           position: 'right',
         },
@@ -112,7 +145,7 @@ const config: Config = {
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/OfficialZenrock'
+              href: 'https://x.com/zenrock'
             },
           ],
         },

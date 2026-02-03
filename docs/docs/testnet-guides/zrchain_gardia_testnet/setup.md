@@ -6,11 +6,20 @@ sidebar_position: 2
 
 Here you can find the necessary steps to set up your wallets and fund your account.
 
+## Prerequisites
+
+Before starting, ensure you have:
+
+- **Browser**: Chrome, Firefox, Brave, or Edge (latest version recommended)
+- **Wallet Extension**: [Keplr](https://www.keplr.app/) v0.12+ or [Leap Wallet](https://www.leapwallet.io/) v0.4+
+- **Network**: Stable internet connection
+- **Discord Account**: Required to access the [Zenrock Discord](https://discord.gg/zenrock) for the testnet faucet
+
 ### Install Wallet
 
 First, you need to install the correct wallet to interact with zrChain.
 
-At the time of writing, we support the [Keplr wallet](https://www.keplr.app/) and [Leap Wallet](https://www.leapwallet.io/) - support for other wallets will be added in the near future. This guide will use the Keplr wallet but the steps for Leap Wallet are very similar. Once you have fully installed Keplr (including making a backup of the wallet seed phrase), go to the [web application](https://gardia.zenrocklabs.io/) to connect your wallet with the testnet. On the top right corner, click "Connect Wallet" and select "Keplr" to connect your wallet. You may get a prompt asking you to add zrchain to Keplr. Please click on "Approve" to add the network.
+At the time of writing, we support the [Keplr wallet](https://www.keplr.app/) and [Leap Wallet](https://www.leapwallet.io/) - support for other wallets will be added in the near future. This guide will use the Keplr wallet but the steps for Leap Wallet are very similar. Once you have fully installed Keplr (including making a backup of the wallet seed phrase), go to the [workspaces application](https://gardia.zenrocklabs.io/) or the [platform application](https://zen-platform.gardia.zenrocklabs.io/) to connect your wallet with the testnet. On the top right corner, click "Connect Wallet" and select "Keplr" to connect your wallet. You may get a prompt asking you to add zrchain to Keplr. Please click on "Approve" to add the network.
 
 <div style={{maxWidth: "350px", margin: "0 auto"}}>
 

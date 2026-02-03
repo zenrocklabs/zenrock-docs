@@ -4,13 +4,25 @@ sidebar_label: zenTP - Introduction
 sidebar_position: 5
 ---
 
-## zenTP: Transfer between Zenrock and Solana
+## zenTP: Native $ROCK Transfers Between Zenrock and Solana
 
-zenTP, for Zenrock Transfer Protocol, is a transfer protocol between Zenrock mainnet and Solana with the purpose of enabling transfer of ROCK between both networks. Powered by Zenrock's sidecars and MPC infrastructure, it facilitates the seamless transfer between these networks in a very intuitive and secure manner.
+Zenrock Transfer Protocol (zenTP) enables **native $ROCK transfers** between zrChain (Cosmos) and Solana. Unlike traditional bridges that wrap tokens, zenTP represents $ROCK as a **native SPL token** on Solana, providing the same user experience as any native Solana asset.
 
-### Enabling ROCK Transfers between Solana and Zenrock Chain
+**zenTP is the first transfer protocol connecting Cosmos directly to Solana with native token representation** (rather than wrapped tokens), leveraging zrChain's dMPC infrastructure for security.
 
-With ROCK's presence on Solana and the Cosmos ecosystem, holders should be free to interact with their ROCK on any network they want in a sovereign way. A key requirement, therefore, is to enable transfers between these networks for ROCK. zenTP fills this gap in the most direct way possible by providing a direct interface to move these assets in a permissionless way. For a small fee, users can send ROCK from zrchain to Solana and vice versa. Therefore, holders can decide how they want to put their ROCK to action, for example, by providing liquidity on ROCK token pools or staking their ROCK to earn yield on their holdings and contribute to the security of the Zenrock Chain.
+**Use zenTP:** [https://app.zenrocklabs.io/zentp](https://app.zenrocklabs.io/zentp)
+
+### Liquidity Seeding
+
+**200M $ROCK were transferred to Solana to seed liquidity** as fully bridged, circulating tokens represented as a native SPL token. As users move tokens across the bridge, supply fluctuates on each side, but total supply remains unchanged.
+
+### Why Native Representation Matters
+
+With ROCK's presence on Solana and the Cosmos ecosystem, holders should be free to interact with their ROCK on any network they want in a sovereign way. zenTP fills this gap in the most direct way possible by providing a direct interface to move assets in a permissionless way.
+
+Unlike wrapped tokens that create an additional layer of smart contract risk, native $ROCK on Solana behaves exactly like any other native SPL token—no wrapping, no additional trust assumptions beyond the bridge itself.
+
+Holders can decide how they want to put their ROCK to action: providing liquidity on ROCK token pools, staking their ROCK to earn yield, or participating in governance on zrChain.
 
 ### Facilitated with Zenrock's Sidecars and MPC technology
 

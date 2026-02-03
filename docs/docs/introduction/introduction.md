@@ -1,17 +1,25 @@
 ---
-title: Welcome to the Zen
-sidebar_label: Project Overview
+title: Welcome to Zenrock
+sidebar_label: Overview
 sidebar_position: 1
 slug: /
 ---
 
 ## Welcome to Zenrock
 
-The Zenrock project is a unique combination of blockchain and MPC technology deployed in a form factor that exposes new ways of interacting and accessing native assets in a cross-chain manner. Zenrock provides permissionless access to institutional-grade private key management and exposes its functionality and products across networks like Bitcoin, Solana, EVM, and Cosmos.
+**Zenrock is on a mission to expand and grow what is possible onchain with products and services users actually want.** Our technology stack and deep cryptographic and cross-chain expertise allow us to venture into areas previously untapped.
 
-Zenrock already offers a custody platform with zrChain, a Cosmos-based sovereign blockchain, alongside MPC-enabled products that go beyond pure custody like minting of zenBTC on Solana and Ethereum, as well as moving native ROCK token between zrChain and Solana.
+**$ROCK is the value capture mechanism for the Zenrock ecosystem**, including all products developed by Zenrock Labs or by third parties leveraging Zenrock's infrastructure.
 
-Developers can already access and build on those platforms to benefit from Zenrock's custody solution.
+### The Zenrock Ecosystem
+
+- **Zenrock**: A permissionless ecosystem supported by Zenrock Labs and the Zenrock Foundation
+- **zrChain**: A purpose-built Layer 1 for distributed multi-party computation (dMPC)—flexible infrastructure powering everything in the Zenrock ecosystem
+- **Decentralized Custody Tokens (DCTs)**: Cross-chain assets secured by dMPC, eliminating centralized vaults and single points of failure. The first two DCTs, zenBTC and zenZEC, are live on Solana
+- **Hush Protocol**: A Zcash-inspired privacy layer on Solana. Shield assets, transfer privately, earn yield, and withdraw anywhere without exposing your wallets
+- **Future Products**: dMPC unlocks use cases across DeFi, privacy, identity, key management, and beyond
+
+**$ROCK benefits from ecosystem growth:** Every product built on zrChain, by Zenrock Labs or anyone else, flows revenue through the same tokenomics. More products, more fees, more value to $ROCK.
 
 ### Remote Control For Your Assets
 
@@ -23,7 +31,7 @@ Zenrock lets users directly interact with their favorite dapps across supported 
 
 ### zrChain
 
-zrChain is Zenrock's own blockchain and the home of the native ROCK token. It is a sovereign application-specific blockchain built with the Cosmos SDK. zrChain is secured by the economic security of the ROCK token, but also through Bitcoin's economic security through a new Eigenlayer integration as zrChain's AVS (Actively Validated Services).
+zrChain is Zenrock's own blockchain and the home of the native ROCK token. It is a sovereign application-specific blockchain built with the Cosmos SDK. zrChain is secured by the economic security of the ROCK token and Zenrock's dMPC network, which eliminates single points of failure in key management.
 
 zrChain comes with various tools to make MPC easier to use and access as well as manage the keys and their assets. Workspaces play the core role where users can collectively manage their MPC keys and signatures to interact across various blockchain networks backed by zrChain's own policy engine that handles authorizations.
 
@@ -31,13 +39,29 @@ Developers can also build their own dApps on zrChain through CosmWasm smart cont
 
 Read more about [zrChain](../zrChain/_category_.json).
 
-### zenBTC
+### Decentralized Custody Tokens (DCTs)
 
-ZenBTC is Zenrock's wrapped Bitcoin product that leverages decentralized multi-party computation (dMPC) infrastructure. By using MPCs, ZenBTC provides a more secure and transparent alternative to traditional wrapped Bitcoin solutions that are often opaque and centralized.
+DCTs are cross-chain assets secured by dMPC, eliminating centralized vaults and single points of failure. Unlike traditional wrapped assets that lock funds in a single custody contract, DCTs distribute custody across a network of wallets powered by dMPC.
 
-Bitcoin private keys are securely generated and managed across Zenrock’s and partners’ federated MPC nodes, eliminating the need for a single trusted custodian and distributing the custody of the deposited Bitcoin across multiple parties to prevent any single point of failure or mishandling.
+#### zenBTC
 
-Furthermore, zenBTC can be made available across many different networks as a wrapped token representation of Bitcoin with it being primarily managed through zrChain.
+zenBTC is Zenrock's flagship DCT: decentralized yield-bearing wrapped Bitcoin on Solana. By using dMPC, zenBTC provides a more secure and transparent alternative to traditional wrapped Bitcoin solutions. The underlying BTC is never lent out or used as risk capital—yield comes from protocol fees, not risky strategies.
+
+Bitcoin private keys are securely generated and managed across Zenrock's and partners' federated MPC nodes, eliminating the need for a single trusted custodian and distributing custody across multiple parties.
+
+#### zenZEC
+
+zenZEC is decentralized wrapped Zcash on Solana. Zcash pioneered zero-knowledge proofs in cryptocurrency, enabling shielded transactions. By bringing ZEC to Solana via the DCT standard, zenZEC inherits both Zcash's privacy heritage and Zenrock's decentralized custody guarantees.
+
+### Hush Protocol
+
+Hush is Zenrock's privacy layer for Solana, enabling users to shield assets and transact privately without revealing the link between deposit and withdrawal addresses. Built on Miden STARK zero-knowledge proofs, Hush provides:
+
+- **Privacy-preserving transactions**: Shield zenBTC or jitoSOL, transfer privately, and unshield to any address
+- **No trusted setup**: Miden STARKs require no ceremony or trusted parameters
+- **Post-quantum resistance**: Hash-based proofs remain secure against quantum attacks
+- **Tiered viewing keys**: Share transaction history with auditors without spending capability
+- **Built-in compliance**: OFAC screening at the sidecar level
 
 ## Going Omnichain with Zenrock
 
