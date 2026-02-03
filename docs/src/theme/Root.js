@@ -65,5 +65,14 @@ export default function Root({ children }) {
     });
   }, [pathname]);
 
+  useEffect(() => {
+    import('@plausible-analytics/tracker').then(({ init }) => {
+      init({
+        domain: 'docs.zenrocklabs.io',
+        captureOnLocalhost: false,
+      });
+    });
+  }, []);
+
   return <>{children}</>;
 }

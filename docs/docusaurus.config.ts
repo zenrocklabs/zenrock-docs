@@ -75,7 +75,7 @@ const config: Config = {
         alt: 'Zenrock',
         srcDark: 'img/zenrock_logo_white_transp.svg',
         src: 'img/zenrock_logo_dark_transp.svg',
-        href: '/',
+        href: 'https://zenrocklabs.io/',
       },
       items: [
         {
@@ -89,16 +89,6 @@ const config: Config = {
           to: 'DCT/introduction',
         },
         {
-          label: 'zenBTC',
-          position: 'left',
-          to: 'zenBTC/introduction',
-        },
-        {
-          label: 'zenZEC',
-          position: 'left',
-          to: 'zenZEC/introduction',
-        },
-        {
           label: 'Hush',
           position: 'left',
           to: 'Hush/introduction',
@@ -109,23 +99,8 @@ const config: Config = {
           to: 'rock-token/introduction',
         },
         {
-          label: 'Build',
-          position: 'left',
-          to: 'build/introduction',
-        },
-        {
-          label: 'zenTP',
-          position: 'left',
-          to: 'zenTP/introduction',
-        },
-        {
           label: 'Litepaper',
           href: 'pathname:///zenrock-litepaper.pdf',
-          position: 'right',
-        },
-        {
-          label: 'Audit',
-          href: 'pathname:///zenrock-hush-protocol-audit.pdf',
           position: 'right',
         },
         {

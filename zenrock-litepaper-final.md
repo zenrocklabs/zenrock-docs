@@ -1,4 +1,4 @@
-**Zenrock Comprehensive Litepaper**
+**Zenrock Litepaper**
 
 **![][image1]**
 
