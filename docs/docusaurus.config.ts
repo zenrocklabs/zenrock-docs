@@ -124,6 +124,11 @@ const config: Config = {
           position: 'right',
         },
         {
+          label: 'Audit',
+          href: 'pathname:///zenrock-hush-protocol-audit.pdf',
+          position: 'right',
+        },
+        {
           href: 'https://github.com/zenrocklabs/zenrock-docs',
           label: 'GitHub',
           position: 'right',
