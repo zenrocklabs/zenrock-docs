@@ -1,9 +1,0 @@
-{
-  "label": "Explore the EVM",
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "WalletConnect is a widely used service that can be used to access decentralized apps across multiple networks. Zenrock allows users to interact with the MPC-generated keys stored on zrChain to access dApps via WalletConnect. The following examples outlines four scenarios around general signature requests and transactions."
-  }
-}
-
