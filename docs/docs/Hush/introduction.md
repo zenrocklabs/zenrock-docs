@@ -5,6 +5,8 @@ title: Hush Protocol
 
 # Hush Protocol
 
+![Hush Protocol](/img/litepaper/hush%20protocol%20graphic%201.png)
+
 Use Hush: [https://hushprotocol.xyz](https://hushprotocol.xyz)
 
 Security Audit: [Hush Protocol Audit (PDF)](/zenrock-hush-protocol-audit.pdf)
@@ -19,6 +21,8 @@ Hush enables anonymity via a shielded asset pool. Users deposit ("shield") jitoS
 - **Unshield to any address**—with no onchain link to the original deposit
 
 This creates an entirely private economy within the pool. Users can receive funds, send payments, and transact multiple times—all without touching public Solana until they choose to.
+
+![Hush Private Economy Pool](/img/litepaper/hush%20private%20economy%20pool%201.png)
 
 Hush is designed to incorporate core compliance features:
 

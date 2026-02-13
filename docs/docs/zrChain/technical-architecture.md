@@ -7,6 +7,8 @@ title: Technical Architecture
 
 ## Consensus & Validator Architecture
 
+![Consensus Architecture](/img/litepaper/consensus%20architecture%201.png)
+
 zrChain uses Delegated Proof-of-Stake with a hybrid validation model. The validator set includes both standard validators running consensus and a specialized subset of dMPC operators. This separation allows the network to scale the validator count for decentralization while maintaining a controlled set of cryptographic key holders for security-critical operations.
 
 ## dMPC Integration
@@ -34,6 +36,8 @@ This design ensures that external chain data is verified by the majority of vali
 
 ## Cross-Chain Observation
 
+![Cross-Chain Observation Security](/img/litepaper/cross%20chain%20observation%20security%20properties%201.png)
+
 The sidecar oracle monitors multiple blockchains simultaneously:
 
 - **Bitcoin & Zcash**: Block headers for SPV-style verification (Simplified Payment Verification, a lightweight method for confirming transactions via Merkle proofs)
@@ -51,6 +55,8 @@ zrChain inherits CometBFT's Byzantine fault tolerance (hence the BFT in the name
 - **Supply invariants**: Strict accounting ensures wrapped token supply equals custodied reserves
 
 ## Workspaces
+
+![Workspaces on zrChain](/img/litepaper/workspaces%20zrChain%201.png)
 
 Workspaces are the core organizational primitive on zrChain. Every dMPC key belongs to a workspace, not to an individual account. A workspace is a shared governance container, analogous to a team vault, where owners request keys, authorize signatures, and control access. This decouples key management from any single blockchain account, enabling teams, institutions, and individuals to manage cross-chain wallets under a shared governance structure.
 
