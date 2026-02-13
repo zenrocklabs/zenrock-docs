@@ -5,6 +5,8 @@ title: zenBTC
 
 # zenBTC
 
+![zenBTC](/img/litepaper/zenBTC.png)
+
 Mint: [https://zenbtc.app.zenrocklabs.io/](https://zenbtc.app.zenrocklabs.io/)
 
 CA: 9hX59xHHnaZXLU6quvm5uGY2iDiT3jczaReHy6A6TYKw
