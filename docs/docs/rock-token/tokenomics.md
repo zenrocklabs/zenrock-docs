@@ -5,6 +5,8 @@ title: Tokenomic Design
 
 # Zenrock's Tokenomic Design
 
+![Zenrock Tokenomics Flow](/img/litepaper/zenrock%20tokenomics%20flow%20chart%201.png)
+
 **Every fee from every product built on Zenrock's infrastructure, whether developed by Zenrock Labs or any other team, is handled according to the same tokenomic framework.** Fees earned are distributed as follows:
 
 * **35% to Zenrock Labs:** operations, development, and $ROCK accumulation

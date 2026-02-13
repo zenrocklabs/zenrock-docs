@@ -5,6 +5,8 @@ title: Token Allocation
 
 # Token Allocation
 
+![Token Allocation Chart](/img/litepaper/token%20allocation%20chart%202%201.png)
+
 Fixed supply of 1 billion $ROCK:
 
 •        **Team:** 20.24%

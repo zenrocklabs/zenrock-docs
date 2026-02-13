@@ -5,6 +5,8 @@ title: Technical Architecture
 
 # Hush Protocol: Technical Architecture
 
+![Hush Technical Architecture](/img/litepaper/techinical%20architecture%20hush%201.png)
+
 ## Zero-Knowledge Foundation
 
 Hush uses **Miden zk-STARKs** as its proof system, chosen for two critical properties:
@@ -33,6 +35,8 @@ When a user shields tokens, they create a cryptographic commitment that is added
 5. **Voucher Creation**: A `ShieldedVoucher` is created with encrypted amount data
 
 ## Unshield Flow
+
+![Hush Unshield Flow](/img/litepaper/hush%20unshield%20flow%201.png)
 
 1. **Client**: User generates a zk-STARK proof demonstrating knowledge of a valid commitment in the tree and correct nullifier derivation
 2. **Proof Submission**: User submits the nullifier, Merkle root, zk-STARK proof, and recipient address

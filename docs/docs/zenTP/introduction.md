@@ -5,6 +5,8 @@ title: zenTP
 
 # zenTP
 
+![zenTP](/img/litepaper/zenTP.png)
+
 Use zenTP: [https://app.zenrocklabs.io/zentp](https://app.zenrocklabs.io/zentp)
 
 Zenrock Transfer Protocol (zenTP) enables native $ROCK transfers between zrChain (Cosmos) and Solana. Unlike traditional bridges that wrap tokens, zenTP represents $ROCK as a native SPL token on Solana, providing the same user experience as any native Solana asset.

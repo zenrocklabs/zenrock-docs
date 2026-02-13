@@ -5,6 +5,8 @@ title: $ROCK
 
 # $ROCK
 
+![ROCK Token](/img/litepaper/rock%20token%20graphic%201.png)
+
 **Solana CA:** 5VsPJ2EG7jjo3k2LPzQVriENKKQkNUTzujEzuaj4Aisf
 
 zenBTC, Hush, and every future product built on zrChain share one thing: **$ROCK is the main value capture mechanism.** This is achieved via our Node Reward Pool architecture (detailed in the Staking $ROCK section).

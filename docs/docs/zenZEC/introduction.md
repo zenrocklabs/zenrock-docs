@@ -5,6 +5,8 @@ title: zenZEC
 
 # zenZEC
 
+![zenZEC](/img/litepaper/zenZEC.png)
+
 Mint: [https://app.zenrocklabs.io/zenzec/crucible](https://app.zenrocklabs.io/zenzec/crucible)
 
 CA: JDt9rRGaieF6aN1cJkXFeUmsy7ZE4yY3CZb8tVMXVroS
