@@ -45,7 +45,45 @@ const config: Config = {
     ],
   ],
 
-  plugins: ['docusaurus-markdown-source-plugin'],
+  plugins: [
+    'docusaurus-markdown-source-plugin',
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          // Old category index pages
+          { from: '/category/zrchain', to: '/zrChain' },
+          { from: '/category/dct-framework', to: '/DCT' },
+          { from: '/category/zenbtc', to: '/zenBTC' },
+          { from: '/category/zenzec', to: '/zenZEC' },
+          { from: '/category/hush-protocol', to: '/Hush' },
+          { from: '/category/rock-token', to: '/rock-token' },
+          { from: '/category/build-on-zrchain', to: '/build' },
+          { from: '/category/zentp', to: '/zenTP' },
+          // Old subpage URLs
+          { from: '/zrChain/introduction', to: '/zrChain' },
+          { from: '/zrChain/dmpc-enclaves', to: '/zrChain' },
+          { from: '/zrChain/technical-architecture', to: '/zrChain' },
+          { from: '/DCT/introduction', to: '/DCT' },
+          { from: '/DCT/technical-architecture', to: '/DCT' },
+          { from: '/zenBTC/introduction', to: '/zenBTC' },
+          { from: '/zenZEC/introduction', to: '/zenZEC' },
+          { from: '/Hush/introduction', to: '/Hush' },
+          { from: '/Hush/technical-architecture', to: '/Hush' },
+          { from: '/rock-token/introduction', to: '/rock-token' },
+          { from: '/rock-token/protocol-revenue', to: '/rock-token' },
+          { from: '/rock-token/tokenomics', to: '/rock-token' },
+          { from: '/rock-token/allocation', to: '/rock-token' },
+          { from: '/rock-token/staking', to: '/rock-token' },
+          { from: '/rock-token/offchain-revenues', to: '/rock-token' },
+          { from: '/rock-token/zenrock-labs', to: '/rock-token' },
+          { from: '/build/introduction', to: '/build' },
+          { from: '/zenTP/introduction', to: '/zenTP' },
+          { from: '/introduction/introduction', to: '/' },
+        ],
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -81,22 +119,22 @@ const config: Config = {
         {
           label: 'zrChain',
           position: 'left',
-          to: 'zrChain/introduction',
+          to: 'zrChain',
         },
         {
           label: 'DCT',
           position: 'left',
-          to: 'DCT/introduction',
+          to: 'DCT',
         },
         {
           label: 'Hush',
           position: 'left',
-          to: 'Hush/introduction',
+          to: 'Hush',
         },
         {
           label: '$ROCK',
           position: 'left',
-          to: 'rock-token/introduction',
+          to: 'rock-token',
         },
         {
           label: 'Litepaper',

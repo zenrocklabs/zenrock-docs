@@ -1,9 +1,0 @@
-{
-  "label": "zrChain",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Purpose-built Layer 1 for distributed multi-party computation (dMPC). Flexible infrastructure powering everything in the Zenrock ecosystem."
-  }
-}
-  
