@@ -1,13 +1,21 @@
 ---
-sidebar_position: 2
-title: Technical Architecture
+sidebar_position: 3
+title: DCT Framework
 ---
 
-# Decentralized Custody Tokens: Technical Architecture
+# Decentralized Custody Tokens (DCTs)
+
+![Zenrock DCTs](/img/litepaper/zenrock%20DCTs%201.png)
+
+A DCT is any token issued through Zenrock's decentralized custody network. Secured by dMPC and anchored by zrChain, DCTs set a new standard for cross-chain asset custody.
+
+DCTs are more than wrappers. They're a security foundation. DeFi primitives can be built on top: structured products, leveraged vaults, restaking strategies. Developers take creative risks. Users choose their exposure. **The underlying custody stays the same.**
+
+## Technical Architecture
 
 The DCT framework handles the complete lifecycle: deposit detection, verification, minting, and redemption.
 
-## Deposit & Verification Flow
+### Deposit & Verification Flow
 
 Dedicated outpost services monitor external blockchains for deposits to dMPC-controlled addresses. When a deposit achieves sufficient confirmations (typically 6 for Bitcoin), the outpost generates a Merkle proof demonstrating the transaction's inclusion in the block and submits it to zrChain.
 
@@ -19,7 +27,7 @@ zrChain then performs multi-step verification:
 
 Upon successful verification, a `PendingMintTransaction` is created.
 
-## Minting Flow
+### Minting Flow
 
 Once a deposit is verified, the minting process proceeds through multiple phases:
 
@@ -31,7 +39,7 @@ Once a deposit is verified, the minting process proceeds through multiple phases
 
 **Phase 4 - Broadcast & Confirmation**: The signed transaction is broadcast to Solana. The sidecar oracle monitors for mint events and reports confirmation back to zrChain.
 
-## Redemption Flow
+### Redemption Flow
 
 When users burn wrapped tokens on Solana to redeem the underlying asset:
 
@@ -41,7 +49,7 @@ When users burn wrapped tokens on Solana to redeem the underlying asset:
 4. **MPC Signing**: The transaction is signed through the distributed MPC infrastructure
 5. **Broadcast**: The outpost broadcasts the signed transaction to the external blockchain
 
-## Supply Accounting
+### Supply Accounting
 
 The DCT system maintains strict supply invariants:
 
